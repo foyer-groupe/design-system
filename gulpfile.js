@@ -31,30 +31,35 @@ gulp.task('default', function (done) {
 				.pipe(sass())
 				.pipe(autoprefixer())
 				.pipe(csso())
-				.pipe(gulp.dest('public/')),
+				.pipe(gulp.dest('public/css/')),
 
 			// Compile JS files
 			gulp.src([
 				'src/js/*.js'
 			]).pipe(concat('main.js'))
-				.pipe(gulp.dest('public/')),
+				.pipe(gulp.dest('public/js/')),
 
 			// Compile vendor JS files
-			gulp.src([
+			/*gulp.src([
 				'node_modules/jquery/dist/jquery.min.js'
 			]).pipe(concat('vendor.js'))
-				.pipe(gulp.dest('public/')),
+				.pipe(gulp.dest('public/js/')),*/
 
 			// Compile vendor CSS files
 			gulp.src([
 				'node_modules/flexboxgrid/dist/flexboxgrid.css'
 			]).pipe(concat('vendor.css'))
-				.pipe(gulp.dest('public/')),
+				.pipe(gulp.dest('public/css/')),
 
-			// Copy others files
+			// Copy image files
 			gulp.src([
 				'src/img/*'
 			]).pipe(gulp.dest('public/img/')),
+
+			// Copy font files
+			gulp.src([
+				'src/fonts/*'
+			]).pipe(gulp.dest('public/fonts/')),
 		];
 
 	});
