@@ -1,0 +1,10 @@
+.idea/
+.vscode/
+node_modules/
+.DS_Store
+_*
+*.log
+package-lock.json
+cdn/trash/
+cdn/files-to-publish/
+cdn/static/

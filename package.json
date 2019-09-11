@@ -1,0 +1,20 @@
+{
+	"name": "design.foyer.lu",
+	"version": "1.0.0",
+	"description": "FDS public presentation",
+	"license": "MIT",
+	"devDependencies": {
+		"del": "^5.0.0",
+		"gulp": "^4.0.2",
+		"gulp-autoprefixer": "^7.0.0",
+		"gulp-concat": "latest",
+		"gulp-csso": "latest",
+		"gulp-sass": "latest",
+		"gulp-swig": "^0.9.1",
+		"flexboxgrid": "latest",
+		"jquery": "2.1.4"
+	},
+	"scripts": {
+		"init": "npm install"
+	}
+}

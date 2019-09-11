@@ -1,0 +1,128 @@
+{% include  'partials/html-header.html' %}
+
+<main class="doc-main homepage">
+
+    {% set navHome = 'is-active' %}
+    {% include 'partials/navigation.html' %}
+
+    <section class="doc-main-section">
+        
+        <div class="doc-home-heading">
+            <p>Foyer Applications <strong>made faster</strong>.<br>
+            A system that helps teams building digital applications.<br>
+            Call it <strong>Foyer Design System</strong>.</p>
+        </div>
+
+        <div class="home-grid">
+
+            <div class="col">
+
+                <div class="doc-home-card is-vertical">
+                    <div class="doc-home-icon">
+                        <img src="img/icon-molecule-flat.svg" width="105" height="105" alt="">
+                    </div>
+                    <div class="doc-home-title">Atomic building principle</div>
+                    <div class="doc-home-desc">
+                        <p>
+                            Foyer Design System (FDS) is built with the same principle than organism. Small molecules can create beautiful living beings.<br>
+                            Each User Interface (UI) element can be used standalone or can be associated to other to build more complex component, called an organism.<br>
+                            Each UI element is encapsulate in a NPM library to be easily imported in your project and to manage his dependencies.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <a href="https://jira.foyer.lu/secure/RapidBoard.jspa?projectKey=FDS&rapidView=430" class="doc-home-card is-horizontal">
+                    <div class="doc-home-icon">
+                        <img src="img/icon-engine-flat.svg" width="78" height="61" alt="">
+                    </div>
+                    <div class="doc-home-texts">
+                        <div class="doc-home-title">What’s in the engine?</div>
+                        <div class="doc-home-desc">
+                            <p>Each library is versioned separately so you don't need to update everytime all your applications when you need a simple new component.</p>
+                        </div>
+                        <div class="doc-home-cta">
+                            <span class="doc-link-like">See our JIRA Board</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://confluence.foyer.lu/display/FDS/Foyer+Design+System" class="doc-home-card is-horizontal">
+                    <div class="doc-home-icon">
+                        <img src="img/icon-heart-flat.svg" width="61" height="83" alt="">
+                    </div>
+                    <div class="doc-home-texts">
+                        <div class="doc-home-title">Need something?</div>
+                        <div class="doc-home-desc">
+                            <p>You want to know more about it? You need a specific component to keep consistency over our applications.</p>
+                        </div>
+                        <div class="doc-home-cta">
+                            <span class="doc-link-like">Ask Pole UX</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!--div class="doc-home-title">Compatibility</div>
+                <div>
+                    All part of the FDS are always tested on every browsers and devices. <br>
+                    That include Chrome, Firefox, Safari, Edge, IE11 and Opera on Windows and OSX. <br>
+                    We also test on iPhone and Android for all MobileApp components. <br>
+                    You can find information about compatibility in each component documentation.
+                </div>-->
+
+            </div>
+
+        </div>
+
+        <div class="doc-home-card doc-home-card-get-it is-horizontal">
+            <div class="doc-home-texts">
+                <div class="doc-home-title">FAQ</div>
+                <div class="doc-home-desc">
+                    <ul>
+                        <li>
+                            <b>When do we need to ask the FDS team to add the stuff we need ?</b><br>
+                            <p>Well you don't. All the designers have the FDS components in their design tools, and thus when they create a new mock, they know already if something is missing.
+                            They will tell the FDS team what is needed, and when the devs are supposed to have it (basically at the start of a <i>sprint</i>).
+                            As making mistakes is human nature, if it ever happens that one feature is missing on a component, you should discuss it with the FDS team directly.
+                            </p>
+                        </li>
+                        <br>
+                        <li>
+                            <b>How to use the components' Javascript ?</b>
+                            <p>There is <b>NO JavaScript</b> shipped with the packages.
+                            At the moment, components who rely <b>heavily</b> on <i>JS</i> aren't in the FDS (i.e. carousel, ...).
+                            Sometimes, you can find a JS tab in the documentation (open/close modal, ...), it is mainly used to make the doc working, and should be redone completly inside your JS files.
+                            We have been working with <i>MEO</i> to style some components they have been doing. You can find a list <a href="https://github.foyer.lu/pages/PoleUX/Foyer-Design-System/angular-components.html">here</a>.<br>
+                            We also have started a web component library based on <a href="https://github.foyer.lu/pages/PoleUX/Foyer-Design-System/stenciljs-components.html">StencilJs</a>.
+                            </p>
+                        </li>
+                        <br>
+                        <li>
+                            <b>When should I use custom CSS ?</b><br>
+                            <p>Basically, some details (i.e. position of an element inside a Panel, ...) may not be achievable directly with the FDS components.
+                            You should always have a look first at the <a href="https://github.foyer.lu/pages/PoleUX/Foyer-Design-System/utilities.html">utilities</a> package which offers several classes acting as inline style.
+                            <br>
+                            If you have a specific request, you can see with the FDS team if they have some time to help out.
+                            It happened that the team did some work which won't be reused through several projects. That work lies in the <a href="https://github.foyer.lu/pages/PoleUX/Foyer-Design-System/labs.html">Labs</a>.
+                            When you do integrate what's in the <i>Labs</i>, you need to copy the source from the <a href="https://github.foyer.lu/PoleUX/Foyer-Design-System/tree/master/Labs">Github</a> and use it directly inside your project.
+                            </p>
+                        </li>
+                        <br>
+                        <li>
+                            <b>How do I report bugs ?</b>
+                            <p>If this is a critical issue, you should always come to see the team directly.
+                            Otherwise, the best way is to create a case on <a href="https://github.foyer.lu/PoleUX/Foyer-Design-System/issues/new?template=bug_report.md">Github</a>.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+{% include  'partials/html-footer.html' %}
