@@ -1,17 +1,36 @@
-<nav class="doc-nav" role="navigation">
+<nav id="menu" class="doc-nav {{ isHome }}" role="navigation">
 
-    <div class="doc-nav-logo">
-        <img width="147" height="51" src="{{ path_img }}logo-molecule.svg" alt="Foyer Design System" class="doc-logo">
-    </div>
+	<div class="doc-nav-logo">
+		<img width="147" height="51" src="{{ path_img }}logo-molecule.svg" alt="Foyer Design System" class="doc-logo">
+	</div>
 
-    <ul class="doc-main-nav" aria-label="Navigate into Design System sections">
+	<ul class="doc-main-nav" aria-label="Foyer Design System sections">
+		<li class="{{ navGetStarted }}">
+			<a href="get-started.html">
+				<img class="doc-nav-icon" src="{{ path_img }}icon-map-marker.svg" width="24" height="24" alt="">
+				Get Started
+			</a>
+		</li>
 
-        <li class="{{ navHome }}">
-            <a href="index.html">
-                <img class="doc-nav-icon" src="{{ path_img }}icon-map-marker.svg" width="24" height="24" alt="">
-                Home
-            </a>
-				</li>
-				
-    </ul>
+		<li class="{{ navBranding }}">
+			<a href="branding.html">
+				<img class="doc-nav-icon" src="{{ path_img }}icon-map-marker.svg" width="24" height="24" alt="">
+				Branding
+			</a>
+		</li>
+
+		<li class="{{ navUIElement }}">
+			<a href="user-interface-elements.html">
+				<img class="doc-nav-icon" src="{{ path_img }}icon-map-marker.svg" width="24" height="24" alt="">
+				UI Elements
+			</a>
+		</li>
+
+		<li class="{{ navStrategy }}">
+			<a href="strategy.html">
+				<img class="doc-nav-icon" src="{{ path_img }}icon-map-marker.svg" width="24" height="24" alt="">
+				Strategy
+			</a>
+		</li>	
+	</ul>
 </nav>

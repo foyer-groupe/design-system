@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
@@ -27,28 +27,55 @@
 </head>
 
 <body class="documentation">
+        
+        <a href="#main" class="jump-link sr-only sr-focusable">Go to content</a>
+        <a href="#menu" class="jump-link sr-only sr-focusable">Go to menu</a>
+
 		
+        
+        
+        
+        
         
 
 <main class="doc-main homepage">
 
 	
-	<nav class="doc-nav" role="navigation">
+	<nav id="menu" class="doc-nav " role="navigation">
 
-    <div class="doc-nav-logo">
-        <img width="147" height="51" src="img/logo-molecule.svg" alt="Foyer Design System" class="doc-logo">
-    </div>
+	<div class="doc-nav-logo">
+		<img width="147" height="51" src="img/logo-molecule.svg" alt="Foyer Design System" class="doc-logo">
+	</div>
 
-    <ul class="doc-main-nav" aria-label="Navigate into Design System sections">
+	<ul class="doc-main-nav" aria-label="Foyer Design System sections">
+		<li class="is-active">
+			<a href="get-started.html">
+				<img class="doc-nav-icon" src="img/icon-map-marker.svg" width="24" height="24" alt="">
+				Get Started
+			</a>
+		</li>
 
-        <li class="">
-            <a href="index.html">
-                <img class="doc-nav-icon" src="img/icon-map-marker.svg" width="24" height="24" alt="">
-                Home
-            </a>
-				</li>
-				
-    </ul>
+		<li class="">
+			<a href="branding.html">
+				<img class="doc-nav-icon" src="img/icon-map-marker.svg" width="24" height="24" alt="">
+				Branding
+			</a>
+		</li>
+
+		<li class="">
+			<a href="user-interface-elements.html">
+				<img class="doc-nav-icon" src="img/icon-map-marker.svg" width="24" height="24" alt="">
+				UI Elements
+			</a>
+		</li>
+
+		<li class="">
+			<a href="strategy.html">
+				<img class="doc-nav-icon" src="img/icon-map-marker.svg" width="24" height="24" alt="">
+				Strategy
+			</a>
+		</li>	
+	</ul>
 </nav>
 
 
@@ -90,8 +117,113 @@
 
 </main>
 
-				<div class="doc-search-results" aria-live="assertive"></div>
+		
+		<footer id="footer" class="main-footer">
+			<div class="container">
+				<div class="row middle-md">
+
+					<div class="col-md-3">
+						<p class="sr-only" id="social-desc">Foyer on social networks:</p>
+						<ul class="social" aria-describedby="social-desc">
+							<li>
+								<a href="https://facebook.com/">
+									<img src="img/icon-facebook.svg" width="32" height="32" alt="Facebook">
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/">
+									<img src="img/icon-twitter.svg" width="32" height="32" alt="Twitter">
+								</a>
+							</li>
+							<li>
+								<a href="https://linkedin.com/">
+									<img src="img/icon-linkedin.svg" width="32" height="32" alt="Linkedin">
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-md-9 text-right">
+						<ul class="network">
+							<li>
+								<a href="#doc">Document Library</a>
+							</li>
+							<li>
+								<a href="#doc">Partners</a>
+							</li>
+							<li>
+								<a href="#doc">Professional</a>
+							</li>
+							<li>
+								<a href="#doc">Le Groupe Foyer</a>
+							</li>
+						</ul>
+					</div>
+
+				</div><!-- .row -->
+				
+				<div class="divider"></div>
+
+				<div class="row">
+					<div class="col-md-4">
+						<img class="icon-app" src="https://static.foyer.lu/images/0e/icon-foyer-logo.0ea4c1d66ee468a2b1f83d2a06e96a5fdbf48777.svg" width="80" height="80" alt="">
+
+						<p class="text-medium text-bold">Download Our New Application</p>
+
+						<p>Simple et intuitive, elle facilitera vos démarches pour vos remboursements sante. Vous suivrez vos sinistres en temps réel et serez rassuré par le rappel d’urgence 24h/24 - 7j/7.</p>
+
+						<p>
+							<a href="https://google.com/"><img src="img/banner-google-store.svg" width="150" height="45" alt="Google Play Store"></a>
+							<a href="https://apple.com/"><img src="img/banner-apple-store.svg" width="150" height="45" alt="AppStore"></a>
+						</p>
+					</div>
+
+					<div class="col-md-4 text-center">
+						<img src="img/logo-foyer.svg" width="92" height="80" alt="">
+
+						<p class="text-medium text-bold">Foyer Assurances</p>
+
+						<p>
+							12 rue Léon Laval<br>
+							L-3372 Leudelange
+						</p>
+
+						<p>Phone: +352 437 437</p>
+
+						<p>
+							<a href="https://foyer.lu/contact/" class="button ghost light">
+								<span class="button-text">Contact Us</span>
+								<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+								</svg>
+							</a>
+						</p>
+					</div>
+
+					<div class="col-md-4 text-right">
+						<img class="work-img" src="img/work-with-us.png" width="152" height="56" alt="">
+
+						<p class="text-medium text-bold">Work with us!</p>
+
+						<p>If you are interested in joining a dynamic group<br> in full expansion, then consult our job offers or<br> do not hesitate to submit your spontaneous<br> application.</p>
+
+						<p>
+							<a href="https://foyer.lu/contact/" class="button ghost light">
+								<span class="button-text">Work With Us</span>
+								<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+								</svg>
+							</a>
+						</p>
+					</div>
+
+				</div><!-- .row -->
+			</div>
+		</footer>
+
+		<div class="doc-search-results" aria-live="assertive"></div>
 		<div class="doc-search-dropshadow"></div>
+
 	</body>
 </html>
 

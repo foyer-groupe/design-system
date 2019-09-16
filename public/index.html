@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
@@ -27,53 +27,432 @@
 </head>
 
 <body class="documentation">
+        
+        <a href="#main" class="jump-link sr-only sr-focusable">Go to content</a>
+        <a href="#menu" class="jump-link sr-only sr-focusable">Go to menu</a>
+
 		
         
+        
+        
+        
+        
 
-<main class="doc-main homepage">
 
-	
+<nav id="menu" class="doc-nav is-home" role="navigation">
 
-	<div class="fds-hero-banner">
-		<div class="container">
-			<header role="banner">
-				<div class="fds-logo">
-					<img src="https://static.foyer.lu/images/d9/logo-fds-molecule.d97e418aa10ea3aae0181ac4b44c9efbdb16a72d.svg" width="146" height="50" alt="Foyer Design System">
-				</div>
-				<nav role="navigation">
-					<ul>
-						<li><a href="#copy">Copy</a></li>
-						<li><a href="#identity">Identity</a></li>
-						<li><a href="#design">Design</a></li>
-						<li><a href="#development">Development</a></li>
-						<li>
-							<a href="get-started.html" class="button">
-								<span class="button-text"></span>
-								<i class="icon-arrow-right" role="presentation"></i>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
-
-			<div class="here-cta">
-				<h1>Foyer Design System</h1>
-				<p>Helps you make experiences people will love.</p>
-				<p>
-					<a href="#" class="button ghost light">
-						<span class="button-text">Learn more</span>
-						<i class="icon-arrow-right" role="presentation"></i>
-					</a>
-				</p>
-			</div>
-			
-		</div>
+	<div class="doc-nav-logo">
+		<img width="147" height="51" src="img/logo-molecule.svg" alt="Foyer Design System" class="doc-logo">
 	</div>
 
+	<ul class="doc-main-nav" aria-label="Foyer Design System sections">
+		<li class="">
+			<a href="get-started.html">
+				<img class="doc-nav-icon" src="img/icon-map-marker.svg" width="24" height="24" alt="">
+				Get Started
+			</a>
+		</li>
+
+		<li class="">
+			<a href="branding.html">
+				<img class="doc-nav-icon" src="img/icon-map-marker.svg" width="24" height="24" alt="">
+				Branding
+			</a>
+		</li>
+
+		<li class="">
+			<a href="user-interface-elements.html">
+				<img class="doc-nav-icon" src="img/icon-map-marker.svg" width="24" height="24" alt="">
+				UI Elements
+			</a>
+		</li>
+
+		<li class="">
+			<a href="strategy.html">
+				<img class="doc-nav-icon" src="img/icon-map-marker.svg" width="24" height="24" alt="">
+				Strategy
+			</a>
+		</li>	
+	</ul>
+</nav>
+
+
+<div class="fds-hero-banner">
+	<div class="container">
+		<header role="banner">
+			<div class="fds-logo">
+				<img src="https://static.foyer.lu/images/d9/logo-fds-molecule.d97e418aa10ea3aae0181ac4b44c9efbdb16a72d.svg" width="146" height="50" alt="Foyer Design System">
+			</div>
+			<nav role="navigation">
+				<ul>
+					<li class="nav-item"><a href="#design">Get started</a></li>
+					<li class="nav-item"><a href="#development">Contact Us</a></li>
+					<li>
+						<button type="button" id="menu-button" class="menu-button">
+							<span class="menu-text">Menu</span>
+							<span class="menu-icon"></span>
+						</button>
+						<!--a href="get-started.html" class="button">
+							<span class="button-text">Explore</span>
+							<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+							</svg>
+						</a-->
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="here-cta">
+			<h1><span>Foyer</span> Design System</h1>
+			<p>Helps you make experiences people will love.</p>
+			<p>
+				<a href="get-started.html" class="button ghost light big">
+					<span class="button-text">Explore the System</span>
+					<svg class="icon-arrow-right" role="presentation" width="28" height="20" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+					</svg>
+				</a>
+			</p>
+		</div>
+		
+	</div>
+</div>
+
+<main id="main" class="fds homepage">
+
+	<section id="guidelines" class="section-light">
+		<div class="container">
+			<h2 class="h2-like text-center">Foyer <strong>Global Guidelines</strong> &amp; <strong>Design System</strong></h2>
+
+			<p class="subtitle text-center">At Foyer we help our teams build documents, interfaces and copies by following guidelines, principles and best practices.</p>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="card flex">
+						<div class="card-illu">
+							<img src="img/icon-blueprint.svg" width="138" height="116" alt="">
+						</div>
+						<div class="card-content">
+							<h3 class="h3-like">Design Guidelines</h3>
+							<p>
+								We provide guides to our designers and developers that help keeping consistency, preserving accessibility over devices but also on paper communication.
+							</p>
+							<p>
+								<a href="guidelines-design.html" class="button">
+									<span class="button-text">See Design Guidelines</span>
+									<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+									</svg>
+								</a>
+							</p>
+						</div>
+					</div><!-- .card -->
+				</div><!-- .col-md-6 -->
+				<div class="col-md-6">
+					<div class="card flex">
+						<div class="card-illu">
+							<img src="img/icon-tools.svg" width="138" height="116" alt="">
+						</div>
+						<div class="card-content">
+							<h3 class="h3-like">Development Guidelines</h3>
+							<p>
+								We provide a system of well documented components to keep consistency and code quality over our interfaces, improving user experience and accessibility..
+							</p>
+							<p>
+								<a href="guidelines-design.html" class="button">
+									<span class="button-text">See Dev. Guidelines</span>
+									<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+									</svg>
+								</a>
+							</p>
+						</div>
+					</div><!-- .card -->
+				</div><!-- .col-md-6 -->
+			</div><!-- .row -->
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="card flex">
+						<div class="card-illu">
+							<img src="img/icon-identity.svg" width="138" height="116" alt="">
+						</div>
+						<div class="card-content">
+							<h3 class="h3-like">Identity Guidelines</h3>
+							<p>
+								We built a centralize database of visual resources based on colors, shapes, and design principles that guide our branding and identity and help on taking decisions.
+							</p>
+							<p>
+								<a href="guidelines-design.html" class="button">
+									<span class="button-text">See Identity Guidelines</span>
+									<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+									</svg>
+								</a>
+							</p>
+						</div>
+					</div><!-- .card -->
+				</div><!-- .col-md-6 -->
+				<div class="col-md-6">
+					<div class="card flex">
+						<div class="card-illu">
+							<img src="img/icon-copyright.svg" width="138" height="117" alt="">
+						</div>
+						<div class="card-content">
+							<h3 class="h3-like">Copyright Guidelines</h3>
+							<p>
+								The tone and the way we communicate to our different users, and all the humans around our communication matter. We guide our pens to follow the red line.
+							</p>
+							<p>
+								<a href="guidelines-design.html" class="button">
+									<span class="button-text">See Copy Guidelines</span>
+									<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+									</svg>
+								</a>
+							</p>
+						</div>
+					</div><!-- .card -->
+				</div><!-- .col-md-6 -->
+			</div><!-- .row -->
+		</div>
+	</section>
+
+	<section id="humans" class="section-primary">
+		<div class="container">
+			<h2 class="h2-like text-center">The <strong>humans behind</strong></h2>
+
+			<p class="subtitle text-center">The <abbr title="Foyer Design System">FDS</abbr> is made by a lot of people,<br>meet the main contributors of the system.</p>
+
+			<ul class="peops">
+				<li>
+					<div class="peops-image">
+						<img src="img/julie-muller.jpg" srcset="img/julie-muller@2x.jpg 2x" width="80" height="80" alt="">
+					</div>
+					<p>
+						<span class="peops-firstname">Julie</span>
+						<span class="peops-lastname">Muller</span>
+						<span class="peops-job">UX Designer</span>
+					</p>
+				</li>
+				<li>
+					<div class="peops-image">
+						<img src="img/lea-poisson.jpg" srcset="img/lea-poisson@2x.jpg 2x" width="80" height="80" alt="">
+					</div>
+					<p>
+						<span class="peops-firstname">Léa</span>
+						<span class="peops-lastname">Poisson</span>
+						<span class="peops-job">Visual Designer</span>
+					</p>
+				</li>
+				<li>
+					<div class="peops-image">
+						<img src="img/geoffrey-crofte.jpg" srcset="img/geoffrey-crofte@2x.jpg 2x" width="80" height="80" alt="">
+					</div>
+					<p>
+						<span class="peops-firstname">Geoffrey</span>
+						<span class="peops-lastname">Crofte</span>
+						<span class="peops-job">UX/UI Designer</span>
+					</p>
+				</li>
+				<li>
+					<div class="peops-image">
+						<img src="img/matthieu-dacosta.jpg" srcset="img/matthieu-dacosta@2x.jpg 2x" width="80" height="80" alt="">
+					</div>
+					<p>
+						<span class="peops-firstname">Matthieu</span>
+						<span class="peops-lastname">Da Costa</span>
+						<span class="peops-job">UX/UI Designer</span>
+					</p>
+				</li>
+				<li>
+					<div class="peops-image">
+						<img src="img/steven-lozach.jpg" srcset="img/steven-lozach@2x.jpg 2x" width="80" height="80" alt="">
+					</div>
+					<p>
+						<span class="peops-firstname">Steven</span>
+						<span class="peops-lastname">Lozach</span>
+						<span class="peops-job">Head Of UX</span>
+					</p>
+				</li>
+				<li>
+					<div class="peops-image">
+						<img src="img/jordan-solt.jpg" srcset="img/jordan-solt@2x.jpg 2x" width="80" height="80" alt="">
+					</div>
+					<p>
+						<span class="peops-firstname">Jordan</span>
+						<span class="peops-lastname">Solt</span>
+						<span class="peops-job">UX Designer</span>
+					</p>
+				</li>
+				<li>
+					<div class="peops-image">
+						<img src="img/bastien-collet.jpg" srcset="img/bastien-collet@2x.jpg 2x" width="80" height="80" alt="">
+					</div>
+					<p>
+						<span class="peops-firstname">Bastien</span>
+						<span class="peops-lastname">Collet</span>
+						<span class="peops-job">Front-End Dev</span>
+					</p>
+				</li>
+				<li>
+					<div class="peops-image">
+						<img src="img/steven-berquez.jpg" srcset="img/steven-berquez@2x.jpg 2x" width="80" height="80" alt="">
+					</div>
+					<p>
+						<span class="peops-firstname">Steven</span>
+						<span class="peops-lastname">Berquez</span>
+						<span class="peops-job">UX Designer</span>
+					</p>
+				</li>
+				<li>
+					<div class="peops-image">
+						<img src="img/laurent-vincent.jpg" srcset="img/laurent-vincent@2x.jpg 2x" width="80" height="80" alt="">
+					</div>
+					<p>
+						<span class="peops-firstname">Laurent</span>
+						<span class="peops-lastname">Vincent</span>
+						<span class="peops-job">UX Designer</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="sharing" class="section-light">
+		<div class="container">
+			<h2 class="h2-like text-center">Why Sharing Those <strong>Design Guidelines?</strong></h2>
+			<p class="subtitle text-center">At Foyer we believe in the benefit of sharing and opening our work.</p>
+
+			<div class="row middle-md">
+				<div class="col-md-offset-1"></div>
+				<div class="col-md-5 col-xs-12 text-center">
+					<img src="img/illu-office.svg" with="360" height="299" alt="">
+				</div>
+				<div class="col-md-5 col-xs-12">
+					<p class="text-medium">At Foyer we work by putting the human being at the centre of our attention. We work internally to <strong>improve the experience</strong> of our customers and policyholders. We want to <strong>share our experience</strong>, share what we have learned, present our work to our employees, and get feedback from the outside.</p>
+
+					<p>
+						<a href="contact.html" class="button">
+							<span class="button-text">Get in touch</span>
+							<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+							</svg>
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 
-				<div class="doc-search-results" aria-live="assertive"></div>
+		
+		<footer id="footer" class="main-footer">
+			<div class="container">
+				<div class="row middle-md">
+
+					<div class="col-md-3">
+						<p class="sr-only" id="social-desc">Foyer on social networks:</p>
+						<ul class="social" aria-describedby="social-desc">
+							<li>
+								<a href="https://facebook.com/">
+									<img src="img/icon-facebook.svg" width="32" height="32" alt="Facebook">
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/">
+									<img src="img/icon-twitter.svg" width="32" height="32" alt="Twitter">
+								</a>
+							</li>
+							<li>
+								<a href="https://linkedin.com/">
+									<img src="img/icon-linkedin.svg" width="32" height="32" alt="Linkedin">
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-md-9 text-right">
+						<ul class="network">
+							<li>
+								<a href="#doc">Document Library</a>
+							</li>
+							<li>
+								<a href="#doc">Partners</a>
+							</li>
+							<li>
+								<a href="#doc">Professional</a>
+							</li>
+							<li>
+								<a href="#doc">Le Groupe Foyer</a>
+							</li>
+						</ul>
+					</div>
+
+				</div><!-- .row -->
+				
+				<div class="divider"></div>
+
+				<div class="row">
+					<div class="col-md-4">
+						<img class="icon-app" src="https://static.foyer.lu/images/0e/icon-foyer-logo.0ea4c1d66ee468a2b1f83d2a06e96a5fdbf48777.svg" width="80" height="80" alt="">
+
+						<p class="text-medium text-bold">Download Our New Application</p>
+
+						<p>Simple et intuitive, elle facilitera vos démarches pour vos remboursements sante. Vous suivrez vos sinistres en temps réel et serez rassuré par le rappel d’urgence 24h/24 - 7j/7.</p>
+
+						<p>
+							<a href="https://google.com/"><img src="img/banner-google-store.svg" width="150" height="45" alt="Google Play Store"></a>
+							<a href="https://apple.com/"><img src="img/banner-apple-store.svg" width="150" height="45" alt="AppStore"></a>
+						</p>
+					</div>
+
+					<div class="col-md-4 text-center">
+						<img src="img/logo-foyer.svg" width="92" height="80" alt="">
+
+						<p class="text-medium text-bold">Foyer Assurances</p>
+
+						<p>
+							12 rue Léon Laval<br>
+							L-3372 Leudelange
+						</p>
+
+						<p>Phone: +352 437 437</p>
+
+						<p>
+							<a href="https://foyer.lu/contact/" class="button ghost light">
+								<span class="button-text">Contact Us</span>
+								<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+								</svg>
+							</a>
+						</p>
+					</div>
+
+					<div class="col-md-4 text-right">
+						<img class="work-img" src="img/work-with-us.png" width="152" height="56" alt="">
+
+						<p class="text-medium text-bold">Work with us!</p>
+
+						<p>If you are interested in joining a dynamic group<br> in full expansion, then consult our job offers or<br> do not hesitate to submit your spontaneous<br> application.</p>
+
+						<p>
+							<a href="https://foyer.lu/contact/" class="button ghost light">
+								<span class="button-text">Work With Us</span>
+								<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+								</svg>
+							</a>
+						</p>
+					</div>
+
+				</div><!-- .row -->
+			</div>
+		</footer>
+
+		<div class="doc-search-results" aria-live="assertive"></div>
 		<div class="doc-search-dropshadow"></div>
+
 	</body>
 </html>
-
