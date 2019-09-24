@@ -1,0 +1,56 @@
+{% set docTitle = 'What is Foyer?' %}
+{% include  'partials/html-header.html' %}
+
+<div class="documentation">
+
+	{% set navAbout = 'is-active' %}
+	{% set navWho = 'is-active' %}
+	{% include 'partials/navigation.html' %}
+
+	<div class="doc-main">
+		<main class="fds">
+			<h1 class="h1-like">Foyer - The Company</h1>
+
+			<div class="intro-block">
+				<p>Foyer is the first Insurance company in Luxembourg. It's an almost one century company living in its time.</p>
+			</div>
+
+			<p>
+				When you work on a Design System for a company, you have to know its history, the context, the work environment and its maturity in terms of Design Culture, but also in term of Development culture and project processes.
+			</p>
+
+			<div class="toc">
+				<p id="toc-title" class="h3-like">Table of Content</p>
+				<ul aria-labelledby="toc-title">
+					<li>
+						<a href="#agility">When Agility arrived</a>
+					</li>
+				</ul>
+			</div>
+
+			<h2 class="h2-like" id="agility">When Agility arrived</h2>
+
+			<p>…</p>
+	
+			<h2 class="h2-like text-center">Go further with:</h2>
+			<div class="discover row">
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="why-a-design-system.html" class="disco-2">
+						<p class="h3-like">Why a Design System?</p>
+						<p>Want to know our approach. Follow us.</p>
+					</a>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="open-innovation.html" class="disco-2">
+						<p class="h3-like">Open Innovation</p>
+						<p>The Foyer Strategy for a Digital Company.</p>
+					</a>
+				</div>
+			</div>
+
+
+		</main>
+
+		{% include  'partials/html-footer.html' %}
+	</div>
+</div>
