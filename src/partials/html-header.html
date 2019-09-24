@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <title>Foyer Design System</title>
+    <title>{% if docTitle %} {{ docTitle }} — {% endif %}Foyer Design System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -26,14 +26,20 @@
 
 </head>
 
-<body class="documentation">
+<body>
         
         <a href="#main" class="jump-link sr-only sr-focusable">Go to content</a>
         <a href="#menu" class="jump-link sr-only sr-focusable">Go to menu</a>
 
+
 		{% set isHome = '' %}
         {% set navHome = '' %}
         {% set navGetStarted = '' %}
+
+        {% set navAbout = '' %}
+        {% set navWhyDS = '' %}
+        {% set navWho = '' %}
+
         {% set navBranding = '' %}
         {% set navUICollection = '' %}
         {% set navStrategy = '' %}

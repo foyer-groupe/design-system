@@ -1,46 +1,35 @@
+{% set docTitle = 'Get Started' %}
 {% include  'partials/html-header.html' %}
 
-<main class="doc-main homepage">
+<div class="documentation">
 
 	{% set navGetStarted = 'is-active' %}
 	{% include 'partials/navigation.html' %}
 
-	<div class="fds-hero-banner">
-		<div class="container">
-			<header role="banner">
-				<div class="fds-logo">
-					<img src="https://static.foyer.lu/images/d9/logo-fds-molecule.d97e418aa10ea3aae0181ac4b44c9efbdb16a72d.svg" width="146" height="50" alt="Foyer Design System">
-				</div>
-				<nav role="navigation">
-					<ul>
-						<li><a href="#copy">Copy</a></li>
-						<li><a href="#identity">Identity</a></li>
-						<li><a href="#design">Design</a></li>
-						<li><a href="#development">Development</a></li>
-						<li>
-							<a href="get-started.html" class="button">
-								<span class="button-text"></span>
-								<i class="icon-arrow-right" role="presentation"></i>
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
+	<div class="doc-main">
+		<main class="fds">
+			<h1 class="h1-like">Get Started</h1>
 
-			<div class="here-cta">
-				<h1>Foyer Design System</h1>
-				<p>Helps you make experiences people will love.</p>
-				<p>
-					<a href="#" class="button ghost light">
-						<span class="button-text">Learn more</span>
-						<i class="icon-arrow-right" role="presentation"></i>
-					</a>
-				</p>
+			<div class="intro-block">
+				<p>Foyer Design System is targetting different domain of expertise to help people on their daily tasks.</p>
 			</div>
-			
-		</div>
+
+			<p>When you work within a company, you end up at some point using, pointing or writing with the tools of the company, on its behalf. Using the right logo, the right colors, the right font face and the right vocabulary and tone in your communication is a part of your work. You carry a part of the identity of the brand.</p>
+
+			<h2>What's your profile?</h2>
+
+			<p>You don't really have the same needs regarding your position, your profile and the work you do within the company.</p>
+
+			<ul>
+				<li><strong>Designer</strong>: To be defined</li>
+				<li><strong>Developer</strong>: To be defined</li>
+				<li><strong>Marketing</strong>: To be defined</li>
+				<li><strong>Product Owner</strong>: To be defined</li>
+				<li><strong>Business Analyst</strong>: To be defined</li>
+			</ul>
+
+		</main>
+
+		{% include  'partials/html-footer.html' %}
 	</div>
-
-</main>
-
-{% include  'partials/html-footer.html' %}
+</div>

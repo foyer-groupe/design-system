@@ -1,4 +1,4 @@
-		
+		{% if isHome %}
 		<footer id="footer" class="main-footer">
 			<div class="container">
 				<div class="row middle-md">
@@ -101,6 +101,19 @@
 				</div><!-- .row -->
 			</div>
 		</footer>
+		{% else %}
+		<footer class="mini-footer text-center">
+			<p>
+				<img src="https://static.foyer.lu/images/e8/logo-foyer-vertical-blue.e8f1828132134ac5b9537db80e3103452de0b5e9.svg" width="80" height="64" alt="Foyer Assurances">
+			</p>
+
+			<p>
+				<a href="contact.html">Contact Us</a>
+				—
+				<a href="https://groupe.foyer.lu/">Groupe Foyer</a>
+			</p>
+		</footer>
+		{% endif %}
 
 		<div class="doc-search-results" aria-live="assertive"></div>
 		<div class="doc-search-dropshadow"></div>
