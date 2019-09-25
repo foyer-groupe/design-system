@@ -26,7 +26,7 @@
 
 			<ul id="doc-about" aria-hidden="{% if navAbout %}false{% else %}true{% endif %}">
 				<li {% if navWhoIs %}class="is-active"{% endif %}>
-					<a href="what-is-foyer.html" class="doing">Foyer - The Company</a>
+					<a href="what-is-foyer.html">Foyer - The Company</a>
 				</li>
 				<li {% if navWhyDS %}class="is-active"{% endif %}>
 					<a href="why-a-design-system.html">Why a Design System?</a>
@@ -34,8 +34,8 @@
 				<li {% if navWho %}class="is-active"{% endif %}>
 					<a href="who-are-our-users.html" class="doing">Who are our users?</a>
 				</li>
-				<li>
-					<a href="contact.html" class="todo">Contact Us</a>
+				<li {% if navContact %}class="is-active"{% endif %}>
+					<a href="contact.html">Contact Us</a>
 				</li>
 			</ul>
 		</li>
