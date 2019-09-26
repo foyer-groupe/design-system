@@ -3,7 +3,7 @@
 <html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <title> What is Foyer? — Foyer Design System</title>
+    <title> API Development — Foyer Design System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -76,14 +76,14 @@
 			</a>
 		</li>
 
-		<li class="is-active is-toggle-only">
-			<button type="button" aria-controls="doc-about" aria-expanded="true">
+		<li class=" is-toggle-only">
+			<button type="button" aria-controls="doc-about" aria-expanded="false">
 				<img class="doc-nav-icon" src="img/icon-group.svg" width="24" height="22" alt="">
 				<span class="nav-text">About Us</span>
 			</button>
 
-			<ul id="doc-about" aria-hidden="false">
-				<li class="is-active">
+			<ul id="doc-about" aria-hidden="true">
+				<li >
 					<a href="what-is-foyer.html">Foyer - The Company</a>
 				</li>
 				<li >
@@ -160,20 +160,20 @@
 			</ul>
 		</li>
 
-		<li class=" is-toggle-only">
-			<button type="button" aria-controls="doc-strategy" aria-expanded="false">
+		<li class="is-active is-toggle-only">
+			<button type="button" aria-controls="doc-strategy" aria-expanded="true">
 				<img class="doc-nav-icon" src="img/icon-strategy.svg" width="24" height="20" alt="">
 				<span class="nav-text">Strategy &amp; Processes</span>
 			</button>
 
-			<ul id="doc-strategy" aria-hidden="true">
+			<ul id="doc-strategy" aria-hidden="false">
 				<li>
 					<a href="open-innovation.html" class="todo">Open Innovation</a>
 				</li>
 				<li>
 					<a href="design-process.html" class="todo">Design Process</a>
 				</li>
-				<li  >
+				<li  class="is-active">
 					<a href="api.html" class="doing"><abbr title="Applications Programming Interface">API</abbr></a>
 				</li>
 				<li>
@@ -190,82 +190,38 @@
 
 	<div class="doc-main">
 		<main class="fds">
-			<h1 class="h1-like">Foyer - The Company</h1>
+			<h1 class="h1-like">API Development</h1>
 
 			<div class="intro-block">
-				<p>Foyer is the first Insurance company in Luxembourg. It's an almost one century company living in its time.</p>
+				<p>we realized that a lot of development were redundant, and we decided to go "service oriented", to work one time on a specific need, and stop reinventing the wheel.</p>
 			</div>
 
-			<p>
-				When you work on a Design System for a company, you have to know its history, the context, the work environment and its maturity in terms of Design Culture, but also in term of Development culture and project processes.
-			</p>
+			<blockquote>
+				<p>Developers realize that much of the functionality they need to build into an app is redundant to what many other companies are toiling over. They’ve learned not to expend precious resources on reinventing the wheel but instead to rely on APIs from the larger platforms, such as Salesforce, Amazon and, more recently, specialized developers. We’re still in the early innings of this shift to third-party APIs, but a number of promising examples illustrate how developers can turn to companies such as Stripe and Plaid for payment connectivity, Twilio for telephony, Factual for location-based data and Algolia for site search.</p>
+				<p><cite>Techcunch</cite> - <em>"The Rise of APIs"</em> (<a href="https://techcrunch.com/2016/05/21/the-rise-of-apis/">source</a>)</p>
+			</blockquote>
 
 			<div class="toc">
 				<p id="toc-title" class="h3-like">Table of Content</p>
 				<ul aria-labelledby="toc-title">
 					<li>
-						<a href="#foyer">Some words on Foyer Group</a>
-					</li>
-					<li>
-						<a href="#agility">When Agility arrived</a>
-					</li>
-					<li>
-						<a href="#agility">When UX Design arrived</a>
+						<a href="#part1">Part 1</a>
 					</li>
 				</ul>
 			</div>
 
-			<h2 class="h2-like" id="foyer">Some words on Foyer Group</h2>
 
-			<p>
-				Since its foundation in 1922, Foyer Group has been a key player in the economic and financial landscape of Luxembourg. Leader of the local insurance market since its inception, it is now present in several European countries through its three businesses: insurance, protection, and wealth management.
-			</p>
 
-			<p>
-				The keys to this strength and longevity lie in the stability of family ownership and in Foyer Group’s strong local roots.
-			</p>
+			<h2 class="h2-like" id="part1">Part 1</h2>
 
-			<p>
-				Past, present and future are combined in the culture and values of Foyer Group. Its mission, its development and its projects are definitely geared towards the future. 
-			</p>
-
-			<p>
-				Foyer Group is implented not only on insurance sector and work on diversify its activity to offer a panel of services for its clients. Foyer is present in <a href="https://www.foyer.lu/en">Luxembourg</a> and <a href="http://www.assurancesfoyer.be/">Belgium</a>, as a wealth insurer with <a href="https://www.wealins.com/en">Wealins</a>, as a life insurer with <a href="https://www.gblife.lu/">GB Life</a>, as asset manager and estate planner with <a href="https://www.capitalatwork.com/">CapitalatWork</a> and as International Health Insurance for Expats with <a href="https://www.foyerglobalhealth.com/individuals/">Global Health</a>.
-			</p>
-
-			<h2 class="h2-like" id="agility">When Agility arrived</h2>
-
-			<p>
-				Agility helps making teams spend more time on value and less on development. Your team will work to solve real problem, to deliver quickly, and to answer real needs for the end user.<br>
-				It works real well on every size of company, and helped Foyer evolve to a new era made of values and User-Centricity.
-			</p>
-
-			<p>
-				At Foyer we work mostly with the Scrum Framework which brings a new layer of communication between the teams and create healthy loops of feedback.<br>
-				We work on it since 2016, even if some of the teams were already working that way without putting the "Agile" name on it.
-			</p>
-
-			<p>It's now a part of the Company: Scrum Framework is deployed as soon as possible.</p>
-
-			<h2 class="h2-like" id="ux">When UX Design arrived</h2>
-
-			<p>
-				UX Design arrived at the same time thanks to the initiative and support of the <abbr title="Chief Information Officer">CIO</abbr> and the Executive Committee.<br>
-				User-Centricity can't be more effectively represented than by a team of designers. It fits really well with the principles of agility: build products being guided by the value in term of business and users needs.
-			</p>
-
-			<p>
-				While working on more and more of projects since the reputation of the UX Team grown quickly, we needed to mutualize things like: research results, UI components and usual guidelines to help on the onboarding of collaborators.
-			</p>
-
-			<p>It's how Foyer, an almost century old company, started a Design System in 2018.</p>
+			<p>To be written…</p>
 	
 			<h2 class="h2-like text-center">Go further with:</h2>
 			<div class="discover row">
 				<div class="col-md-6 col-sm-12 col-xs-12">
-					<a href="why-a-design-system.html" class="disco-1">
-						<p class="h3-like">Why a Design System?</p>
-						<p>Want to know our approach. Follow us.</p>
+					<a href="design-principles.html" class="disco-1">
+						<p class="h3-like">Design Principles</p>
+						<p>What defines the Foyer Brand &amp; identity.</p>
 					</a>
 				</div>
 				<div class="col-md-6 col-sm-12 col-xs-12">
@@ -296,9 +252,7 @@
 		<div class="doc-search-results" aria-live="assertive"></div>
 		<div class="doc-search-dropshadow"></div>
 
-
-	</div><!-- doc-main -->
-</div><!-- documentation -->
-
+	</div>
+</div>
 	</body>
 </html>

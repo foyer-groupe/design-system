@@ -1,0 +1,61 @@
+{% set docTitle = 'API Development' %}
+{% include  'partials/html-header.html' %}
+
+<div class="documentation">
+
+	{% set navStrategy = 'is-active' %}
+	{% set navAPI = 'is-active' %}
+	{% include 'partials/navigation.html' %}
+
+	<div class="doc-main">
+		<main class="fds">
+			<h1 class="h1-like">API Development</h1>
+
+			<div class="intro-block">
+				<p>we realized that a lot of development were redundant, and we decided to go "service oriented", to work one time on a specific need, and stop reinventing the wheel.</p>
+			</div>
+
+			<blockquote>
+				<p>Developers realize that much of the functionality they need to build into an app is redundant to what many other companies are toiling over. They’ve learned not to expend precious resources on reinventing the wheel but instead to rely on APIs from the larger platforms, such as Salesforce, Amazon and, more recently, specialized developers. We’re still in the early innings of this shift to third-party APIs, but a number of promising examples illustrate how developers can turn to companies such as Stripe and Plaid for payment connectivity, Twilio for telephony, Factual for location-based data and Algolia for site search.</p>
+				<p><cite>Techcunch</cite> - <em>"The Rise of APIs"</em> (<a href="https://techcrunch.com/2016/05/21/the-rise-of-apis/">source</a>)</p>
+			</blockquote>
+
+			<div class="toc">
+				<p id="toc-title" class="h3-like">Table of Content</p>
+				<ul aria-labelledby="toc-title">
+					<li>
+						<a href="#part1">Part 1</a>
+					</li>
+				</ul>
+			</div>
+
+
+
+			<h2 class="h2-like" id="part1">Part 1</h2>
+
+			<p>To be written…</p>
+	
+			<h2 class="h2-like text-center">Go further with:</h2>
+			<div class="discover row">
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="design-principles.html" class="disco-1">
+						<p class="h3-like">Design Principles</p>
+						<p>What defines the Foyer Brand &amp; identity.</p>
+					</a>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="open-innovation.html" class="disco-2">
+						<p class="h3-like">Open Innovation</p>
+						<p>The Foyer Strategy for a Digital Company.</p>
+					</a>
+				</div>
+			</div>
+
+
+		</main>
+
+		{% include  'partials/html-footer.html' %}
+	</div>
+</div>
+	</body>
+</html>

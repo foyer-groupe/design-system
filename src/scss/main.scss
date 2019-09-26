@@ -83,6 +83,12 @@ a {
 	&.doing.doing.doing {
 		color: orange;
 	}
+
+	&:hover,
+	&:focus {
+		color: $color-blue;
+		text-decoration: none;
+	}
 }
 
 dl {
