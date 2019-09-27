@@ -3,7 +3,7 @@
 <html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <title> Who are our users — Foyer Design System</title>
+    <title> API Development — Foyer Design System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -81,20 +81,20 @@
 			</a>
 		</li>
 
-		<li class="is-active is-toggle-only">
-			<button type="button" aria-controls="doc-about" aria-expanded="true">
+		<li class=" is-toggle-only">
+			<button type="button" aria-controls="doc-about" aria-expanded="false">
 				<img class="doc-nav-icon" src="img/icon-group.svg" width="24" height="22" alt="">
 				<span class="nav-text">About Us</span>
 			</button>
 
-			<ul id="doc-about" aria-hidden="false">
+			<ul id="doc-about" aria-hidden="true">
 				<li >
 					<a href="what-is-foyer.html">Foyer - The Company</a>
 				</li>
 				<li >
 					<a href="why-a-design-system.html">Why a Design System?</a>
 				</li>
-				<li class="is-active">
+				<li >
 					<a href="who-are-our-users.html">Who are our users?</a>
 				</li>
 				<li >
@@ -171,20 +171,20 @@
 			</ul>
 		</li>
 
-		<li class=" is-toggle-only">
-			<button type="button" aria-controls="doc-strategy" aria-expanded="false">
+		<li class="is-active is-toggle-only">
+			<button type="button" aria-controls="doc-strategy" aria-expanded="true">
 				<img class="doc-nav-icon" src="img/icon-strategy.svg" width="24" height="20" alt="">
 				<span class="nav-text">Strategy &amp; Processes</span>
 			</button>
 
-			<ul id="doc-strategy" aria-hidden="true">
+			<ul id="doc-strategy" aria-hidden="false">
 				<li>
 					<a href="open-innovation.html" class="todo">Open Innovation</a>
 				</li>
 				<li>
 					<a href="design-process.html" class="todo">Design Process</a>
 				</li>
-				<li  >
+				<li  class="is-active">
 					<a href="api.html"><abbr title="Applications Programming Interface">API</abbr></a>
 				</li>
 				<li>
@@ -201,99 +201,78 @@
 
 	<div class="doc-main">
 		<main class="fds">
-			<h1 class="h1-like">Who are our users?</h1>
+			<h1 class="h1-like">API Development</h1>
 
 			<div class="intro-block">
-				<p>We mostly address to our Designers and Developers in a first step. But our target is larger than just "our", or just those profiles.</p>
+				<p>We realized that a lot of development were redundant, and we decided to go "service oriented", to work one time on a specific need, and stop reinventing the wheel.</p>
 			</div>
 
-			<p>
-				When you start building a product you have to define your users, all of them. When you develop the product you focus on a part of your users. The Foyer Design System respect this Agile approach that's why we mostly work for our Designers and Developers.
-			</p>
+			<blockquote>
+				<p>Developers realize that much of the functionality they need to build into an app is redundant to what many other companies are toiling over. They’ve learned not to expend precious resources on reinventing the wheel but instead to rely on APIs from the larger platforms, such as Salesforce, Amazon and, more recently, specialized developers. We’re still in the early innings of this shift to third-party APIs, but a number of promising examples illustrate how developers can turn to companies such as Stripe and Plaid for payment connectivity, Twilio for telephony, Factual for location-based data and Algolia for site search.</p>
+				<p><cite>Techcunch</cite> - <em>"The Rise of APIs"</em> (<a href="https://techcrunch.com/2016/05/21/the-rise-of-apis/">source</a>)</p>
+			</blockquote>
 
 			<div class="toc">
 				<p id="toc-title" class="h3-like">Table of Content</p>
 				<ul aria-labelledby="toc-title">
 					<li>
-						<a href="#dev-teams">Development Teams</a>
+						<a href="#api">API Work In Progress</a>
 					</li>
 					<li>
-						<a href="#collaborators">Our Collaborators</a>
+						<a href="#features">Task focused: The Features</a>
 					</li>
 					<li>
-						<a href="#partners-collaborators">Our Partners &amp; Future Collaborators</a>
+						<a href="#design-system">What about the Design System?</a>
 					</li>
 				</ul>
 			</div>
 
 
 
-			<h2 class="h2-like" id="dev-teams">Development Teams</h2>
+			<h2 class="h2-like" id="api">API Work In Progress</h2>
 
-			<h3 class="h3-like" id="designers">UX and UI Designers</h3>
+			<p>Reinventing the wheel every time you have to work on something is not efficient. Not at all. At Foyer we listened to the developers and product owners. We worked together to rework the existing ecosystem: a lot of technical debt, and it's totally normal regarding the almost one century of existance of Foyer.</p>
 
-			<p>
-				The Designers will focus on the <a href="design-process.html#user-research" class="todo">user research</a> and will need to communicate with the end user. Those users for Foyer can be an agent, a client or someone in the administration. The language used (Voice &amp; Tone) and the results expected are variable regarding the user profile.
-			</p>
-			<p>
-				They also work on the visual and desirable aspect of the applications. They need to work on <a href="typography.html" class="todo">Typography</a>, <a href="colors.html" class="todo">Colors</a> and all the <a href="design-principles.html" class="todo">brand aspect</a> to keep a solid identity.
-			</p>
+			<p><abbr title="Applications Programming Interface">API</abbr>s are the best solution to build micro-services and move business complexity to a single location to centralize complex insurance rules. API are building by each Domain Team and orchestrated under the Scrum Framework to allow quickly delivery and short loop of improvement.</p>
 
-			<h3 class="h3-like" id="developers">Front-End Developers</h3>
+			<p>While we are working on the construction of APIs and their testing, we are also working on the construction of independent organisms using these APIs. We name those organisms "Features".</p>
+
+			<h2 class="h2-like" id="features">Task focused: The Features</h2>
 
 			<p>
-				The Developers will focus on delivering a great experience through performant applications: they usually spend time on speed load, great interactions and <a href="motions.html" class="todo">motions</a>, respect of the <a href="design-principles.html" class="todo">brand aspect</a> respecting the <a href="design-tokens.html" class="todo">Design Tokens</a>.
+				Adding a new client in our database is not something simple because there is a lot of way to become a client at Foyer. Read here: there is a lot of application/website that are doing the same job, but not the same way.
 			</p>
-
-
-
-			<h2 class="h2-like" id="collaborators">Our Collaborators</h2>
-
-			<h3 class="h3-like" id="marketing">Marketing &amp; Communication</h3>
-			
-			<p>The Marketing is in constant relation with the clients. They deliver communication assets and campains which need to be consistent through time, media and devices. <a href="logos.html" class="todo">Logos</a>, <a href="typography.html" class="todo">Typography</a>, <a href="colors.html" class="todo">Colors</a>, Voice &amp; Tone and Design Principles are their main tools, within the Design System, for a great communication.</p>
-
-			<h3 class="h3-like" id="po-ba">Product Owner &amp; Business Analyst</h3>
-
-			<p><abbr title="Product Owner">PO</abbr> and <abbr title="Business Analyst">BA</abbr> need to have a better view on how things work in a business and technical point of view to better estimate the time, resources, and budget allocated to the development of features. The Design System help the development team and the Business Analyst evaluate a part of the work required and already done by the Core Team.</p>
-			
-
-
-			<h2 class="h2-like" id="partners-collaborators">Our Partners &amp; Future Collaborators</h2>
 
 			<p>
-				One of our goal by publishing our Design System is, more than just collecting feedback, to open our System to our Partners, Startups and Future Collaborators.
+				Our Features' work in progess is here to create efficient way to exploit APIs a certain way, and once for all propose a homogeneous, adapted and unique user experience for all applications.
 			</p>
 
-			<p>Our wish is to provide enough assets and guidelines to facilitate the adoption of our graphic charter and to avoid the distortion of Foyer's identity. We are aware that even with the greatest effort, minor unintentional identity changes can be made when the guidelines are not clear, or even totally missing. With this Design System we hope to limit exchange times on visual aspect and rule details, and focus on what really matters: working with our partners on projects that improve the experience of our customers and prospects.</p>
+			<p>
+				Our Design Processes helped a lot here to build consistent flows all over the different existing and incoming application. We played with several methods like Event Storming to get the big picture of our <span class="la-la-Cthulhu-fhtagn">tentacular</span> organization through all of our domains.<br>
+			</p>
 
-			<h3 class="h3-like" id="partners">Our Partners</h3>
+			<p>We can't expose those Features today, because of the lack of maturity and feedback. But it's just a matter of time.😉</p>
 
-			<p>We work closely with companies that are our partners since several years now. Each time a new contact comes to existing or new projects, the first steps are the same: exchanges by email of existing graphic charter, logos, and other several assets, doing repetitively the same type of email month after month.</p>
 
-			<p>The Design System is here to bring simplicity to those first exchange, and help our partners being a bit more independant on the way they will handle the "Foyer" part of their work.</p>
-			
-			
-			<h3 class="h3-like" id="startups">Startups</h3>
 
-			<p>Another aspect is our <a href="api.html" class="doing"><abbr title="Applications Programming Interface">API</abbr></a>-fication.<br>In 2018 we started a big work of being full API. That means we realized that a lot of development were redundant, and we decided to go "service oriented", to work one time on a specific need, and stop reinventing the wheel. Those internal APIs can be brought to life also for external collaboration, in particular with Startups or services that would need to insure a good or a property for example.</p>
+			<h2 class="h2-like" id="design-system">What about the Design System?</h2>
 
-			<p>For that we need you, we need to listen your needs. Do not hesitate to <a href="contact.html">contact us</a>.</p>
+			<p>
+				The Design System is used by the actors of the APIs and Features initiatives like an example of what can be done to mutualize work, and also "physically" as a way to share the work done on features. It became the place where collaborators can find the reference of all the centralized work done at Foyer.
+			</p>
 
-			
-			<h3 class="h3-like" id="students">Future Collaborators &amp; Students</h3>
+			<p>
+				It's a good cursor that shows you the Design System has its early adopters and ambassador for furthers new usages. Moreover, it's a demonstration of the need to centralized information at one and unique location to falicitate its use.
+			</p>
 
-			<p>Last but not least users of our Design System, more an expectation than a reality for now: future collaborators and students. We expect that this tool would help students in their work when working on more concrete projects. Oftentime courses offer the opportunity to explore what's happening in the real life of companies, and Foyer would love to help student in their exploration. We are here to help, <a href="contact.html">contact us</a> 😊</p>
-
-			<p>For Foyer, when it comes the time to recruit people for teaming-up with efficiency, we hope that our teammates and collaborators fit well with our mindset. The Design System is a good starting point for communicating on what we do and how we do it. We hope this System will help with onboarding people on our projects, and will help candidate in their decision, and even in their wish to join us.</p>
 
 	
 			<h2 class="h2-like text-center">Go further with:</h2>
 			<div class="discover row">
 				<div class="col-md-6 col-sm-12 col-xs-12">
-					<a href="design-principles.html" class="disco-1">
-						<p class="h3-like">Design Principles</p>
-						<p>What defines the Foyer Brand &amp; identity.</p>
+					<a href="features.html" class="disco-1">
+						<p class="h3-like">Features</p>
+						<p>What others call organism, we call them features.</p>
 					</a>
 				</div>
 				<div class="col-md-6 col-sm-12 col-xs-12">

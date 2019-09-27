@@ -32,7 +32,7 @@
 					<a href="why-a-design-system.html">Why a Design System?</a>
 				</li>
 				<li {% if navWho %}class="is-active"{% endif %}>
-					<a href="who-are-our-users.html" class="doing">Who are our users?</a>
+					<a href="who-are-our-users.html">Who are our users?</a>
 				</li>
 				<li {% if navContact %}class="is-active"{% endif %}>
 					<a href="contact.html">Contact Us</a>
@@ -121,8 +121,8 @@
 				<li>
 					<a href="design-process.html" class="todo">Design Process</a>
 				</li>
-				<li>
-					<a href="api.html" class="todo"><abbr title="Applications Programming Interface">API</abbr></a>
+				<li  {% if navAPI %}class="is-active"{% endif %}>
+					<a href="api.html"><abbr title="Applications Programming Interface">API</abbr></a>
 				</li>
 				<li>
 					<a href="features.html" class="todo">Features</a>
