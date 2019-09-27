@@ -67,15 +67,18 @@
 
 	document.querySelectorAll('pre code').forEach( function(el) {
 		const tabPanel = el.closest( '[role="tabpanel"]' );
-		const textArea = document.createElement('textarea');
-		textArea.innerHTML = el.innerHTML;
-		textArea.tabIndex = '-1';
-		textArea.className = 'doc-to-copy';
-		textArea.style.position = 'absolute';
-		textArea.style.opacity = '0.01';
 
-		tabPanel.insertBefore( textArea,  tabPanel.firstChild);
-	} );
+		if(tabPanel) {
+			const textArea = document.createElement('textarea');
+			textArea.innerHTML = el.innerHTML;
+			textArea.tabIndex = '-1';
+			textArea.className = 'doc-to-copy';
+			textArea.style.position = 'absolute';
+			textArea.style.opacity = '0.01';
+
+			tabPanel.insertBefore( textArea,  tabPanel.firstChild);
+		}
+	});
 
 	document.querySelectorAll('pre code.html').forEach(function(el){
 		el.innerHTML = el.innerHTML
