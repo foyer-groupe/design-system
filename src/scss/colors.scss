@@ -1,0 +1,113 @@
+// ---- COLORS ------------------------------------------------------------------------------------------------------ //
+
+$colors: (
+
+  // Monochrome colors ----------------------------------
+
+        black : #000000,
+        white : #FFFFFF,
+
+  // System colors --------------------------------------
+
+        info           : #4EABFF,
+        info-light     : #5EB2FF,
+        info-lighter   : #EDF6FF,
+        info-dark      : #479CE8,
+
+        yellow         : #F5CE22,
+        yellow-light   : #F7D84E,
+        yellow-lighter : #FEFAE8,
+        yellow-dark    : #DDB91F,
+
+        warning        : #FF9E00,
+        warning-light  : #FFAD26,
+        warning-lighter: #FFFAF2,
+        warning-dark   : #E68E00,
+
+        danger         : #FF5A5F,
+        danger-light   : #FF696D,
+        danger-lighter : #FFF0F0,
+        danger-dark    : #E85257,
+
+        success        : #00B698,
+        success-light  : #17BCA1,
+        success-lighter: #F2FBFA,
+        success-dark   : #00A68B,
+
+  // Grey scale -----------------------------------------
+
+        grey-800   : #3B4856,
+        grey-500   : #999999,
+        grey-light : #EBECEE,
+        grey-050   : #F2F2F2,
+        grey-shadow: rgba(64, 72, 79, .25),
+
+  // Brand colors ---------------------------------------
+
+        blue-foyer             : #004C92,
+        blue-foyer-light       : tint(#004C92, 15%),
+        blue-foyer-dark        : shade(#004C92,15%),
+
+        blue-ghost             : #F7FBFF,
+        blue-ghost-light       : tint(#F7FBFF,30%),
+        blue-ghost-dark        : shade(#F7FBFF,1%),
+
+        blue-smoke             : #EAF0F6,
+        blue-smoke-light       : tint(#EAF0F6,50%),
+        blue-smoke-dark        : shade(#EAF0F6,3%),
+
+);
+
+
+// ---- GRADIENTS --------------------------------------------------------------------------------------------------- //
+
+$gradients: (
+        blue-primary      : linear-gradient(to right top, #004C92, #086DCA),
+        blue-secondary    : linear-gradient(to right,     #479CE8, #3973E6),
+        blue-tertiary     : linear-gradient(to right,     #4EABFF, #0F8DFF),
+        blue-quaternary   : linear-gradient(to right,     #388CD9, #0C77D9),
+        blue-quinary      : linear-gradient(to bottom,    #004C92, #0083C4),
+        blue-complete     : linear-gradient(to right,     #4EABFF, #0F8DFF, #388CD9, #0C77D9),
+
+        orange-primary    : linear-gradient(to right    , #FF9E00, #FF8B00),
+        orange-secondary  : linear-gradient(to right    , #D98600, #D97500),
+        orange-complete   : linear-gradient(to right    , #FF9E00, #FF8B00, #D98600, #D97500),
+
+        red-primary       : linear-gradient(to right    , #F97F7F, #FF5A5F),
+        red-secondary     : linear-gradient(to right    , #E26969, #D74B50),
+        red-complete      : linear-gradient(to right    , #F97F7F, #FF5A5F, #E26969, #D74B50),
+
+        green-primary     : linear-gradient(to right    , #00DCC9, #00B698),
+        green-secondary   : linear-gradient(to right    , #00B698, #0F8E79),
+        green-complete    : linear-gradient(to right    , #00DCC9, #00B698, #00B698, #0F8E79),
+);
+
+@each $color-name, $color-value in $colors {
+  .u-is-txt-#{$color-name + ""} { // + "" is needed to prevent a warning in Angular8
+    color: $color-value !important;
+  }
+}
+
+@each $color-name, $color-value in $colors {
+  .u-is-bg {
+    &-#{$color-name + ""} {
+      background: $color-value !important;
+    }
+
+    &-gradient-blue-primary     { background: map-get($gradients, blue-primary)     !important; }
+    &-gradient-blue-secondary   { background: map-get($gradients, blue-secondary)   !important; }
+    &-gradient-blue-tertiary    { background: map-get($gradients, blue-tertiary)    !important; }
+    &-gradient-blue-quaternary  { background: map-get($gradients, blue-quaternary)  !important; }
+    &-gradient-blue-quinary     { background: map-get($gradients, blue-quinary)     !important; }
+    &-gradient-blue-complete    { background: map-get($gradients, blue-complete)    !important; }
+    &-gradient-orange-primary   { background: map-get($gradients, orange-primary)   !important; }
+    &-gradient-orange-secondary { background: map-get($gradients, orange-secondary) !important; }
+    &-gradient-orange-complete  { background: map-get($gradients, orange-complete)  !important; }
+    &-gradient-red-primary      { background: map-get($gradients, red-primary)      !important; }
+    &-gradient-red-secondary    { background: map-get($gradients, red-secondary)    !important; }
+    &-gradient-red-complete     { background: map-get($gradients, red-complete)     !important; }
+    &-gradient-green-primary    { background: map-get($gradients, green-primary)    !important; }
+    &-gradient-green-secondary  { background: map-get($gradients, green-secondary)  !important; }
+    &-gradient-green-complete   { background: map-get($gradients, green-complete)   !important; }
+  }
+}

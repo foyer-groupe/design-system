@@ -32,12 +32,29 @@ $mq-overflowing: $sidebar-width + $content-width + $padding-offset * 2; // To co
 $font-family: "DIN Pro", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-title: "Din Pro", "DIN", Helvetica, Arial, sans-serif;
 
+.font-din-pro * {
+	font-family: 'DIN Pro', serif;
+}
+
 $doc-layout-z-index: 1900;
 $doc-anchor-z-index: 2000;
 $doc-search-z-index: 2100;
 $doc-nav-z-index: 2500;
 
+$breakpoints : (
+	xxs  :    0,
+	xs  :  376px,
+	sm  :  716px,
+	md  :  984px,
+	lg  : 1200px,
+	xl  : 1600px
+);
+
+@import 'mixins';
 @import 'font-face';
+@import 'colors';
+@import 'grid';
+@import 'documentation';
 
 * {
 	box-sizing: border-box;
@@ -75,6 +92,9 @@ a {
 
 a {
 	color: $color-foyer;
+	text-decoration: none;
+	outline: 0;
+	transition: color .3s ease;
 
 	&.todo.todo.todo {
 		color: red;
@@ -82,6 +102,21 @@ a {
 
 	&.doing.doing.doing {
 		color: orange;
+	}
+
+	&:hover,
+	&:focus {
+		color: $color-foyer;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+	&[disabled],
+	&[aria-disabled="true"],
+	&.is-disabled {
+		color: map-get($colors, grey-500);
+		text-decoration: none;
+		cursor: not-allowed;
 	}
 }
 
@@ -251,6 +286,25 @@ dd {
 /* Documentation Layout */
 .documentation {
 	display: flex;
+	// Code example
+
+	pre {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		min-width: 0;
+
+		.hljs {
+			height: 100%;
+			padding: 16px;
+			font-size: 14px;
+			background: #F5F2F0;
+			tab-size: 2;
+			font-family: "Fira Code", "Lucida Console", monospace;
+			font-weight: normal;
+			line-height: 1.5;
+		}
+	}
 }
 
 .button {
@@ -454,233 +508,6 @@ button:hover,
 button:focus {
 	.icon-arrow-right {
 		transform: translateX(4px);
-	}
-}
-
-.doc-nav {
-	$second-level-ident: 72px;
-	$third-level-ident: 88px;
-
-	width: $sidebar-width;
-	min-height: 100vh;
-	flex-shrink: 0;
-	background: $linear-gradient-main-tob top left no-repeat fixed;
-	transition: all .325s;
-	z-index: $doc-nav-z-index;
-
-	~ * {
-		transition: transform .325s;
-	}
-
-
-	&.is-home {
-		position: fixed;
-		top: 0;
-		right: 0;
-		height: 100vh;
-		overflow: auto;
-		transform: translateX(100%);
-	}
-
-	@media (max-width: $mq-medium) {
-		position: fixed;
-		top: 0;
-		right: 0;
-		height: 100vh;
-		overflow: auto;
-		transform: translateX(100%);
-	}
-	
-	// Move the entire page and the menu on the homepage
-	&.is-open {
-		transform: translateX(0);
-
-		~ * {
-			transform: translateX(-50px);
-		}
-	}
-
-	&-logo {
-		padding: 40px 24px;
-		text-align: center;
-	}
-
-	ul, li {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		border: 0;
-	}
-
-	> ul > li {
-		border-bottom: 1px solid rgba(255, 255, 255, .05);
-	}
-
-
-	> ul {
-		position: sticky;
-		top: 8px;
-		// 100% viewport height minus the height of the logo part to allow scrollable sticky menu.
-		height: calc(100vh - 134px);
-		overflow: auto;
-	}
-
-	ul {
-
-		li {
-			position: relative;
-
-			&.is-toggle-only .is-toggle-only {
-				font-size: 16px;
-
-				& > button {
-					padding-left: $second-level-ident;
-				}
-			}
-
-			&.is-active {
-
-				&.is-toggle-only {
-					background: rgba(50, 50, 50, .2);
-				}
-
-				> a, > button {
-					font-weight: bold;
-
-					&:after {
-						transform: rotate(180deg);
-					}
-				}
-
-				& > ul {
-					max-height: 200vh;
-					padding: 12px 0;
-				}
-			}
-
-			&.is-disabled {
-				pointer-events: none;
-				opacity: .5;
-			}
-
-			&:before {
-				display: none;
-			}
-		}
-
-		a, button {
-			display: flex;
-			align-items: center;
-			flex-grow: 1;
-			padding: 18px 16px 18px 32px;
-			border-bottom: 0;
-			color: #FFFFFF;
-			font-family: $font-family-title;
-			font-size: 18px;
-			text-decoration: none;
-			cursor: pointer;
-			transition: all .3s ease;
-
-			&:hover {
-				background-color: rgba(255, 255, 255, .1);
-			}
-
-			&:active {
-				background-color: rgba(255, 255, 255, .2);
-			}
-
-			.doc-nav-icon {
-				display: inline-block;
-				width: 24px;
-				margin-right: 16px;
-				vertical-align: middle;
-			}
-		}
-
-		button {
-			width: 100%;
-			border: 0;
-			background: none;
-			letter-spacing: 0.01em;
-			outline: none;
-
-			&::after {
-				content: '\e313';
-				position: absolute;
-				right: 24px;
-				font-family: 'MaterialIcons';
-				transition: all .275s;
-			}
-		}
-		
-		// Submenus
-		ul {
-			max-height: 0;
-			overflow: hidden;
-			transition: all .3s ease;
-			background: #FFF;
-
-			a {
-				color: $color-foyer;
-				font-size: 16px;
-				font-weight: normal;
-				padding: 15px 24px 12px $second-level-ident;
-
-				&:hover,
-				&:focus {
-					background: $color-info-light;
-				}
-			}
-
-			li.is-active {
-				a {
-					background: $color-info-light;
-				}
-			}
-
-			li {
-				/* Third level if needed */
-				li a {
-					padding-left: $third-level-ident;
-				}
-			}
-		}
-	}
-
-	.nav-text {
-		padding-top: 3px;
-	}
-
-	.locked {
-		position: relative;
-
-		a::before {
-			content: "";
-			position: absolute;
-			left: 40px;
-			top: 10px;
-			font-size: 20px;
-			font-family: "MaterialIcons";
-			opacity: .5;
-		}
-	}
-
-}
-
-.doc-search-dropshadow {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0, 0, 0, .5);
-	opacity: 0;
-	z-index: -1;
-	transition: all .325s;
-
-	.doc-nav.is-open ~ & {
-		z-index: $doc-nav-z-index - 1;
-		opacity: 1;
 	}
 }
 
@@ -1039,83 +866,6 @@ button:focus {
 		}
 	}
 
-}
-
-.doc-main {
-	width: calc( 100% - #{$sidebar-width} );
-
-	@media (max-width: $mq-medium) {
-		width: 100%;
-	}
-	
-	/* Main documentation pages */
-	.fds {
-		display: block;
-		width: $content-width;
-		max-width: 100%;
-		padding: 24px 24px 0 24px;
-		margin: 0 auto;
-		font-size: 1.1em;
-		line-height: 1.7;
-
-		img {
-			max-width: 100%;
-			height: auto;
-		}
-		
-		h2,
-		.h2-like {
-			padding-top: 1.5em;
-			margin-top: 2em;
-			border-top: 1px solid $color-blue-smoke-dark;
-			font-size: 1.6em;
-			font-weight: 600;
-			color: $color-foyer;
-
-			@media (min-width: $mq-small) {
-				font-size: 1.8em;
-			}
-		}
-
-		h3,
-		.h3-like {
-			margin-top: 2em;
-			font-size: 1.4em;
-			color: $color-grey-dark;
-			background-image: none;
-			-webkit-text-fill-color: $color-grey-dark;
-		}
-
-		p {
-			margin: 1.5em 0;
-		}
-
-		.margin-big {
-			margin: 3em auto;
-		}
-
-		.intro-block {
-			margin: 0 auto;
-			padding: 24px;
-			color: $color-foyer;
-			font-size: 1.25em;
-			border-radius: 8px;
-			background: $color-info-light;
-
-			p:first-child {
-				margin-top: 0;
-			}
-
-			p:last-child {
-				margin-bottom: 0;
-			}
-
-			@media (min-width: $mq-overflowing){
-				margin: 0 $padding-offset * -1;
-				padding: $padding-offset;
-			}
-		}
-	}
 }
 
 .main-footer {

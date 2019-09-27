@@ -40,14 +40,16 @@ gulp.task('default', function (done) {
 				.pipe(gulp.dest('public/js/')),
 
 			// Compile vendor JS files
-			/*gulp.src([
-				'node_modules/jquery/dist/jquery.min.js'
+			gulp.src([
+				'node_modules/jquery/dist/jquery.min.js',
+				'node_modules/highlightjs/highlight.pack.js'
 			]).pipe(concat('vendor.js'))
-				.pipe(gulp.dest('public/js/')),*/
+				.pipe(gulp.dest('public/js/')),
 
 			// Compile vendor CSS files
 			gulp.src([
-				'node_modules/flexboxgrid/dist/flexboxgrid.css'
+				'node_modules/flexboxgrid/dist/flexboxgrid.css',
+				'node_modules/highlightjs/styles/github-gist.css'
 			]).pipe(concat('vendor.css'))
 				.pipe(gulp.dest('public/css/')),
 

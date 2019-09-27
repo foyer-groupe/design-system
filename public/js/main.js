@@ -60,6 +60,28 @@
 		});
 	}
 
+	/**
+	 * Show code preview with HighlightJS
+	 */
+	hljs.initHighlightingOnLoad();
+
+	$( 'pre code' ).each( function() {
+		var code = $(this).prop('innerHTML');
+		$(this).closest( '[role="tabpanel"]' ).prepend( '<textarea tabindex="-1" class="doc-to-copy" style="position: absolute; opacity: 0.01">' + code + '</textarea>' );
+	} );
+	$('pre code.html').each(function(key, element){
+		element = $(element);
+		element.html(
+			element.html()
+				.replace(/&/g, "&amp;")
+				.replace(/</g, "&lt;")
+				.replace(/>/g, "&gt;")
+				.replace(/"/g, "&quot;")
+				.replace(/'/g, "&#039;")
+		);
+		$(this).css({visibility: 'visible'});
+	});
+
 })();
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.io/#x15.4.4.18
