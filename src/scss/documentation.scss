@@ -84,7 +84,7 @@
 
     &-controls {
       z-index: 5;
-      position: sticky;
+      //position: sticky;
       top: 0;
       display: flex;
       justify-content: flex-start;
@@ -93,7 +93,7 @@
       padding: 8px 0 0 0;
       list-style: none;
       border-bottom: 1px solid $color-purple;
-      background: #FFF;
+      background: #f7fbff;
 
       li {
         position: static;

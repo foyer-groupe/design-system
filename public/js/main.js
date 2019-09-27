@@ -65,21 +65,27 @@
 	 */
 	hljs.initHighlightingOnLoad();
 
-	$( 'pre code' ).each( function() {
-		var code = $(this).prop('innerHTML');
-		$(this).closest( '[role="tabpanel"]' ).prepend( '<textarea tabindex="-1" class="doc-to-copy" style="position: absolute; opacity: 0.01">' + code + '</textarea>' );
+	document.querySelectorAll('pre code').forEach( function(el) {
+		const tabPanel = el.closest( '[role="tabpanel"]' );
+		const textArea = document.createElement('textarea');
+		textArea.innerHTML = el.innerHTML;
+		textArea.tabIndex = '-1';
+		textArea.className = 'doc-to-copy';
+		textArea.style.position = 'absolute';
+		textArea.style.opacity = '0.01';
+
+		tabPanel.insertBefore( textArea,  tabPanel.firstChild);
 	} );
-	$('pre code.html').each(function(key, element){
-		element = $(element);
-		element.html(
-			element.html()
-				.replace(/&/g, "&amp;")
-				.replace(/</g, "&lt;")
-				.replace(/>/g, "&gt;")
-				.replace(/"/g, "&quot;")
-				.replace(/'/g, "&#039;")
-		);
-		$(this).css({visibility: 'visible'});
+
+	document.querySelectorAll('pre code.html').forEach(function(el){
+		el.innerHTML = el.innerHTML
+			.replace(/&/g, "&amp;")
+			.replace(/</g, "&lt;")
+			.replace(/>/g, "&gt;")
+			.replace(/"/g, "&quot;")
+			.replace(/'/g, "&#039;");
+
+		el.style.visibility = 'visible';
 	});
 
 })();

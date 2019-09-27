@@ -12,7 +12,6 @@
 		"gulp-sass": "latest",
 		"gulp-swig": "^0.9.1",
 		"flexboxgrid": "latest",
-		"jquery": "2.1.4",
 		"highlightjs": "8.7.0"
 	},
 	"scripts": {

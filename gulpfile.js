@@ -41,8 +41,7 @@ gulp.task('default', function (done) {
 
 			// Compile vendor JS files
 			gulp.src([
-				'node_modules/jquery/dist/jquery.min.js',
-				'node_modules/highlightjs/highlight.pack.js'
+				'node_modules/highlightjs/highlight.pack.min.js'
 			]).pipe(concat('vendor.js'))
 				.pipe(gulp.dest('public/js/')),
 
