@@ -76,7 +76,11 @@ gulp.task('publish-documentation', function (done) {
     ghPages.publish(path.resolve('pub'),
 		{
 			message: 'Documentation updated',
-			repo: 'https://github.com/foyer-groupe/design-system.git'
+			repo: 'https://github.com/foyer-groupe/design-system.git',
+			user: {
+				name: 'Bastien Collet',
+				email: 'bastien.collet1@gmail.com'
+			}
 		}, (err) => {
         if (err) {
             console.error(err);
