@@ -8,6 +8,8 @@ const csso = require('gulp-csso');
 const concat = require('gulp-concat');
 const swig = require('gulp-swig');
 const del = require('del');
+const ghPages = require('gh-pages');
+const path = require('path');
 
 gulp.task('default', function (done) {
 
