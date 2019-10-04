@@ -10,6 +10,6 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     steps:
-      - name: Publish Github Pages step
-        uses: ./.github/actions/publish-github-pages
+      - uses: actions/checkout@v1
+      - uses: ./.github/actions/publish-github-pages
         id: publish
