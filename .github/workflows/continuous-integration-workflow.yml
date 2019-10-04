@@ -1,4 +1,4 @@
-name: Publich Github Pages
+name: Publish Github Pages
 # This workflow is triggered on pushes to the repository.
 on:
   push:
