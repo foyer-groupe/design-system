@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Publish Github Pages step
-        uses: ./actions/publish-github-pages
+        uses: ./.github/actions/publish-github-pages
         id: publish
