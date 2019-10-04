@@ -1,3 +1,15 @@
+<header class="header mobile-navigation {{ isHome }}" role="banner">
+    <div class="fds-logo">
+        <img src="https://static.foyer.lu/images/d9/logo-fds-molecule.d97e418aa10ea3aae0181ac4b44c9efbdb16a72d.svg" width="146" height="50" alt="Foyer Design System">
+    </div>
+    <div class="navigation">
+       <button type="button" id="menu-button" class="menu-button">
+            <span class="menu-text">Menu</span>
+            <span class="menu-icon"></span>
+        </button>
+    </div>
+</header>
+
 <nav id="menu" class="doc-nav {{ isHome }}" role="navigation">
 
 	<div class="doc-nav-logo">
@@ -66,11 +78,11 @@
 				<li>
 					<a href="iconography.html" class="todo">Iconography</a>
 				</li>
-				<li>
+				<li {% if navIllustration %}class="is-active"{% endif %}>
 					<a href="illustration.html" class="doing">Illustration</a>
 				</li>
-				<li>
-					<a href="motion.html" class="todo">Motion</a>
+				<li {% if navMotion %}class="is-active"{% endif %}>
+					<a href="motion.html" class="doing">Motion</a>
 				</li>
 			</ul>
 		</li>
@@ -121,14 +133,14 @@
 				<li>
 					<a href="design-process.html" class="todo">Design Process</a>
 				</li>
-				<li  {% if navAPI %}class="is-active"{% endif %}>
+				<li {% if navAPI %}class="is-active"{% endif %}>
 					<a href="api.html"><abbr title="Applications Programming Interface">API</abbr></a>
 				</li>
 				<li>
 					<a href="features.html" class="todo">Features</a>
 				</li>
-				<li>
-					<a href="system-roadmap.html" class="todo">System Roadmap</a>
+				<li {% if navRoadmap %}class="is-active"{% endif %}>
+					<a href="roadmap.html" class="doing">Roadmap</a>
 				</li>
 			</ul>
 		</li>	

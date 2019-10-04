@@ -9,6 +9,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Foyer Design System" />
 
+    <script>document.documentElement.className = 'js';</script>
+
     <link rel="shortcut icon"    href="img/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
@@ -19,6 +21,22 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png" />
+
+    <meta name="twitter:card" content="Foyer Design System">
+    <meta name="twitter:site" content="@GroupeFoyer">
+    <meta name="twitter:creator" content="@GroupeFoyer">
+    <meta name="twitter:title" content="Foyer Design System - Foyer Assurances">
+    <meta name="twitter:description" content="Explore a Design System made by Foyer Assurances, the first Insurance Company at Luxembourg.">
+    <meta name="twitter:image" content=""> <!-- 560x300 -->
+
+    <meta property="og:title" content="Foyer Design System - Foyer Assurances" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://design.foyer.lu" />
+    <meta property="og:description" content="Explore a Design System made by Foyer Assurances, the first Insurance Company at Luxembourg." />
+    <meta property="og:image" content="" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
 		
     <link rel="stylesheet" href="css/vendor.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -33,7 +51,6 @@
         <a href="#main" class="jump-link sr-only sr-focusable">Go to content</a>
         <a href="#menu" class="jump-link sr-only sr-focusable">Go to menu</a>
 
-
 		
         
         
@@ -50,9 +67,11 @@
 
         
         
+        
 
         
 
+        
         
         
 
@@ -61,7 +80,19 @@
 
 	
 	
-	<nav id="menu" class="doc-nav " role="navigation">
+	<header class="header mobile-navigation " role="banner">
+    <div class="fds-logo">
+        <img src="https://static.foyer.lu/images/d9/logo-fds-molecule.d97e418aa10ea3aae0181ac4b44c9efbdb16a72d.svg" width="146" height="50" alt="Foyer Design System">
+    </div>
+    <div class="navigation">
+       <button type="button" id="menu-button" class="menu-button">
+            <span class="menu-text">Menu</span>
+            <span class="menu-icon"></span>
+        </button>
+    </div>
+</header>
+
+<nav id="menu" class="doc-nav " role="navigation">
 
 	<div class="doc-nav-logo">
 		
@@ -129,11 +160,11 @@
 				<li>
 					<a href="iconography.html" class="todo">Iconography</a>
 				</li>
-				<li>
+				<li >
 					<a href="illustration.html" class="doing">Illustration</a>
 				</li>
-				<li>
-					<a href="motion.html" class="todo">Motion</a>
+				<li >
+					<a href="motion.html" class="doing">Motion</a>
 				</li>
 			</ul>
 		</li>
@@ -184,14 +215,14 @@
 				<li>
 					<a href="design-process.html" class="todo">Design Process</a>
 				</li>
-				<li  class="is-active">
+				<li class="is-active">
 					<a href="api.html"><abbr title="Applications Programming Interface">API</abbr></a>
 				</li>
 				<li>
 					<a href="features.html" class="todo">Features</a>
 				</li>
-				<li>
-					<a href="system-roadmap.html" class="todo">System Roadmap</a>
+				<li >
+					<a href="roadmap.html" class="doing">Roadmap</a>
 				</li>
 			</ul>
 		</li>	

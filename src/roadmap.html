@@ -1,0 +1,104 @@
+{% set docTitle = 'Roadmap' %}
+{% include  'partials/html-header.html' %}
+
+<div class="documentation">
+
+	{% set navStrategy = 'is-active' %}
+	{% set navRoadmap = 'is-active' %}
+	{% include 'partials/navigation.html' %}
+
+	<div class="doc-main">
+		<main class="fds">
+			<h1 class="h1-like">System Roadmap</h1>
+
+			<div class="intro-block">
+				<p>Take an overview of the timeline, from where we started to where our roadmap will lead us.</p>
+			</div>
+
+			<p>
+				Our System exists since 2018 and has been initiated even before through a UI Kit for only one project and production team. Our FDS is born from that project.
+			</p>
+
+			<div class="toc">
+				<p id="toc-title" class="h3-like">Table of Content</p>
+				<ul aria-labelledby="toc-title">
+					<li>
+						<a href="#timeline">Timeline</a>
+					</li>
+					<li>
+						<a href="#changelog">Changelog</a>
+					</li>
+					<li>
+						<a href="#roadmap">Roadmap</a>
+					</li>
+				</ul>
+			</div>
+
+			<h2 class="h2-like" id="timeline">Timeline</h2>
+
+			<div class="timeline">
+				<div class="time-line"><span class="line"></span></div>
+				<ol class="events-list">
+					<li class="event-item">
+						<div class="event-image">
+							<img src="{{ path_img }}julie-muller.jpg" srcset="{{ path_img }}julie-muller@2x.jpg 2x" width="80" height="80" alt="">
+						</div>
+						<div class="event-text-content">
+							<time datetime="2013-07-14" class="event-time">Month 2018</time>
+							<p class="event-title">Event happening you can talk here</p>
+						</div>
+					</li>
+					<li class="event-item">
+						<div class="event-image">
+							<img src="{{ path_img }}julie-muller.jpg" srcset="{{ path_img }}julie-muller@2x.jpg 2x" width="80" height="80" alt="">
+						</div>
+						<div class="event-text-content">
+							<time datetime="2014-01-14" class="event-time">Month 2018</time>
+							<p class="event-title">Event happening you can talk here</p>
+						</div>
+					</li>
+
+					<li class="event-item">
+						<div class="event-image">
+							<img src="{{ path_img }}julie-muller.jpg" srcset="{{ path_img }}julie-muller@2x.jpg 2x" width="80" height="80" alt="">
+						</div>
+						<div class="event-text-content">
+							<time datetime="2016-01-26" class="event-time">Month 2018</time>
+							<p class="event-title">Event happening you can talk here</p>
+						</div>
+					</li>
+				</ol>
+			</div>
+			
+			<p>But we also have a lot of work to do for our teams, and for this public website.</p>
+
+			<h2 class="h2-like" id="changelog">Changelog</h2>
+			<dl>
+				<dt>14 oct. 2019</dt>
+				<dd>
+					<ul>
+						<li>First Public Release</li>
+					</ul>
+				</dd>
+			</dl>
+
+
+			<h2 class="h2-like" id="roadmap">Roadmap</h2>
+			
+			<p>Our next steps leading by our Core Team.</p>
+
+			<ol>
+				<li>Step 1</li>
+				<li>Step 2</li>
+				<li>Step 3</li>
+			</ol>
+
+		</main>
+
+		{% include  'partials/html-footer.html' %}
+
+	</div><!-- doc-main -->
+</div><!-- documentation -->
+
+	</body>
+</html>
