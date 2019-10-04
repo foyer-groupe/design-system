@@ -73,7 +73,11 @@ gulp.task('default', function (done) {
 
 gulp.task('publish-documentation', function (done) {
     // Publish documentation in branch gh_pages
-    ghPages.publish(path.resolve('pub'), {message: 'Documentation updated'}, (err) => {
+    ghPages.publish(path.resolve('pub'),
+		{
+			message: 'Documentation updated',
+			repo: 'https://github.com/foyer-groupe/design-system.git'
+		}, (err) => {
         if (err) {
             console.error(err);
         }
