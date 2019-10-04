@@ -3,7 +3,7 @@
 <html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <title> Contact — Foyer Design System</title>
+    <title> Roadmap — Foyer Design System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -77,7 +77,7 @@
 
 
 <div class="documentation">
-	
+
 	
 	
 	<header class="header mobile-navigation " role="banner">
@@ -112,13 +112,13 @@
 			</a>
 		</li>
 
-		<li class="is-active is-toggle-only">
-			<button type="button" aria-controls="doc-about" aria-expanded="true">
+		<li class=" is-toggle-only">
+			<button type="button" aria-controls="doc-about" aria-expanded="false">
 				<img class="doc-nav-icon" src="img/icon-group.svg" width="24" height="22" alt="">
 				<span class="nav-text">About Us</span>
 			</button>
 
-			<ul id="doc-about" aria-hidden="false">
+			<ul id="doc-about" aria-hidden="true">
 				<li >
 					<a href="what-is-foyer.html">Foyer - The Company</a>
 				</li>
@@ -128,7 +128,7 @@
 				<li >
 					<a href="who-are-our-users.html">Who are our users?</a>
 				</li>
-				<li class="is-active">
+				<li >
 					<a href="contact.html">Contact Us</a>
 				</li>
 			</ul>
@@ -202,13 +202,13 @@
 			</ul>
 		</li>
 
-		<li class=" is-toggle-only">
-			<button type="button" aria-controls="doc-strategy" aria-expanded="false">
+		<li class="is-active is-toggle-only">
+			<button type="button" aria-controls="doc-strategy" aria-expanded="true">
 				<img class="doc-nav-icon" src="img/icon-strategy.svg" width="24" height="20" alt="">
 				<span class="nav-text">Strategy &amp; Processes</span>
 			</button>
 
-			<ul id="doc-strategy" aria-hidden="true">
+			<ul id="doc-strategy" aria-hidden="false">
 				<li>
 					<a href="open-innovation.html" class="todo">Open Innovation</a>
 				</li>
@@ -221,7 +221,7 @@
 				<li>
 					<a href="features.html" class="todo">Features</a>
 				</li>
-				<li >
+				<li class="is-active">
 					<a href="roadmap.html" class="doing">Roadmap</a>
 				</li>
 			</ul>
@@ -232,63 +232,89 @@
 
 	<div class="doc-main">
 		<main class="fds">
-			<h1 class="h1-like">Contact the team</h1>
+			<h1 class="h1-like">System Roadmap</h1>
 
 			<div class="intro-block">
-				<p>Our System need you to evolve. Don't hesitate to contact one of our collaborators.</p>
+				<p>Take an overview of the timeline, from where we started to where our roadmap will lead us.</p>
 			</div>
 
-			<p>Several persons are involved in the project: core team, marketing, communication, UX team. Here are some key persons you can contact.</p>
+			<p>
+				Our System exists since 2018 and has been initiated even before through a UI Kit for only one project and production team. Our FDS is born from that project.
+			</p>
 
-			<dl aria-label="People you can contact about Design System">
-				<dt>Head of UX</dt>
+			<div class="toc">
+				<p id="toc-title" class="h3-like">Table of Content</p>
+				<ul aria-labelledby="toc-title">
+					<li>
+						<a href="#timeline">Timeline</a>
+					</li>
+					<li>
+						<a href="#changelog">Changelog</a>
+					</li>
+					<li>
+						<a href="#roadmap">Roadmap</a>
+					</li>
+				</ul>
+			</div>
+
+			<h2 class="h2-like" id="timeline">Timeline</h2>
+
+			<div class="timeline">
+				<div class="time-line"><span class="line"></span></div>
+				<ol class="events-list">
+					<li class="event-item">
+						<div class="event-image">
+							<img src="img/julie-muller.jpg" srcset="img/julie-muller@2x.jpg 2x" width="80" height="80" alt="">
+						</div>
+						<div class="event-text-content">
+							<time datetime="2013-07-14" class="event-time">Month 2018</time>
+							<p class="event-title">Event happening you can talk here</p>
+						</div>
+					</li>
+					<li class="event-item">
+						<div class="event-image">
+							<img src="img/julie-muller.jpg" srcset="img/julie-muller@2x.jpg 2x" width="80" height="80" alt="">
+						</div>
+						<div class="event-text-content">
+							<time datetime="2014-01-14" class="event-time">Month 2018</time>
+							<p class="event-title">Event happening you can talk here</p>
+						</div>
+					</li>
+
+					<li class="event-item">
+						<div class="event-image">
+							<img src="img/julie-muller.jpg" srcset="img/julie-muller@2x.jpg 2x" width="80" height="80" alt="">
+						</div>
+						<div class="event-text-content">
+							<time datetime="2016-01-26" class="event-time">Month 2018</time>
+							<p class="event-title">Event happening you can talk here</p>
+						</div>
+					</li>
+				</ol>
+			</div>
+			
+			<p>But we also have a lot of work to do for our teams, and for this public website.</p>
+
+			<h2 class="h2-like" id="changelog">Changelog</h2>
+			<dl>
+				<dt>14 oct. 2019</dt>
 				<dd>
-					<p>
-						<strong>Steven LOZACH</strong><br>
-						<a href="mailto:steven.lozach@foyer.lu">steven.lozach@foyer.lu</a>
-					</p>
-					<p>
-						You can contact Steven for further information about UX Processes and history on Agile and UX Teams evolution within Foyer.
-					</p>
+					<ul>
+						<li>First Public Release</li>
+					</ul>
 				</dd>
-
-				<dt>Lead Design System</dt>
-				<dd>
-					<p>
-						<strong>Geoffrey CROFTE</strong><br>
-						<a href="mailto:geoffrey.crofte@foyer.lu">geoffrey.crofte@foyer.lu</a>
-					</p>
-					<p>
-						You can contact Geoffrey for further information on this System, the process of building it, the issues encountered and the solutions found, or the current <a href="roadmap.html" class="todo">roadmap</a>.
-					</p>
-				</dd>
-
-				<dt>Contact Press</dt>
-				<dd>
-					<strong>Alice BODART</strong><br>
-					<a href="mailto:alice.bodart@foyer.lu">alice.bodart@foyer.lu</a>
-				</dd>
-
-				<p>
-					You can contact Alice is you need more information on the communication around this Design System topic, or for other needs related to the Press.
-				</p>
 			</dl>
 
-			<h2 class="h2-like text-center">Go further with:</h2>
-			<div class="discover row">
-				<div class="col-md-6 col-sm-12 col-xs-12">
-					<a href="who-are-our-users.html" class="disco-1">
-						<p class="h3-like">What is Foyer?</p>
-						<p>You may not know Foyer Group. Context!</p>
-					</a>
-				</div>
-				<div class="col-md-6 col-sm-12 col-xs-12">
-					<a href="why-a-design-system.html" class="disco-2">
-						<p class="h3-like">Why a Design System?</p>
-						<p>Want to know our approach. Follow us.</p>
-					</a>
-				</div>
-			</div>
+
+			<h2 class="h2-like" id="roadmap">Roadmap</h2>
+			
+			<p>Our next steps leading by our Core Team.</p>
+
+			<ol>
+				<li>Step 1</li>
+				<li>Step 2</li>
+				<li>Step 3</li>
+			</ol>
 
 		</main>
 
@@ -309,7 +335,9 @@
 		<div class="doc-search-results" aria-live="assertive"></div>
 		<div class="doc-search-dropshadow"></div>
 
-	</div>
-</div>
+
+	</div><!-- doc-main -->
+</div><!-- documentation -->
+
 	</body>
 </html>

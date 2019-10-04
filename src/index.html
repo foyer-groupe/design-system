@@ -1,18 +1,18 @@
 {% include  'partials/html-header.html' %}
-{% set navHome = 'is-active' %}
 {% set isHome = 'is-home' %}
+{% set navHome = 'is-active' %}
 {% include  'partials/navigation.html' %}
 
 <div class="fds-hero-banner">
 	<div class="container">
-		<header role="banner">
+		<header class="header" role="banner">
 			<div class="fds-logo">
 				<img src="https://static.foyer.lu/images/d9/logo-fds-molecule.d97e418aa10ea3aae0181ac4b44c9efbdb16a72d.svg" width="146" height="50" alt="Foyer Design System">
 			</div>
-			<nav role="navigation">
+			<nav class="navigation" role="navigation">
 				<ul>
-					<li class="nav-item"><a href="#design">Get started</a></li>
-					<li class="nav-item"><a href="#development">Contact Us</a></li>
+					<li class="nav-item"><a href="get-started.html">Get started</a></li>
+					<li class="nav-item"><a href="contact.html">Contact Us</a></li>
 					<li>
 						<button type="button" id="menu-button" class="menu-button">
 							<span class="menu-text">Menu</span>
@@ -179,12 +179,12 @@
 					<p>
 						<span class="peops-firstname">Geoffrey</span>
 						<span class="peops-lastname">Crofte</span>
-						<span class="peops-job">UX/UI Designer</span>
+						<span class="peops-job">Lead Design System</span>
 					</p>
 				</li>
 				<li>
 					<div class="peops-image">
-						<img src="{{ path_img }}matthieu-dacosta.jpg" srcset="{{ path_img }}matthieu-dacosta@2x.jpg 2x" width="80" height="80" alt="">
+						<img src="{{ path_img }}matthieu-da-costa.jpg" srcset="{{ path_img }}matthieu-da-costa@2x.jpg 2x" width="80" height="80" alt="">
 					</div>
 					<p>
 						<span class="peops-firstname">Matthieu</span>

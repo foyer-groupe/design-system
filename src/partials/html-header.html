@@ -8,6 +8,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Foyer Design System" />
 
+    <script>document.documentElement.className = 'js';</script>
+
     <link rel="shortcut icon"    href="img/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
@@ -18,6 +20,22 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png" />
+
+    <meta name="twitter:card" content="Foyer Design System">
+    <meta name="twitter:site" content="@GroupeFoyer">
+    <meta name="twitter:creator" content="@GroupeFoyer">
+    <meta name="twitter:title" content="Foyer Design System - Foyer Assurances">
+    <meta name="twitter:description" content="Explore a Design System made by Foyer Assurances, the first Insurance Company at Luxembourg.">
+    <meta name="twitter:image" content=""> <!-- 560x300 -->
+
+    <meta property="og:title" content="Foyer Design System - Foyer Assurances" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://design.foyer.lu" />
+    <meta property="og:description" content="Explore a Design System made by Foyer Assurances, the first Insurance Company at Luxembourg." />
+    <meta property="og:image" content="" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
 		
     <link rel="stylesheet" href="css/vendor.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -31,7 +49,6 @@
         
         <a href="#main" class="jump-link sr-only sr-focusable">Go to content</a>
         <a href="#menu" class="jump-link sr-only sr-focusable">Go to menu</a>
-
 
 		{% set isHome        = '' %}
         {% set navHome       = '' %}
@@ -47,10 +64,12 @@
         {% set navWho     = '' %}
         {% set navContact = '' %}
 
-        {% set navBranding = '' %}
+        {% set navBranding     = '' %}
         {% set navIllustration = '' %}
+        {% set navMotion       = '' %}
 
         {% set navUICollection = '' %}
 
         {% set navStrategy = '' %}
+        {% set navRoadmap  = '' %}
         {% set navAPI      = '' %}
