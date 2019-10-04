@@ -10,7 +10,8 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     steps:
-      - uses: peaceiris/actions-gh-pages@v2.4.0
+      - name: Publish pages
+        uses: peaceiris/actions-gh-pages@v2.4.0
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           PUBLISH_BRANCH: gh-pages
