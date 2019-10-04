@@ -11,5 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: ./.github/actions/publish-github-pages
-        id: publish
+      - uses: peaceiris/actions-gh-pages@v2.4.0
+          env:
+            ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+            PUBLISH_BRANCH: gh-pages
+            PUBLISH_DIR: ./pub

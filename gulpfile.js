@@ -70,17 +70,12 @@ gulp.task('default', function (done) {
 	done();
 });
 
-
 gulp.task('publish-documentation', function (done) {
     // Publish documentation in branch gh_pages
-    ghPages.publish(path.resolve('pub'),
-		{
-			message: 'Documentation updated',
-			repo: 'https://github.com/foyer-groupe/design-system.git',
-			user: {
-				name: 'Bastien Collet',
-				email: 'bastien.collet1@gmail.com'
-			}
+    ghPages.publish(
+    	path.resolve('public'),
+{
+			message: 'Documentation updated'
 		}, (err) => {
         if (err) {
             console.error(err);
