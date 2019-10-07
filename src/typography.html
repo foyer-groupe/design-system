@@ -12,13 +12,16 @@
             <h1 class="h1-like">Typography</h1>
 
             <div class="intro-block">
-                <p>At Foyer, we use nice <strong>Typography</strong> in our applications. To keep consistency in our branding, DIN Pro are the only font we use.</p>
+                <p>Typography is a main part of visual identity. To maintain a homogeneous and easily recognizable image, a family of character has been chosen: DIN Pro.</p>
+                <p>This typeface must be systematically used and applied to all supports except for some specific ones. <a href="#">Check exceptions list.</a></p>
             </div>
+            
+            <h3 class="h3-like">Important note</h3>
+            <p>
+                For legal reasons, the name <b>Foyer</b> presents in text blocs must be in bold. The first name letter must be in uppercase, and the rest in lowercase.
+            </p>
 
-            <h2 class="h2-like">
-                Font families
-            </h2>
-
+            <!--
             <div class="doc-font font-din-pro">
                 <div class="doc-font-watermark">Di</div>
                 <div class="doc-font-name">
@@ -66,133 +69,120 @@
                     </div>
                 </div>
             </div>
+            -->
 
-            <h2 class="h2-like">Heading</h2>
-
+            <h2 class="h2-like">Rules & Guidelines for Web Applications</h2>
             <div class="row">
-                <div class="col-xs-12 col-md-6">
-
-                    <div class="doc-typo-heading">
-                        <h1>h1. Heading</h1>
-                        <label>DIN Pro Medium, 40px, #3B4856</label>
-                    </div>
-
-                    <div class="doc-typo-heading">
-                        <h2 style="padding-top: 0; border-top: none">h2. Heading</h2>
-                        <label>DIN Pro Bold, 24px, #004C92</label>
-                    </div>
-
-                    <div class="doc-typo-heading">
-                        <h3>h3. Heading</h3>
-                        <label>DIN Pro Bold, 16px, #3B4856</label>
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12 col-md-6">
-
-                    <div class="doc-tabs" role="tablist" aria-orientation="horizontal">
+                <div class="col-xs-12 col-md-10">
 
 
-                        <ul class="doc-tabs-controls">
-                            <li><a id="tab-html" href="#tabpanel-html" role="tab" aria-posinset="1" aria-setsize="1" aria-controls="tabpanel-html" aria-selected="true">HTML</a></li>
-                        </ul>
+                    <h3>Font-properties</h3>
 
+                        <h4>Font-size</h4>
+                        <div>
+                            <p>16 px is defined as a common base for body texts of all our web interfaces.</p>
+                            <p>For accessibility purpose, the minimal font-size authorized in Web Apps is 12 pixels.</p>
 
-                        <div class="doc-tabs-contents">
+                            <h5>Good practices</h5>
+                            <p>In order to avoid too small nuances between closed texts, we advise to use an increment of 2 pixels.</p>
+                        </div>
+                        
+                        <h4>Font-weights</h4>
+                        <div>
+                            <p>In most of our Designs, the base font-weight used is the Regular (400).</p>
 
-
-                            <div id="tabpanel-html" role="tabpanel" aria-expanded="true" aria-labelledby="tab-html">
-
-                                <pre><code class="html"><h1>Heading</h1>
-<h2>Heading</h2>
-<h3>Heading</h3></code></pre>
-                            </div>
-
+                            <h5>Good practices</h5>
+                            <p>In order to avoid too light variant between closed texts, we advise to have at least a gap of one font-weight.</p>
                         </div>
 
-                    </div>
+                        <h4>Underlining</h4>
+                        <div>
+                            <p>We don't use underlining except for links.</p>
+                        </div>
+
+                        <h4>Capitalization</h4>
+                        <div>
+                            <p>– COMING SOON –</p>
+                        </div>
+
+                        <h4>Italicizing</h4>
+                        <div>
+                            <p>– COMING SOON –</p>
+                        </div>
+
+                        <h4>Hyphenation</h4>
+                        <div>
+                            <p>– COMING SOON –</p>
+                        </div>
+
+                        <h4>Truncation</h4>
+                        <div>
+                            <p>– COMING SOON –</p>
+                        </div>
+
+
+                    <h3>Font fallback strategy</h3>
+                        <p>In some situations, the DIN Pro – <span>the primary font</span> – could not be available or usable for technical reasons/limitations. Then to protect the homogeneity of Foyer's image, we defined a list of fonts that will be used as fallbacks.</p>
+                        <p>Here is the ordered list:</p>
+                        <ol>
+                            <li>“DIN Pro”,</li>
+                            <li>Roboto,</li>
+                            <li>“Helvetica Neue”,</li>
+                            <li>Helvetica,</li>
+                            <li>Arial,</li>
+                            <li>Sans-Serif;</li>
+                        </ol>
+
+                        <p>So to be really verbose here, what that rule is saying is:</p>
+                        <ol>
+                            <li>I'd like to use the "Din Pro" font, please.</li>
+                            <li>If you don't have that, try Roboto next.</li>
+                            <li>you don't have that, try "HelveticaNeue",</li>
+                            <li>you don't have that, try Helvetica,</li>
+                            <li>you don't have that, try Arial,</li>
+                            <li>All else fails, use whatever you've got for the generic keyword Sans-Serif</li>
+                        </ol>
+
+                    <h3>Preset styles</h3>
+                    <p>– IN PROGRESS –</p>
+
                 </div>
             </div>
 
-            <h2 class="h2-like">Inline text style</h2>
+            <h2 class="h2-like">Rules & Guidelines for Print</h2>
             <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <div class="doc-demo">
-
-                        <p>This is the base text style.</p>
-                        <small>This line of text is meant to be treated as fine print.</small>
-                        <br>
-                        <strong>This line rendered as bold text.</strong>
-                        <em>This line rendered as italicized text.</em>
-
-                    </div>
+                <div class="col-xs-12 col-md-10">
+                    <p>…</p>
                 </div>
-
-                <div class="col-xs-12 col-md-6">
-                    <div class="doc-tabs" role="tablist" aria-orientation="horizontal">
-
-
-                        <ul class="doc-tabs-controls">
-                            <li><a id="tab-html-1" href="#tabpanel-html-1" role="tab" aria-posinset="1" aria-setsize="1" aria-controls="tabpanel-html-1" aria-selected="true">HTML</a></li>
-                        </ul>
-
-
-                        <div class="doc-tabs-contents">
-
-
-                            <div id="tabpanel-html-1" role="tabpanel" aria-expanded="true" aria-labelledby="tab-html-1">
-
-                            <pre><code class="html"><p>This is the base text style.</p>
-<small>This line of text is meant to be treated as fine print.</small>
-<strong>This line rendered as bold text.</strong>
-<em>This line rendered as italicized text.</em></code></pre>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
             </div>
 
-            <h2 class="h2-like">Links</h2>
-
+            <h2 class="h2-like">Rules & Guidelines for Public Website</h2>
             <div class="row">
-
-                <div class="col-xs-12 col-md-6">
-                    <div class="doc-demo">
-
-                        <a href="#">This is a link.</a>
-                        <br>
-                        <a href="#" class="is-disabled">This is a disabled link.</a>
-
-                    </div>
+                <div class="col-xs-12 col-md-10">
+                    <p>…</p>
                 </div>
-
-                <div class="col-xs-12 col-md-6">
-                    <div class="doc-tabs" role="tablist" aria-orientation="horizontal">
-                        <ul class="doc-tabs-controls">
-                            <li><a id="tab-html-2" href="#tabpanel-html-2" role="tab" aria-posinset="1" aria-setsize="1" aria-controls="tabpanel-html-2" aria-selected="true">HTML</a></li>
-                        </ul>
-
-
-                        <div class="doc-tabs-contents">
-
-
-                            <div id="tabpanel-html-2" role="tabpanel" aria-expanded="true" aria-labelledby="tab-html-2">
-
-						<pre><code class="html"><a href="">This is a link.</a>
-<a href="#" class="is-disabled">This is a disabled link.</a></code></pre>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
             </div>
 
+            
+            <h2 class="h2-like">Exceptions list</h2>
+            <div class="row">
+                <div class="col-xs-12 col-md-10">
+                    
+                    <h3>Administrative documents</h3>
+                    <p>The font used is Arial to insure compatibility. <a href="#">Refer to the Corporate Identity document</a></p>
+
+                    
+                    <h3>Emails</h3>
+                    <p>Because of technical limitations within emails, we decided to use the following font stack in a fallback approach:</p>
+                    <ol>
+                        <li>Barlow,</li>
+                        <li>Arial</li>
+                        <li>Sans-Serif</li>
+                    </ol>
+                    <p><a href="#">Refer to the Corporate Identity document</a></p>
+
+                </div>
+            </div>
 
         </main>
 
