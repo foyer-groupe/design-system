@@ -5,12 +5,13 @@
 $color-blue:        #4EABFF;
 $color-blue-dark:   #479CE8;
 $color-blue-smoke-dark: #E3E9EF;
-$color-purple:      #5f72e6;
 $color-grey:        #999999;
 $color-grey-dark:   #3B4856;
 $color-foyer: 	    #004c92;
 $color-foyer-light: #C8DFF4;
 $color-info-light:  #EDF6FF;
+
+$color-illu-blue: #2957C8;
 
 $linear-gradient-primary: linear-gradient(to right, rgba(0, 76, 146, 1), rgba(8, 109, 202, 1) );
 $linear-gradient-main: linear-gradient(to right, rgba(0, 85, 145, 1), rgba(0, 136, 201, 1) );
@@ -168,16 +169,16 @@ dd {
 	margin-left: 48px;
 }
 
-ol {
+dl.counter {
 	padding: .5em 0 .5em 8px;
 	counter-reset: ol 0;
 
-	li {
+	dt {
 		position: relative;
+		display: block;
+		font-weight: 600;
 		padding-left: 40px;
-		margin: 1.5em 0;
 		counter-increment: ol;
-		list-style: none;
 
 		&:before {
 			content: counter(ol);
@@ -188,12 +189,18 @@ ol {
 			justify-content: center;
 			align-items: center;
 			width: 28px;
-			height: 28px;
+			height: 26px;
+			padding-bottom: 2px;
 			color: white;
 			font-weight: 600;
-			background: $color-foyer;
+			background: $color-illu-blue;
 			border-radius: 46% 54% 37% 63% / 44% 26% 74% 56%;
 		}
+	}
+
+	dd {
+		margin: 0 0 1.5em 40px;
+		list-style: none;
 	}
 }
 
@@ -1100,7 +1107,7 @@ button:focus {
 		justify-content: flex-start;
 		margin: 0;
 		padding: 32px 0;
-		color: $color-purple;
+		color: $color-foyer;
 		background: #FFF;
 		font-family: $font-family-title;
 		font-size: 40px;
@@ -1132,7 +1139,7 @@ button:focus {
 		position: relative;
 		padding-bottom: 10px;
 		margin: 48px 0 40px;
-		color: $color-purple;
+		color: $color-foyer;
 		font-family: $font-family;
 		font-size: 32px;
 		font-weight: 300;
@@ -1160,7 +1167,7 @@ button:focus {
 
 	&-h3 {
 		margin: 24px 0 16px 0;
-		color: $color-purple;
+		color: $color-foyer;
 		font-family: $font-family;
 		font-size: 24px;
 		font-weight: 400;

@@ -92,7 +92,7 @@
 			margin: 0 0;
 			padding: 8px 0 0 0;
 			list-style: none;
-			border-bottom: 1px solid $color-purple;
+			border-bottom: 1px solid $color-foyer;
 			background: #f7fbff;
 
 			li {
@@ -116,7 +116,7 @@
 				padding: 8px 16px 12px;
 				margin: 0 4px;
 				font-weight: bold;
-				color: $color-purple;
+				color: $color-foyer;
 				text-decoration: none;
 				background: #F2F2F2;
 				border-bottom: 0;
@@ -125,7 +125,7 @@
 				transition: all .2s;
 
 				&[aria-selected="true"] {
-					background: $color-purple;
+					background: $color-foyer;
 					color: #FFF;
 
 					&:hover,
@@ -137,7 +137,7 @@
 				&:hover,
 				&:focus {
 					text-decoration: none;
-					color: $color-purple;
+					color: $color-foyer;
 					box-shadow: inset 0 -45px 0 rgba(0, 0, 0, .1), inset 0 -4px 0 rgba(0, 0, 0, .1);
 				}
 			}
@@ -156,7 +156,7 @@
 					outline: none;
 
 					&.is-active {
-						color: $color-purple;
+						color: $color-foyer;
 					}
 
 					i {
@@ -199,7 +199,7 @@
 					code {
 						font-size: 1em;
 						line-height: 1.5;
-						color: $color-purple;
+						color: $color-foyer;
 					}
 
 					.doc-help-title {
@@ -688,7 +688,7 @@
 			flex-wrap: nowrap !important;
 			padding: 10px 0;
 			margin: 5px 0;
-			background: rgba($color-purple, .2);
+			background: rgba($color-foyer, .2);
 		}
 
 		.doc-cell {
@@ -696,7 +696,7 @@
 			align-items: center;
 			justify-content: center;
 			height: 30px;
-			background: $color-purple;
+			background: $color-foyer;
 			color: #FFFFFF;
 			font-weight: 500;
 			line-height: 1;
