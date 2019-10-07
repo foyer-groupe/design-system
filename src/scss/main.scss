@@ -168,6 +168,35 @@ dd {
 	margin-left: 48px;
 }
 
+ol {
+	padding: .5em 0 .5em 8px;
+	counter-reset: ol 0;
+
+	li {
+		position: relative;
+		padding-left: 40px;
+		margin: 1.5em 0;
+		counter-increment: ol;
+		list-style: none;
+
+		&:before {
+			content: counter(ol);
+			position: absolute;
+			left: 0;
+			top: 4px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 28px;
+			height: 28px;
+			color: white;
+			font-weight: 600;
+			background: $color-foyer;
+			border-radius: 46% 54% 37% 63% / 44% 26% 74% 56%;
+		}
+	}
+}
+
 blockquote {
 	position: relative;
 	margin: 56px 16px 56px 40px;
@@ -893,7 +922,9 @@ button:focus {
 			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text;
 
-			&::-moz-selection,
+			&::-moz-selection {
+				-webkit-text-fill-color: white;
+			}
 			&::selection {
 				-webkit-text-fill-color: white;
 			}
@@ -914,7 +945,9 @@ button:focus {
 			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text;
 
-			&::-moz-selection,
+			&::-moz-selection {
+				-webkit-text-fill-color: white;
+			}
 			&::selection {
 				-webkit-text-fill-color: white;
 			}
@@ -935,7 +968,9 @@ button:focus {
 			-webkit-text-fill-color: transparent;
 			-webkit-background-clip: text;
 
-			&::-moz-selection,
+			&::-moz-selection {
+				-webkit-text-fill-color: white;
+			}
 			&::selection {
 				-webkit-text-fill-color: white;
 			}
@@ -1493,11 +1528,19 @@ button:focus {
 }
 
 .event-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 80px;
+	height: 80px;
+	line-height: 0;
+	box-shadow: 0 2px 2px -2px rgba(24, 0, 102, .25), 0 4px 4px -4px rgba(24, 0, 102, .25);
+	border-radius: 50%;
+	background: white;
 
 	img {
-		box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-		border-radius: 50%;
+		width: 48px;
+		height: 48px;
 	}
 }
 
