@@ -19,3 +19,49 @@
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
+
+@mixin position($type, $top: auto, $right: false, $bottom: false, $left: false) {
+  @if $right  == false { $right: $top;  }
+  @if $bottom == false { $bottom: $top; }
+  @if $left   == false { $left: $right; }
+
+  position: $type;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin MaterialIcons() {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'MaterialIcons', sans-serif !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1 !important;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin chevron($rotate: 0deg, $color: "") {
+  &:after { // Chevron icon
+    @include position(absolute, 0, 0, auto, auto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 100%;
+    @include MaterialIcons();
+    font-size: 24px;
+    content: "\e313"; //$mi-keyboard_arrow_down
+    transition: all .3s ease;
+    transform: rotate($rotate);
+    @if ($color) {
+      color: $color;
+    }
+  }
+}

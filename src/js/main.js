@@ -148,4 +148,37 @@
 		el.style.visibility = 'visible';
 	});
 
+	/**
+	 * Tabs controls
+	 */
+	document.querySelectorAll('.doc-tabs [role="tab"]').forEach((el) => {
+		el.addEventListener('click', (ev) => {
+			const target = ev.target, currTabs = target.closest('.doc-tabs'), targetID = target.getAttribute('href');
+
+			// Current on tab
+			currTabs.querySelectorAll('[role="tab"]').forEach(el => el.setAttribute('aria-selected', 'false'));
+			target.setAttribute('aria-selected', 'true');
+
+			// Current on tab panel
+			currTabs.querySelectorAll('[role="tabpanel"]').forEach(el => el.setAttribute('aria-expanded', 'false'));
+			document.querySelector(targetID).setAttribute('aria-expanded', 'true');
+
+			return false;
+		});
+	});
+
+	/**
+	 * Code/Doc Help control
+	 */
+	document.querySelectorAll('.doc-help').forEach((el) => el.style.display = '');
+	document.querySelectorAll('.doc-btn-help button').forEach((el) => {
+		el.addEventListener('click', (ev) => {
+			const target = ev.currentTarget;
+			target.classList.toggle('is-active');
+			const helps = target.closest('.doc-tabs').querySelectorAll('.doc-help');
+			helps.forEach(e => {
+				target.classList.contains('is-active') ? e.style.display = '' : e.style.display = 'none'
+			});
+		});
+	});
 })();

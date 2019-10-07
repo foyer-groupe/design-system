@@ -84,7 +84,7 @@
 
     &-controls {
       z-index: 5;
-      //position: sticky;
+      position: relative; // sticky
       top: 0;
       display: flex;
       justify-content: flex-start;
@@ -703,4 +703,10 @@
       border-radius: 2px;
     }
   }
+}
+
+.documentation .doc-u-is-txt-class-color {
+  color: #df5000;
+  white-space: nowrap;
+  text-shadow: 0 0 black;
 }
