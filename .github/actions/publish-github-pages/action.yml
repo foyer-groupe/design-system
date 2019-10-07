@@ -1,5 +1,0 @@
-name: 'Publish Github Pages'
-description: 'Use the local gulpfile to publish the github pagesOB'
-runs:
-  using: 'node12'
-  main: 'index.js'

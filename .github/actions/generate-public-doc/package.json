@@ -1,5 +1,5 @@
 {
-  "name": "publish-github-pages",
+  "name": "generate-public-doc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

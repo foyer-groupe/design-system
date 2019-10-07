@@ -70,10 +70,13 @@ gulp.task('default', function (done) {
 	done();
 });
 
-
 gulp.task('publish-documentation', function (done) {
     // Publish documentation in branch gh_pages
-    ghPages.publish(path.resolve('pub'), {message: 'Documentation updated'}, (err) => {
+    ghPages.publish(
+    	path.resolve('public'),
+{
+			message: 'Documentation updated'
+		}, (err) => {
         if (err) {
             console.error(err);
         }

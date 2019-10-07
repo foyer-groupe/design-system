@@ -5,8 +5,8 @@ try {
     if (fs.existsSync('gulpfile.js')) {
         console.log('Run npm i');
         execSync('npm i');
-        console.log('Run gulp publish-documentation');
-        execSync('gulp publish-documentation');
+        console.log('Run gulp');
+        execSync('gulp');
     }
 } catch(err) {
     console.error(err);
