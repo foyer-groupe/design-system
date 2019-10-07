@@ -6,3 +6,8 @@ node_modules/
 _*
 *.log
 package-lock.json
+<<<<<<< HEAD
+cdn/trash/
+cdn/files-to-publish/
+cdn/static/
+public/

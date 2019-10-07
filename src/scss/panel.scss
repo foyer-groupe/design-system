@@ -1,0 +1,687 @@
+// ------------------------------------------------------------------------------------------------------------------ //
+//      #Panel
+// ------------------------------------------------------------------------------------------------------------------ //
+.Panel {
+  $panel-border-width: 1px;
+  $panel-border-color: rgba(0, 76, 146, .05);
+  $panel-background-color: map-get($colors, white);
+  $panel-border-radius: 4px;
+  $panel-spacing-h : 24px;
+  $panel-spacing-h-sm : 16px;
+  $panel-button-shadow       : 0 2px 4px rgba(2m,8,20,0.1),0 1px 2px rgba(2,8,20,0.08);
+  $panel-button-shadow-hover : 0 4px 6px rgba(0,0,0,0.12),0 1px 3px rgba(0,0,0,0.08);
+
+  position: relative;
+  margin-bottom: 24px;
+  border: $panel-border-width solid $panel-border-color;
+  background: $panel-background-color;
+  border-radius: $panel-border-radius;
+  transition: all .3s ease;
+
+  // ---- Other states -------------------------------------------------------------------------------------------- //
+  &.is-clickable {
+    box-shadow: $panel-button-shadow;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $panel-button-shadow-hover;
+      cursor: pointer;
+    }
+  }
+
+  &.has-arrow {
+    z-index: 0;
+    .Panel-header {
+      z-index: 1;
+      background-color: $panel-background-color;
+    }
+    .Panel-body {
+      background-color: $panel-background-color;
+    }
+  }
+
+  &.is-collapsable {
+    box-shadow: $panel-button-shadow;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: $panel-button-shadow-hover;
+    }
+
+    .Panel-header {
+      border-width: 0;
+      @include chevron(0deg, map-get($colors, blue-foyer));
+
+      &.is-strong {
+        @include chevron(0deg, map-get($colors, white));
+      }
+    }
+
+    &:not(.is-auto-opened) {
+      .Panel-header {
+        position: relative;
+        padding-right: 56px;
+        transition: all .3s ease;
+
+        &:hover {
+          cursor: pointer;
+
+          &,
+          &:after {
+            color: map-get($colors, info-dark);
+          }
+        }
+
+        &.is-strong {
+          &:hover {
+            &,
+            &:after {
+              color: map-get($colors, blue-ghost-dark);
+            }
+          }
+        }
+      }
+    }
+
+    .Panel-collapse {
+      max-height: 0;
+      overflow: hidden;
+      transition: $collapse-transition-close;
+      outline: 0 none;
+    }
+
+    &.is-opened,
+    &.is-auto-opened:hover {
+      .Panel-header {
+        border-width: 1px;
+
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+      .Panel-collapse {
+        max-height: 2000px;
+        transition: $collapse-transition-open;
+      }
+    }
+
+  }
+
+  // Both the class and the attribute are supported but we should go towards only the attribute
+  &.is-draggable,
+  &[draggable] {
+    position: relative;
+    color: map-get($colors, blue-foyer);
+    margin-bottom: 8px;
+    box-shadow: $panel-button-shadow;;
+    cursor: grab;
+    transition: all .275s;
+    transform-origin: 80% 50%;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $panel-button-shadow-hover;
+    }
+
+    &:active {
+      cursor: grabbing;
+      box-shadow: $panel-button-shadow-hover;
+      transform: rotate(-0.8deg);
+    }
+
+    $draggable-thumbnail-width: 32px;
+
+    .Panel-draggable-thumbnail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: -$panel-border-width;
+      bottom: -$panel-border-width;
+      left: 0;
+      right: calc(100% - #{$draggable-thumbnail-width});
+
+      color: map-get($colors, white);
+      font-size: 24px;
+      font-weight: 500;
+
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+
+      &,
+      &.is-info {
+        background-color: map-get($colors, info);
+      }
+
+      &.is-warning {
+        background-color: map-get($colors, warning);
+      }
+
+      &.is-success {
+        background-color: map-get($colors, success);
+      }
+
+      &.is-danger {
+        background-color: map-get($colors, danger);
+      }
+    }
+
+    $draggable-handle-size: 4px;
+    $draggable-handle-color: darken(map-get($colors, grey-light), 5%);
+
+    .Panel-draggable-handle {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      background:	radial-gradient($draggable-handle-size $draggable-handle-size at 33.3% 20%, $draggable-handle-color 50%, transparent 0%),
+      radial-gradient($draggable-handle-size $draggable-handle-size at 66.6% 20%, $draggable-handle-color 50%, transparent 0%),
+      radial-gradient($draggable-handle-size $draggable-handle-size at 33.3% 40%, $draggable-handle-color 50%, transparent 0%),
+      radial-gradient($draggable-handle-size $draggable-handle-size at 66.6% 40%, $draggable-handle-color 50%, transparent 0%),
+      radial-gradient($draggable-handle-size $draggable-handle-size at 33.3% 60%, $draggable-handle-color 50%, transparent 0%),
+      radial-gradient($draggable-handle-size $draggable-handle-size at 66.6% 60%, $draggable-handle-color 50%, transparent 0%),
+      radial-gradient($draggable-handle-size $draggable-handle-size at 33.3% 80%, $draggable-handle-color 50%, transparent 0%),
+      radial-gradient($draggable-handle-size $draggable-handle-size at 66.6% 80%, $draggable-handle-color 50%, transparent 0%);
+      width: $draggable-handle-size * 6;
+      height: $draggable-handle-size * 10;
+    }
+
+    .Panel-body {
+      display: flex;
+      align-items: center;
+      margin-left: $draggable-thumbnail-width;
+      padding: 20px 48px 20px 20px;
+      font-size: 20px;
+      font-weight: 500;
+
+      i {
+        font-size: 32px;
+        margin-right: 16px;
+      }
+    }
+
+    &[draggable='false'] {
+      pointer-events: none;
+      .Panel-draggable-thumbnail {
+        background-color: map-get($colors, blue-smoke);
+      }
+      .Panel-draggable-handle {
+        display: none;
+      }
+      & > * {
+        color: map-get($colors, blue-smoke);
+      }
+    }
+  }
+
+  .Panel-arrow {
+    $arrow-height: 12px;
+    position: absolute;
+    top: -$arrow-height - $panel-border-width;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: transparent transparent $panel-border-color;
+    border-style: solid;
+    border-width: 0 $arrow-height $arrow-height;
+    z-index: -1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: -$arrow-height;
+      border-style: solid;
+      border-width: 0 $arrow-height $arrow-height;
+      border-color: transparent transparent map-get($colors, white);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 0;
+      box-shadow: 0px 0px 11px 1px rgba(0,76,146,.3);
+      height: $arrow-height;
+      width: $arrow-height;
+      transform: translateX(-50%) rotate(45deg);
+    }
+  }
+
+  // ---- Markers ------------------------------------------------------------------------------------------------- //
+
+  &:after {
+    content: ' ';
+    @include position(absolute, 0, auto, 0, 0);
+    width: 4px;
+  }
+
+  &.marked-as-success {
+    &:after {
+      background: map-get($colors, success);
+    }
+  }
+  &.marked-as-warning {
+    &:after {
+      background: map-get($colors, warning);
+    }
+  }
+  &.marked-as-danger {
+    &:after {
+      background: map-get($colors, danger);
+    }
+  }
+  &.marked-as-info {
+    &:after {
+      background: map-get($colors, info);
+    }
+  }
+
+  // -------------------------------------------------------------------------------------------------------------- //
+
+  .Panel-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px $panel-spacing-h;
+    border-bottom: 1px solid map-get($colors, blue-smoke);
+    color: map-get($colors, blue-foyer);
+    font-family: $font-family-title;
+    font-weight: 500;
+    line-height: 1.2;
+
+    @media (max-width: map-get($breakpoints, md) - 1) {
+      padding: $panel-spacing-h-sm;
+    }
+
+    &.is-strong {
+      border-bottom: none;
+      border-radius: $panel-border-radius $panel-border-radius 0 0;
+      background: map-get($gradients, blue-primary);
+      color: map-get($colors, white);
+    }
+
+    &.has-no-border {
+      margin-bottom: -24px;
+      border-bottom: none;
+
+      @media (max-width: map-get($breakpoints, md) - 1) {
+        margin-bottom: -16px;
+      }
+    }
+
+    &.has-small-title {
+      font-size: 20px;
+
+      .Panel-watermark {
+        font-size: 36px
+      }
+
+      @media (max-width: map-get($breakpoints, md) - 1) {
+        font-size: 18px;
+
+        .Panel-watermark {
+          font-size: 32px
+        }
+      }
+    }
+
+    &, // by default
+    &.has-normal-title {
+      font-size: 24px;
+
+      .Panel-watermark {
+        font-size: 40px;
+      }
+
+      @media (max-width: map-get($breakpoints, md) - 1) {
+        font-size: 20px;
+
+        .Panel-watermark {
+          font-size: 36px;
+        }
+      }
+    }
+
+    &.has-big-title {
+      font-size: 32px;
+
+      .Panel-watermark {
+        font-size: 48px;
+      }
+
+      @media (max-width: map-get($breakpoints, md) - 1) {
+        font-size: 28px;
+
+        .Panel-watermark {
+          font-size: 46px;
+        }
+      }
+    }
+
+    .Panel-watermark {
+      display: flex;
+      align-items: center;
+      margin: -6px -8px -6px 0px;
+      color: map-get($colors, blue-smoke-light);
+      font-weight: 900;
+      line-height: 1;
+    }
+
+
+    // ---- Support for other component
+
+    &.has-DataTile {
+      flex-wrap: wrap;
+      padding: 16px;
+      text-indent: 8px;
+
+      .DataTile {
+        flex-basis: 100%;
+        margin: 16px 0 -40px;
+        text-indent: 0;
+      }
+
+      + .Panel-body {
+        padding-top: 32px;
+      }
+
+      @media (max-width: map-get($breakpoints, sm)) {
+        .DataTile {
+          margin: 8px 0 -40px;
+        }
+      }
+    }
+
+  }
+
+  .Panel-body {
+    position: relative;
+    padding: $panel-spacing-h;
+
+    @media (max-width: map-get($breakpoints, md) - 1) {
+      padding: $panel-spacing-h-sm;
+    }
+
+    & + .Panel-body {
+      border-top: $panel-border-width solid $panel-border-color;
+    }
+
+    &-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 48px;
+      color: map-get($colors, grey-800);
+      font-size: 16px;
+      padding-left: $panel-spacing-h;
+      padding-right: $panel-spacing-h;
+      margin: (-$panel-spacing-h) (-$panel-spacing-h) $panel-spacing-h (-$panel-spacing-h);
+      border-bottom: $panel-border-width solid $panel-border-color;
+      background-color: map-get($colors, blue-smoke-light);
+
+      @media (max-width: map-get($breakpoints, md) - 1) {
+        padding-left: $panel-spacing-h-sm;
+        padding-right: $panel-spacing-h-sm;
+        margin: (-$panel-spacing-h-sm) (-$panel-spacing-h-sm) $panel-spacing-h-sm (-$panel-spacing-h-sm);
+      }
+    }
+
+    .Panel-section {
+
+      &.is-collapsable {
+        .Panel-section-header {
+          padding-right: 48px;
+
+          @include chevron(0deg, map-get($colors, blue-foyer));
+
+          &:after {
+            width: 40px;
+          }
+
+          &:hover {
+            cursor: pointer;
+            &,
+            &:after {
+              color: map-get($colors, info-dark);
+            }
+          }
+        }
+        .Panel-section-collapse {
+          max-height: 0;
+          overflow: hidden;
+          transition: $collapse-transition-close;
+          border-bottom: 1px solid map-get($colors, blue-smoke);
+
+          .Panel-section-body {
+            border: none;
+          }
+        }
+        &.is-opened {
+          .Panel-section-header {
+            border-width: 1px;
+
+            &:after {
+              transform: rotate(180deg);
+            }
+          }
+          .Panel-section-collapse {
+            max-height: 2000px;
+            transition: $collapse-transition-open;
+          }
+        }
+      }
+
+      &-header {
+        position: relative;
+        padding: 8px 0;
+        color: map-get($colors, blue-foyer);
+        transition: all .3s ease;
+      }
+
+      &-body {
+        position: relative;
+        padding-bottom: 16px;
+        border-bottom: 1px solid map-get($colors, blue-smoke);
+      }
+
+    }
+
+
+    // ---- Support for other component
+
+    .Timeline {
+      margin-left: -20px;
+
+      li {
+        .Panel-section {
+          .Panel-section-header {
+            padding: 0;
+            &:after {
+              width: 32px;
+            }
+          }
+          .Panel-section-collapse {
+            border-bottom: none;
+            .Panel-section-body {
+              padding-bottom: 0;
+            }
+          }
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+  }
+
+  $backgroundImage-distance-from-top: -20px;
+  $backgroundIcon-distance-from-top: -70px;
+
+  .Panel-backgroundWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .Panel-backgroundImage {
+    position: absolute;
+    top: $backgroundImage-distance-from-top;
+    right: -120px;
+    width: 250px;
+    overflow: hidden;
+    opacity: .05;
+    max-width: none !important; // override the doc
+    &.is-position-bottom {
+      top: auto;
+      bottom: $backgroundImage-distance-from-top;
+    }
+  }
+
+  .Panel-backgroundIcon {
+    position: absolute;
+    top: $backgroundIcon-distance-from-top;
+    right: -140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: map-get($colors, blue-foyer);
+    font-size: 300px;
+    opacity: .05;
+    &.is-position-bottom {
+      top: auto;
+      bottom: $backgroundIcon-distance-from-top;
+    }
+  }
+
+  .Panel-separator {
+    border: none;
+    border-bottom: 1px solid map-get($colors, blue-smoke);
+
+    &.has-margin-8 {
+      margin: 8px 0;
+    }
+
+    &, // by default
+    &.has-margin-16 {
+      margin: 16px 0;
+    }
+
+    &.has-margin-24 {
+      margin: 24px 0;
+    }
+
+    &.has-margin-32 {
+      margin: 32px 0;
+    }
+
+    &.has-no-margin {
+      margin: 0;
+    }
+
+    &.is-full-width {
+      margin-left: (-$panel-spacing-h);
+      margin-right: (-$panel-spacing-h);
+      width: calc(100% + (#{$panel-spacing-h} * 2));
+
+      @media (max-width: map-get($breakpoints, md) - 1) {
+        margin-left: -$panel-spacing-h-sm;
+        margin-right: -$panel-spacing-h-sm;
+        width: calc(100% + (2 * #{$panel-spacing-h-sm}));
+      }
+    }
+  }
+
+  .Panel-footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    border-top: 1px solid map-get($colors, blue-smoke);
+
+    @media (max-width: map-get($breakpoints, md) - 1) {
+      padding: 16px;
+    }
+
+    &.has-no-border {
+      margin-top: -24px;
+      border-top: none;
+
+      @media (max-width: map-get($breakpoints, md) - 1) {
+        margin-top: -16px;
+      }
+    }
+
+    &.is-justified-left {
+      justify-content: flex-start
+    }
+
+    &.is-justified-center {
+      justify-content: center;
+    }
+
+    &,
+    &.is-justified-right {
+      justify-content: flex-end
+    }
+
+    button:not(:first-of-type) {
+      margin-left: 8px;
+    }
+
+    @media (max-width: map-get($breakpoints, sm) - 1) {
+      flex-wrap: wrap;
+
+      button {
+        width: 100%;
+        justify-content: center;
+        margin: 8px 0 0 0 !important;
+
+        &:last-child {
+          margin-top: 0 !important;
+        }
+
+        @for $i from 0 through 5 {
+          &:nth-child(#{$i}) {
+            order: #{5 - $i};
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+.Panel-image-heading {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &[class*="has-fixed-height-"] {
+    overflow: hidden;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  $panel-image-heights: 40, 48, 56, 64, 72, 80, 88;
+
+  @each $size in $panel-image-heights {
+
+    &.has-fixed-height-#{$size} {
+      height: #{$size}px;
+    }
+
+  }
+}
