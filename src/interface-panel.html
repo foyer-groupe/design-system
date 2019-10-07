@@ -2,7 +2,8 @@
 {% include  'partials/html-header.html' %}
 
 <div class="documentation">
-
+    
+    {% set navUIElement = 'is-active' %}
     {% set navPanel = 'is-active' %}
     {% include 'partials/navigation.html' %}
 
@@ -12,13 +13,16 @@
 
             <div class="intro-block">
                 <p>
-                    Panels have to be a representation of a single independant item. (e.i a page, a product, a category, etc.)
-                    <br><br>
-                    A panel should be identifiable by a name, a title or a illustration and can contain a short description and a little amount of actions (1 to 3 maximum), like « See more », « Sign up », « Remove » or similar.
-                    <br><br>
-                    Panels are grouped in columns or rows unless it covers the entire page (e.i. main content page).
+                    Panels have to be a representation of a group of items in semantic relation and could be totally independent.
                 </p>
             </div>
+
+            <p>
+                A panel should be identifiable by a name, a title or a illustration and can contain a short description and a little amount of actions (1 to 3 maximum), like « See more », « Sign up », « Remove » or similar.
+            </p>
+            <p>
+                Panels are grouped in columns or rows unless it covers the entire page (e.i. main content page).
+            </p>
 
             <h2 class="h2-like">
                 Basic
