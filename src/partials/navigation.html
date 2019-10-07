@@ -121,8 +121,8 @@
 			</button>
 
 			<ul id="doc-strategy" aria-hidden="{% if navStrategy %}false{% else %}true{% endif %}">
-				<li>
-					<a href="open-innovation.html" class="todo">Open Innovation</a>
+				<li {% if navOpenInnovation %}class="is-active"{% endif %}>
+					<a href="open-innovation.html" class="doing">Open Innovation</a>
 				</li>
 				<li>
 					<a href="design-process.html" class="todo">Design Process</a>
