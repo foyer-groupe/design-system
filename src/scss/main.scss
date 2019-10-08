@@ -866,6 +866,58 @@ button:focus {
 	padding-left: 16px;
 }
 
+/**
+ * Title page with illustration
+ */
+.fds .h1-like.with-illu {
+	position: relative;
+	padding-top: 50px;
+	margin-top: -24px;
+	margin-bottom: 48px;
+	min-height: 200px;
+	width: auto;
+	margin-left: -24px;
+	margin-right: -24px;
+	left: 0;
+	background: white;
+	box-shadow: inset 0 -16px 16px rgba(100,100,200,.05);
+	
+	@media (min-width: $mq-medium) {
+		width: calc(100vw - 320px);
+		margin-left: calc(-50vw + 160px);
+		margin-right: 0;
+		left: 50%;
+	}
+
+	@media (max-width: $mq-small) {
+		font-size: 32px;
+		text-shadow: 0 0 8px white, 0 0 8px white, 0 0 8px white, 0 0 4px white, 0 0 4px white, 0 0 2px white;
+	}
+
+	background-image: none;
+	-webkit-text-fill-color: $color-foyer;
+	-webkit-background-clip: none;
+
+	span {
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.illu {
+		display: block;
+		width: 75%;
+		margin-left: auto;
+
+		@media (min-width: $mq-medium) {
+			width: 50%;
+		}
+	}
+}
+
 .fds {
 	/**
 	 * Containers
