@@ -6,7 +6,7 @@
 	const menuToggle   = menu.querySelectorAll('[aria-controls]');
 
 	var closeMenu = function(){
-			
+
 			menuBtn.forEach(function(menuB){
 				menuB.classList.remove('is-open');
 				menuB.setAttribute('aria-expanded', 'false');
@@ -183,9 +183,34 @@
 	/**
 	 * Color details
 	 */
-	let colors = document.querySelectorAll('.doc-color-block'),
-		panel  = document.querySelector('.doc-color-detail-panel');
-		i = 0;
+	let colors  = document.querySelectorAll('.doc-color-block'),
+		panel   = document.querySelector('.doc-color-detail-panel'),
+		dpLayer = document.querySelector('.doc-color-detail-panel-back'),
+		i = 0,
+		closePanel = function(e) {
+			e.preventDefault();
+
+			// If it's a keypress event, close only if it's an Escape attempt.
+			if ( ( e.type === 'keydown' && e.keyCode !== 27 ) ) {
+				return false;
+			}
+
+			var colorID    = panel.getAttribute('data-source-id'),
+				theColor   = document.querySelector('[aria-controls="' + colorID + '"]'),
+				thisDetail = panel.querySelector('.doc-color-more-details');
+
+			// move data from panel to color tile
+			panel.removeAttribute('data-source-id');
+			panel.removeAttribute('role', 'modal' );
+			thisDetail.setAttribute('aria-hidden', 'true');
+
+			theColor.appendChild( thisDetail );
+			theColor.setAttribute('aria-expanded', 'false');
+
+			window.removeEventListener('keydown', closePanel);
+
+			return false;
+		};
 
 	colors.forEach(function(color){
 		i++;
@@ -202,18 +227,24 @@
 			detail.setAttribute('aria-hidden', 'true');
 
 			color.addEventListener('click', function(e){
-				var this_detail = this.querySelector('.doc-color-more-details');
+				var thisDetail = this.querySelector('.doc-color-more-details');
 
 				if ( this.getAttribute('aria-expanded') === 'false' ) {
 					// move data to panel
-					panel.setAttribute('data-source-id', this_detail.id );
+					panel.setAttribute('data-source-id', thisDetail.id );
 					panel.setAttribute('role', 'modal' );
-					panel.appendChild( this_detail );
+					panel.appendChild( thisDetail );
 
 					this.setAttribute('aria-expanded', 'true');
-					this_detail.setAttribute('aria-hidden', 'false');
+					thisDetail.setAttribute('aria-hidden', 'false');
+
+					// init esc capability
+					window.addEventListener('keydown', closePanel);
 				}
 			});
 		}
 	});
+
+	// Close on clicking backdrop layer
+	dpLayer.addEventListener('click', closePanel);
 })();

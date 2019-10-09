@@ -18,5 +18,8 @@
 	},
 	"scripts": {
 		"init": "npm install"
+	},
+	"dependencies": {
+		"gulp-cli": "^2.2.0"
 	}
 }
