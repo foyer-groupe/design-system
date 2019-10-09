@@ -92,8 +92,15 @@ $gradients: (
   .u-is-bg {
 	&-#{$color-name + ""} {
 	  background: $color-value !important;
-	}
 
+		.doc-color-block & + .doc-color-block-details .doc-color-block-details-hexa:before {
+			content: '#{$color-value + ""}';
+		}
+	}
+  }
+}
+
+.u-is-bg {
 	&-gradient-blue-primary     { background: map-get($gradients, blue-primary)     !important; }
 	&-gradient-blue-secondary   { background: map-get($gradients, blue-secondary)   !important; }
 	&-gradient-blue-tertiary    { background: map-get($gradients, blue-tertiary)    !important; }
@@ -109,5 +116,4 @@ $gradients: (
 	&-gradient-green-primary    { background: map-get($gradients, green-primary)    !important; }
 	&-gradient-green-secondary  { background: map-get($gradients, green-secondary)  !important; }
 	&-gradient-green-complete   { background: map-get($gradients, green-complete)   !important; }
-  }
 }

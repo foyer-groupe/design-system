@@ -129,7 +129,7 @@ a {
 	transition: color .3s ease;
 
 	&.todo.todo.todo {
-		color: red;
+		color: salmon;
 	}
 
 	&.doing.doing.doing {
@@ -688,17 +688,14 @@ button:focus {
 		border: 0;
 	}
 
-	> ul > li {
-		border-bottom: 1px solid rgba(255, 255, 255, .05);
-	}
-
-
 	> ul {
 		position: sticky;
 		top: 8px;
-		// 100% viewport height minus the height of the logo part to allow scrollable sticky menu.
-		height: calc(100vh - 134px);
 		overflow: auto;
+	}
+
+	> ul > li {
+		border-bottom: 1px solid rgba(255, 255, 255, .05);
 	}
 
 	ul {
@@ -951,6 +948,10 @@ button:focus {
 		max-width: 100%;
 		font-size: 1.125em; // 18px;
 		line-height: 1.7;
+	}
+
+	a {
+		text-decoration: underline;
 	}
 
 	h2,

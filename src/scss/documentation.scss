@@ -456,7 +456,8 @@
 		}
 
 		&-shade {
-			display: inline-flex;
+			display: flex;
+			width: 100%;
 			margin-top: 56px;
 			margin-right: 56px;
 			border: 1px solid #F2F2F2;
@@ -464,12 +465,17 @@
 		}
 
 		&-block {
-			width: 180px;
+			width: 33.33%;
+			background: #FFF;
+
 			@media (max-width: map-get($breakpoints, sm)) {
 				width: 100%;
 				min-width: 100px;
 			}
-			background: #FFF;
+
+			.js & {
+				cursor: help;
+			}
 
 			&.is-main,
 			&.is-gradient {
@@ -531,6 +537,69 @@
 					text-transform: uppercase;
 				}
 			}
+		}
+
+		&-more-details[aria-hidden="true"] {
+			.js & {
+				display: none;
+			}
+		}
+
+		&-detail-panel {
+			position: fixed;
+			top: 0;
+			right: 0;
+			width: 320px;
+			background: white;
+			padding: 24px;
+			bottom: 0;
+			transform: translateX(100%);
+			opacity: 0;
+			transition: all .375s;
+			z-index: 2501;
+
+			&[role="modal"] {
+				transform: translateX(0);
+				opacity: 1;				
+			}
+		}
+
+		&-detail-panel-back {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: rgba(0,0,0,.5);
+			opacity: 0;
+			z-index: -2;
+
+			[role="modal"] + & {
+				opacity: 1;
+				z-index: 2500;
+			}
+		}
+	}
+
+	&-data {
+		display: flex;
+
+		.doc-main .fds & {
+			margin: 1px 0;
+		}
+
+		span {
+			width: 50%;
+			padding: 8px;
+		}
+
+		&-label {
+			background: map-get($colors, blue-smoke-light);
+			font-weight: bold;
+		}
+		&-value {
+			background: map-get($colors, blue-smoke);
+			color: #000;
 		}
 	}
 

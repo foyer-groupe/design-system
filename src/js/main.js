@@ -39,9 +39,7 @@
 	 * Open Menu
 	 */
 	if ( menuBtn ) {
-		console.log(menuBtn);
 		menuBtn.forEach(function(element){
-			console.log(element);
 			element.addEventListener('click', function(){
 				if ( this.classList.contains('is-open') ) {
 					closeMenu();
@@ -180,5 +178,42 @@
 				target.classList.contains('is-active') ? e.style.display = '' : e.style.display = 'none'
 			});
 		});
+	});
+
+	/**
+	 * Color details
+	 */
+	let colors = document.querySelectorAll('.doc-color-block'),
+		panel  = document.querySelector('.doc-color-detail-panel');
+		i = 0;
+
+	colors.forEach(function(color){
+		i++;
+		var uniqid = 'color-block-detail-' + i,
+			detail = color.querySelector('.doc-color-more-details');
+
+		if ( detail ) {
+			color.setAttribute('role', 'button');
+			color.setAttribute('tabindex', '0');
+			color.setAttribute('aria-expanded', 'false');
+			color.setAttribute('aria-controls', uniqid);
+			
+			detail.setAttribute('id', uniqid);
+			detail.setAttribute('aria-hidden', 'true');
+
+			color.addEventListener('click', function(e){
+				var this_detail = this.querySelector('.doc-color-more-details');
+
+				if ( this.getAttribute('aria-expanded') === 'false' ) {
+					// move data to panel
+					panel.setAttribute('data-source-id', this_detail.id );
+					panel.setAttribute('role', 'modal' );
+					panel.appendChild( this_detail );
+
+					this.setAttribute('aria-expanded', 'true');
+					this_detail.setAttribute('aria-hidden', 'false');
+				}
+			});
+		}
 	});
 })();
