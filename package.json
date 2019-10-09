@@ -1,6 +1,7 @@
 {
 	"name": "design.foyer.lu",
 	"version": "1.0.0",
+	"repository": "https://github.com/foyer-groupe/design-system.git",
 	"description": "FDS public presentation",
 	"license": "MIT",
 	"devDependencies": {
