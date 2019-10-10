@@ -553,6 +553,14 @@
 			}
 		}
 
+		&-more-details {
+			.h3-like {
+				color: map-get($colors, grey-800);
+				font-size: 1.2em;
+				margin-bottom: 0;
+			}
+		}
+
 		&-detail-panel {
 			position: fixed;
 			top: 0;
@@ -613,6 +621,25 @@
 			word-spacing: -0.3em;
 			background: map-get($colors, blue-smoke);
 			color: #000;
+		}
+	}
+
+	&-compatibility-table {
+		width: 100%;
+		font-size: .875em;
+		text-align: center;
+
+		[class^="u-is-"] {
+			display: block;
+			height: 40px;
+			width: 100%;
+			border: 1px solid #999;
+		}
+		
+		th {
+			background: $color-foyer;
+			color: white;
+			font-weight: 600;
 		}
 	}
 
