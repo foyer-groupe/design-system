@@ -12,71 +12,115 @@
             <h1 class="h1-like">Typography</h1>
 
             <div class="intro-block">
-                <p>Typography is a main part of visual identity. To maintain a homogeneous and easily recognizable image, a family of character has been chosen: DIN Pro.</p>
-                <p>This typeface must be systematically used and applied to all supports except for some specific ones. <a href="#">Check exceptions list.</a></p>
+                <p>Typography is a main part of visual identity. To maintain a homogeneous and easily recognizable image, a family of character has been chosen: <strong>DIN Pro</strong>.</p>
             </div>
             
-            <h3 class="h3-like">Important note</h3>
+            <p>
+                This typeface must be systematically used and applied to all supports except for some specific ones. <a href="#">Check exceptions list.</a>
+            </p>
             <p>
                 For legal reasons, the name <b>Foyer</b> presents in text blocs must be in bold. The first name letter must be in uppercase, and the rest in lowercase.
             </p>
 
-            <!--
-            <div class="doc-font font-din-pro">
-                <div class="doc-font-watermark">Di</div>
-                <div class="doc-font-name">
-                    DIN Pro
-                </div>
-                <div class="doc-font-details">
-                    <div class="doc-font-details-header">Characters</div>
-                    <div class="doc-font-details-body">
-                        <div>abcdefghijklmnopqrstuvwxyz</div>
-                        <div>ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
-                        <div>0123456789</div>
-                        <div>éèêëàâäùûüîïôöç</div>
-                        <div style="text-transform: uppercase;">éèêëàâäùûüîïôöç</div>
-                        <div>&"'`@%*µ§~#¤^¨()[]{}-_²/\|.,;:?!><​‌-​‌+​‌÷​‌×​‌=​‌>​‌®​‌©‌$​‌€​‌£​‌¥​‌¢</div>
+            <div class="toc">
+                <p id="toc-title" class="h3-like">Table of Contents</p>
+                <ul aria-labelledby="toc-title">
+                    <li>
+                        <a href="#din-pro-preview">Din Pro preview</a>
+                    </li>
+                    <li>
+                        <a href="#web-apps-environment">Rules & Guidelines for Web Applications</a>
+                    </li>
+                    <li>
+                        <a href="#print-environment">Rules & Guidelines for Print</a>
+                    </li>
+                    <li>
+                        <a href="#public-websites-environment">Rules & Guidelines for Public Websites</a>
+                    </li>
+                    <li>
+                        <a href="#Exceptions">Exceptions list</a>
+                    </li>
+                </ul>
+            </div>
+            
+
+            <h2 class="h2-like" id="din-pro-preview">Din Pro preview</h2>
+            <div class="row">
+                <div class="col-xs-12 col-md-10">
+                    
+                    <div class="doc-font font-din-pro">
+                        <div class="doc-font-watermark">Di</div>
+                        
+                        <!-- <div class="doc-font-name">
+                            DIN Pro
+                        </div> -->
+
+                        <div class="doc-font-details">
+                            <div class="doc-font-details-header">Characters</div>
+                            <div class="doc-font-details-body">
+                                <div>abcdefghijklmnopqrstuvwxyz</div>
+                                <div>ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+                                <div>0123456789</div>
+                                <div>éèêëàâäùûüîïôöç</div>
+                                <div style="text-transform: uppercase;">éèêëàâäùûüîïôöç</div>
+                                <div>&"'`@%*µ§~#¤^¨()[]{}-_²/\|.,;:?!><​‌-​‌+​‌÷​‌×​‌=​‌>​‌®​‌©‌$​‌€​‌£​‌¥​‌¢</div>
+                            </div>
+                        </div>
+                        <div class="doc-font-details">
+                            <div class="doc-font-details-header">Font weights & styles</div>
+                            <div class="doc-font-details-body">
+                                <div style="font-weight: 200;">200 - Light <span style="font-style: italic;">italic</span></div>
+                                <div style="font-weight: 400;">400 - Regular <span style="font-style: italic;">italic</span></div>
+                                <div style="font-weight: 500;">500 - Medium <span style="font-style: italic;">italic</span></div>
+                                <div style="font-weight: 700;">700 - Bold <span style="font-style: italic;">italic</span></div>
+                                <div style="font-weight: 800;">800 - Black <span style="font-style: italic;">italic</span></div>
+                            </div>
+                        </div>
+                        <div class="doc-font-details">
+                            <div class="doc-font-details-header">Font sizes</div>
+                            <div class="doc-font-details-body">
+                                <div style="font-size: 12px;">12px - lorem ipsum</div>
+                                <div style="font-size: 14px;">14px - lorem ipsum</div>
+                                <div style="font-size: 16px;">16px - lorem ipsum</div>
+                                <div style="font-size: 24px;">24px - lorem ipsum</div>
+                                <div style="font-size: 32px;">32px - lorem ipsum</div>
+                                <div style="font-size: 40px;">40px - lorem ipsum</div>
+                            </div>
+                        </div>
+                        <!-- <div class="doc-font-details">
+                            <div class="doc-font-details-header">Usage</div>
+                            <div class="doc-font-details-body doc-p">
+                                DIN Pro is used for all texts in our applications. <br>
+                                <br>
+                                Utility class available : <span class="doc-u-is-txt-class-color">.u-font-dinpro</span>. <br>
+                                Utility variable available : <span class="doc-u-is-txt-var-color">$font-din-pro</span>. <br>
+                            </div>
+                        </div> -->
                     </div>
-                </div>
-                <div class="doc-font-details">
-                    <div class="doc-font-details-header">Font styles</div>
-                    <div class="doc-font-details-body">
-                        <div style="font-weight: 200;">200 - light <span style="font-style: italic;">italic</span></div>
-                        <div style="font-weight: 400;">400 - regular <span style="font-style: italic;">italic</span></div>
-                        <div style="font-weight: 500;">500 - medium <span style="font-style: italic;">italic</span></div>
-                        <div style="font-weight: 700;">700 - bold <span style="font-style: italic;">italic</span></div>
-                        <div style="font-weight: 800;">800 - black <span style="font-style: italic;">italic</span></div>
-                    </div>
-                </div>
-                <div class="doc-font-details">
-                    <div class="doc-font-details-header">Font size</div>
-                    <div class="doc-font-details-body">
-                        <div style="font-size: 10px;">10px - lorem ipsum</div>
-                        <div style="font-size: 12px;">12px - lorem ipsum</div>
-                        <div style="font-size: 16px;">16px - lorem ipsum</div>
-                        <div style="font-size: 24px;">24px - lorem ipsum</div>
-                        <div style="font-size: 32px;">32px - lorem ipsum</div>
-                        <div style="font-size: 40px;">40px - lorem ipsum</div>
-                    </div>
-                </div>
-                <div class="doc-font-details">
-                    <div class="doc-font-details-header">Usage</div>
-                    <div class="doc-font-details-body doc-p">
-                        DIN Pro is used for all texts in our applications. <br>
-                        <br>
-                        Utility class available : <span class="doc-u-is-txt-class-color">.u-font-dinpro</span>. <br>
-                        Utility variable available : <span class="doc-u-is-txt-var-color">$font-din-pro</span>. <br>
-                    </div>
+
                 </div>
             </div>
-            -->
 
-            <h2 class="h2-like">Rules & Guidelines for Web Applications</h2>
+            <h2 class="h2-like" id="web-apps-environment">Rules & Guidelines for Web Applications</h2>
             <div class="row">
                 <div class="col-xs-12 col-md-10">
 
+                    <div class="toc">
+                        <p id="toc-title" class="h3-like">Sub-Table of Contents</p>
+                        <ul aria-labelledby="toc-title">
+                            <li>
+                                <a href="#web-apps-font-properties">Font properties</a>
+                            </li>
+                            <li>
+                                <a href="#web-apps-fallback-strategy">Font fallback strategy</a>
+                            </li>
+                            <li>
+                                <a href="#web-apps-presets-styles">Preset styles</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <h3>Font-properties</h3>
+                    <h3 class="h3-like" id="web-apps-font-properties">Font properties</h3>
 
                         <h4>Font-size</h4>
                         <div>
@@ -121,7 +165,7 @@
                         </div>
 
 
-                    <h3>Font fallback strategy</h3>
+                    <h3 class="h3-like" id="web-apps-fallback-strategy">Font fallback strategy</h3>
                         <p>In some situations, the DIN Pro – <span>the primary font</span> – could not be available or usable for technical reasons/limitations. Then to protect the homogeneity of Foyer's image, we defined a list of fonts that will be used as fallbacks.</p>
                         <p>Here is the ordered list:</p>
                         <ol>
@@ -143,20 +187,20 @@
                             <li>All else fails, use whatever you've got for the generic keyword Sans-Serif</li>
                         </ol>
 
-                    <h3>Preset styles</h3>
+                    <h3 class="h3-like" id="web-apps-presets-styles">Preset styles</h3>
                     <p>– IN PROGRESS –</p>
 
                 </div>
             </div>
 
-            <h2 class="h2-like">Rules & Guidelines for Print</h2>
+            <h2 class="h2-like" id="print-environment">Rules & Guidelines for Print</h2>
             <div class="row">
                 <div class="col-xs-12 col-md-10">
                     <p>…</p>
                 </div>
             </div>
 
-            <h2 class="h2-like">Rules & Guidelines for Public Website</h2>
+            <h2 class="h2-like" id="public-websites-environment">Rules & Guidelines for Public Websites</h2>
             <div class="row">
                 <div class="col-xs-12 col-md-10">
                     <p>…</p>
@@ -164,12 +208,13 @@
             </div>
 
             
-            <h2 class="h2-like">Exceptions list</h2>
+            <h2 class="h2-like" id="Exceptions">Exceptions list</h2>
             <div class="row">
                 <div class="col-xs-12 col-md-10">
                     
                     <h3>Administrative documents</h3>
-                    <p>The font used is Arial to insure compatibility. <a href="#">Refer to the Corporate Identity document</a></p>
+                    <p>The font used is Arial to insure compatibility.</p>
+                    <p><a href="#">Refer to the Corporate Identity document</a></p>
 
                     
                     <h3>Emails</h3>
@@ -179,7 +224,6 @@
                         <li>Arial</li>
                         <li>Sans-Serif</li>
                     </ol>
-                    <p><a href="#">Refer to the Corporate Identity document</a></p>
 
                 </div>
             </div>
