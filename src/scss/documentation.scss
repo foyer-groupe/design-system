@@ -554,10 +554,15 @@
 		}
 
 		&-more-details {
-			.h3-like {
+			.h3-like.h3-like {
 				color: map-get($colors, grey-800);
 				font-size: 1.2em;
-				margin-bottom: 0;
+				margin-bottom: .5em;
+				margin-top: 1em;
+
+				+ p {
+					margin-top: 0;
+				}
 			}
 		}
 
@@ -574,6 +579,7 @@
 			transition: all .375s;
 			z-index: 2501;
 			overflow: auto;
+			font-size: .875em;
 
 			&[role="modal"] {
 				transform: translateX(0);
@@ -608,7 +614,6 @@
 		span {
 			width: 50%;
 			padding: 8px 8px 8px 16px;
-			font-size: .875em;
 		}
 
 		&-label {
@@ -626,7 +631,6 @@
 
 	&-compatibility-table {
 		width: 100%;
-		font-size: .875em;
 		text-align: center;
 
 		[class^="u-is-"] {
