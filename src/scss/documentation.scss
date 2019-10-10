@@ -664,8 +664,6 @@
 	&-font {
 		position: relative;
 		width: 440px;
-		margin: 0 20px 20px 0;
-		padding: 25px 40px 50px 0px;
 
 		&-grid {
 			display: flex;
@@ -695,8 +693,6 @@
 				padding-bottom: 5px;
 				margin: 1.5em 0 1em;
 				color: $color-foyer;
-				font-family: $font-family;
-				font-size: 14px;
 				text-transform: uppercase;
 				border-bottom: 1px solid $color-foyer-light;
 			}
