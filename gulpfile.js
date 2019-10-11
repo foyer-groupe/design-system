@@ -28,6 +28,12 @@ gulp.task('default', function (done) {
 			]).pipe(swig({ data: swigData }))
 				.pipe(gulp.dest('public/')),
 
+			// Compile HTML files
+			gulp.src([
+				'CNAME'
+			]).pipe(swig({ data: swigData }))
+				.pipe(gulp.dest('public/')),
+
 			// Compile CSS files
 			gulp.src('src/scss/main.scss')
 				.pipe(sass())
