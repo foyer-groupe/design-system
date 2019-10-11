@@ -31,8 +31,7 @@ gulp.task('default', function (done) {
 			// Compile HTML files
 			gulp.src([
 				'CNAME'
-			]).pipe(swig({ data: swigData }))
-				.pipe(gulp.dest('public/')),
+			]).pipe(gulp.dest('public/')),
 
 			// Compile CSS files
 			gulp.src('src/scss/main.scss')
