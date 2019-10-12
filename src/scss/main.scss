@@ -152,6 +152,10 @@ a {
 	}
 }
 
+strong {
+	font-weight: 600;
+}
+
 dl {
 	margin: 2em 0;
 }
@@ -1179,7 +1183,7 @@ button:focus {
 		}
 
 		strong {
-			font-weight: bold;
+			font-weight: 600;
 
 			&:before {
 				content: '– ';
