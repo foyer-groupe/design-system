@@ -1,0 +1,102 @@
+{% set docTitle = 'Logos' %}
+{% include  'partials/html-header.html' %}
+
+<div class="documentation">
+    
+    {% set navBranding = 'is-active' %}
+    {% set navLogos = 'is-active' %}
+    {% include 'partials/navigation.html' %}
+
+    <div class="doc-main">
+        <main class="fds">
+            <h1 class="h1-like">Logos</h1>
+
+            <div class="intro-block">
+                <p>Logos are usually the first thing you remember from a brand. It's part of the DNA of the Foyer Identity.</p>
+            </div>
+            
+            <p>
+                On the following lines you'll get all the information you need to be able to use different variants of our logo. Those variants are part of the evolution of the identity of Foyer. They've been made to match the need on new communication medium.
+            </p>
+
+            <div class="toc">
+                <p id="toc-title" class="h3-like">Table of Contents</p>
+                <ul aria-labelledby="toc-title">
+                    <li>
+                        <a href="#foyer-logos">Foyer Logos</a>
+                    </li>
+                    <li>
+                        <a href="#usage-rules">Usage Rules</a>
+                    </li>
+                    <li>
+                        <a href="#donts">Some Don'ts</a>
+                    </li>
+                    <li>
+                        <a href="#dos">"Do" exceptions</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <h2 class="h2-like" id="foyer-logos">Foyer Logos</h2>
+            
+            <p>We worked on 3 variations for our logo: Positive, Negative, and Horizontal. All the logos are using the same base: 1 pictogram associated with the word Foyer.</p>
+
+            <h3 class="h3-like" id="positive">Positive Logo</h3>
+            
+            <p>The positive logo have to be used on light backgrounds. The background have to offer enough contrast with the Foyer Blue color <span class="color">#004C92</span></p>
+
+            <p class="margin-big text-center">
+                <img src="{{ path_img }}logo-foyer-positive.png" srcset="{{ path_img }}logo-foyer-positive@2x.png" width="152" height="131" alt="Foyer Positive Logo in blue on white background">
+            </p>
+
+            <h3 class="h3-like" id="negative">Negative Logo</h3>
+
+            <p>The negative logo if for dark or white backgrounds but comes with a blue gradient background with rounded corners. It uses a gradient with 2 colors from <span class="color">#005591</span> to <span class="color">#0088C9</span></p>
+
+            <p class="margin-big text-center">
+                <img src="{{ path_img }}logo-foyer-negative.png" srcset="{{ path_img }}logo-foyer-negative@2x.png" width="160" height="160" alt="Foyer Negative Logo in white on gradient-blue squared background">
+            </p>
+
+            <h3 class="h3-like" id="horizontal">Horizontal Logo</h3>
+            
+            <p>You can use this version of logo on compact context. Compact context is when you start having lack of rooms to put items on the screen, for example. It's when you need more space for practical concern: logo don't need to occupy all the available room.</p>
+
+            <p class="margin-big text-center">
+                <img src="{{ path_img }}logo-foyer-horizontal.png" srcset="{{ path_img }}logo-foyer-horizontal@2x.png" width="241" height="80" alt="Foyer Horizontal Logo in blue">
+            </p>
+
+            <h2 class="h2-like" id="usage-rules">Usage Rules</h2>
+
+            <p>When it comes the time use our logos, respect the followings rules to avoid adding complexity into your interface or to avoid breaking our identity.</p>
+            
+            <h3 class="h3-like" id="positive-rules">Positive Logo</h3>
+
+            <p>On the positive logo, we used the F letter of Foyer to create spacing around the logo. Nothing from the outside is allowed to cross those visual lines.</p>
+
+            <p class="margin-big text-center">
+                <img src="{{ path_img }}logo-foyer-positive-rules.png" srcset="{{ path_img }}logo-foyer-positive-rules@2x.png" width="270" height="249" alt="">
+            </p>
+
+            <h3 class="h3-like" id="negative-rules">Negative Logo</h3>
+
+            <p>On the negative logo, we used the F letter of Foyer next to the square to create spacing around the logo. Nothing from the outside is allowed to cross those visual lines.</p>
+
+            <p class="margin-big text-center">
+                <img src="{{ path_img }}logo-foyer-negative-rules.png" srcset="{{ path_img }}logo-foyer-negative-rules@2x.png" width="270" height="268" alt="">
+            </p>
+
+            <h3 class="h3-like" id="horizontal-rules">Horizontal Logo</h3>
+
+            <p>On the horizontal logo, as this version is for compact use case, we used the F letter of Foyer, we rotate it of 90 deg. and put it around the logo. Nothing from the outside is allowed to cross those visual lines.</p>
+
+            <p class="margin-big text-center">
+                <img src="{{ path_img }}logo-foyer-horizontal-rules.png" srcset="{{ path_img }}logo-foyer-horizontal-rules@2x.png" width="285" height="102" alt="">
+            </p>
+
+        </main>
+
+        {% include  'partials/html-footer.html' %}
+    </div>
+</div>
+</body>
+</html>

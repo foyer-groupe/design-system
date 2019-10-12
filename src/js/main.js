@@ -212,39 +212,56 @@
 			return false;
 		};
 
-	colors.forEach(function(color){
-		i++;
-		var uniqid = 'color-block-detail-' + i,
-			detail = color.querySelector('.doc-color-more-details');
+	if ( colors ) {
+		colors.forEach(function(color){
+			i++;
+			var uniqid = 'color-block-detail-' + i,
+				detail = color.querySelector('.doc-color-more-details');
 
-		if ( detail ) {
-			color.setAttribute('role', 'button');
-			color.setAttribute('tabindex', '0');
-			color.setAttribute('aria-expanded', 'false');
-			color.setAttribute('aria-controls', uniqid);
-			
-			detail.setAttribute('id', uniqid);
-			detail.setAttribute('aria-hidden', 'true');
+			if ( detail ) {
+				color.setAttribute('role', 'button');
+				color.setAttribute('tabindex', '0');
+				color.setAttribute('aria-expanded', 'false');
+				color.setAttribute('aria-controls', uniqid);
+				
+				detail.setAttribute('id', uniqid);
+				detail.setAttribute('aria-hidden', 'true');
 
-			color.addEventListener('click', function(e){
-				var thisDetail = this.querySelector('.doc-color-more-details');
+				color.addEventListener('click', function(e){
+					var thisDetail = this.querySelector('.doc-color-more-details');
 
-				if ( this.getAttribute('aria-expanded') === 'false' ) {
-					// move data to panel
-					panel.setAttribute('data-source-id', thisDetail.id );
-					panel.setAttribute('role', 'modal' );
-					panel.appendChild( thisDetail );
+					if ( this.getAttribute('aria-expanded') === 'false' ) {
+						// move data to panel
+						panel.setAttribute('data-source-id', thisDetail.id );
+						panel.setAttribute('role', 'modal' );
+						panel.appendChild( thisDetail );
 
-					this.setAttribute('aria-expanded', 'true');
-					thisDetail.setAttribute('aria-hidden', 'false');
+						this.setAttribute('aria-expanded', 'true');
+						thisDetail.setAttribute('aria-hidden', 'false');
 
-					// init esc capability
-					window.addEventListener('keydown', closePanel);
-				}
-			});
+						// init esc capability
+						window.addEventListener('keydown', closePanel);
+					}
+				});
+			}
+		});
+
+		// Close on clicking backdrop layer
+		if ( dpLayer ) {
+			dpLayer.addEventListener('click', closePanel);
 		}
-	});
+	}
 
-	// Close on clicking backdrop layer
-	dpLayer.addEventListener('click', closePanel);
+	/**
+	 * Inline Color Generator
+	 */
+	let inlineColors = document.querySelectorAll('.color');
+
+	if ( inlineColors ) {
+		inlineColors.forEach(function(color){
+			var theColor = color.innerHTML;
+			color.innerHTML = '<span class="color-thumbnail" style="background:' + theColor + '"></span><span class="color-hexa">' + theColor + '</span>';
+		});
+	}
+
 })();

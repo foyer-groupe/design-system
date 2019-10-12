@@ -1661,6 +1661,26 @@ button:focus {
 	}
 }
 
+/**
+ * Inline Colors
+ */
+.color {
+	display: inline-block;
+	font-weight: 600;
+	align-items: center;
+
+	.color-thumbnail {
+		display: inline-block;
+		vertical-align: -.1em;
+		height: 16px;
+		width: 16px;
+		margin-left: 6px;
+		margin-right: 4px;
+		border: 1px solid #AAA;
+		border-radius: 2px;
+	}
+}
+
 
 /* Clears the 'X' from Internet Explorer */
 input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
