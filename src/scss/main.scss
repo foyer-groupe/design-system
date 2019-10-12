@@ -230,6 +230,14 @@ blockquote {
 		font-weight: 600;
 		font-style: normal;
 	}
+
+	&.is-big {
+		font-size: 2em;
+
+		&:before {
+			top: .39em;
+		}
+	}
 }
 
 /**
