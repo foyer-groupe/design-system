@@ -470,7 +470,7 @@
 		}
 
 		&-block {
-			width: 33.33%;
+			width: 100%; // will auto adjust
 			background: #FFF;
 
 			@media (max-width: map-get($breakpoints, sm)) {
@@ -490,8 +490,7 @@
 				}
 			}
 
-			&.is-main,
-			&.is-gradient {
+			&.is-main {
 				transform: scale(1.2);
 
 				.doc-color-block-details {
@@ -501,16 +500,6 @@
 						font-weight: 600;
 					}
 				}
-			}
-
-			&.is-gradient {
-				width: 400px;
-				@media (max-width: map-get($breakpoints, sm)) {
-					width: 100%;
-					min-width: 300px;
-				}
-				margin-right: 40px;
-				margin-left: 24px;
 			}
 
 			&-example {

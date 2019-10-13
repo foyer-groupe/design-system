@@ -188,10 +188,10 @@
 		dpLayer = document.querySelector('.doc-color-detail-panel-back'),
 		i = 0,
 		closePanel = function(e) {
-			e.preventDefault();
 
 			// If it's a keypress event, close only if it's an Escape attempt.
 			if ( ( e.type === 'keydown' && e.keyCode !== 27 ) ) {
+				e.preventDefault();
 				return false;
 			}
 
@@ -241,6 +241,13 @@
 
 						// init esc capability
 						window.addEventListener('keydown', closePanel);
+
+						// init on click on colors table
+						var colorLinks = panel.querySelectorAll('.doc-compatibility-table a');
+
+						colorLinks.forEach(function(colorLink){
+							colorLink.addEventListener('click', closePanel);
+						});
 					}
 				});
 			}
