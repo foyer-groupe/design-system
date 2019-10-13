@@ -1452,6 +1452,12 @@ button:focus {
 			transform: translateY(-3px);
 			box-shadow: 0 6px 16px -6px rgba(0,0,0, .2);
 		}
+
+		p {
+			margin-top: .5em;
+			margin-bottom: 1em;
+			color: map-get($colors, grey-800);
+		}
 	}
 
 	.h3-like.h3-like {
