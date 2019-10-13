@@ -126,7 +126,7 @@ a {
 	color: $color-foyer;
 	text-decoration: none;
 	outline: 0;
-	transition: color .3s ease;
+	transition: all .3s ease;
 
 	&.todo.todo.todo {
 		color: salmon;
@@ -236,6 +236,14 @@ blockquote {
 
 		&:before {
 			top: .39em;
+		}
+
+		+ p {
+			margin-top: 0;
+		}
+
+		p + & {
+			margin-top: 4em;
 		}
 	}
 }
@@ -1432,7 +1440,7 @@ button:focus {
  * Discover widget at the end of pages
  */
 
-.discover {
+.discover.discover {
 	div {
 		padding: 16px;
 	}
@@ -1443,6 +1451,7 @@ button:focus {
 		height: 100%;
 		padding: 24px;
 		border-radius: 8px;
+		text-align: center;
 		background: white;
 		box-shadow: 0 4px 8px -4px rgba(0,0,0, .15);
 		text-decoration: none;
@@ -1468,21 +1477,11 @@ button:focus {
 	
 	@media (min-width: $mq-overflowing) {
 		a.disco-1 {
-			text-align: left;
 			margin-left: $padding-offset * -1;
-
-			.h3-like {
-				margin-left: 0;
-			}
 		}
 
 		a.disco-2 {
-			text-align: right;
 			margin-right: $padding-offset * -1;
-
-			.h3-like {
-				margin-right: 0;
-			}
 		}
 	}
 }
