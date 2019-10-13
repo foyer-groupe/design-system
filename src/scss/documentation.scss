@@ -465,13 +465,24 @@
 			width: 100%;
 			margin-top: 56px;
 			margin-right: 56px;
-			border: 1px solid #F2F2F2;
-			box-shadow: 0 16px 16px -16px rgba(102, 153, 204, .2);
+
+			@media (max-width: $mq-small) {
+				flex-wrap: wrap;
+			}
+
+			@media (min-width: $mq-small) {
+				border: 1px solid #F2F2F2;
+				box-shadow: 0 16px 16px -16px rgba(102, 153, 204, .2);
+			}
 		}
 
 		&-block {
 			width: 100%; // will auto adjust
 			background: #FFF;
+
+			@media (max-width: $mq-small) {
+				margin: 1em 0;
+			}
 
 			@media (max-width: map-get($breakpoints, sm)) {
 				width: 100%;
@@ -492,6 +503,10 @@
 
 			&.is-main {
 				transform: scale(1.2);
+
+				@media (max-width: $mq-small) {
+					transform: scale(1.05);				
+				}
 
 				.doc-color-block-details {
 					box-shadow: 0 8px 16px 0px rgba(102, 153, 204, .2);
