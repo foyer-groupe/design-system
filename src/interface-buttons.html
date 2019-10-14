@@ -1,0 +1,258 @@
+{% set docTitle = 'Panel' %}
+{% include  'partials/html-header.html' %}
+
+<div class="documentation">
+    
+    {% set navUIElement = 'is-active' %}
+    {% set navButtons = 'is-active' %}
+    {% include 'partials/navigation.html' %}
+
+    <div class="doc-main">
+        <main class="fds">
+            <h1 class="h1-like">Buttons</h1>
+
+            <div class="intro-block">
+                <p>
+                    Buttons are the goto to trigger an action on a page. (TOCOMPLETE)
+                </p>
+            </div>
+
+            <h2 class="h2-like">
+                Buttons kinds
+            </h2>
+
+            <div class="doc-demo">
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-md-6">
+
+                        <button class="ButtonContained">Contained</button>
+                        <br><br>
+                        <button class="ButtonOutlined">Outlined</button>
+                        <br><br>
+                        <button class="ButtonText">Text</button>
+
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="doc-tabs" role="tablist" aria-orientation="horizontal">
+
+                            {# Tab bar ------------------------------- #}
+                            <ul class="doc-tabs-controls">
+                                <li>
+                                    <a id="tab-html-1" href="#tabpanel-html-1" role="tab" aria-posinset="1" aria-setsize="1" aria-controls="tabpanel-html-1" aria-selected="true">HTML</a>
+                                </li>
+                            </ul>
+
+                            {# Tab content ---------------------------- #}
+                            <div class="doc-tabs-contents">
+
+                                {# HTML doc #}
+                                <div id="tabpanel-html-1" role="tabpanel" aria-expanded="true" aria-labelledby="tab-html-1">
+
+                                    <pre><code class="html"><button class="[ButtonContained|ButtonOutlined|ButtonText]">...</button></code></pre>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h2 class="h2-like">
+                Color variants
+            </h2>
+
+            <div class="doc-demo">
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-md-6">
+
+                        <button class="ButtonContained is-primary">Primary</button>
+                        <br><br>
+                        <button class="ButtonContained is-success">Success</button>
+                        <br><br>
+                        <button class="ButtonOutlined is-warning">Warning</button>
+                        <br><br>
+                        <button class="ButtonText is-danger">Danger</button>
+
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="doc-tabs" role="tablist" aria-orientation="horizontal">
+
+                            {# Tab bar ------------------------------- #}
+                            <ul class="doc-tabs-controls">
+                                <li>
+                                    <a id="tab-html-3" href="#tabpanel-html-3" role="tab" aria-posinset="1" aria-setsize="1" aria-controls="tabpanel-html-3" aria-selected="true">HTML</a>
+                                </li>
+                            </ul>
+
+                            {# Tab content ---------------------------- #}
+                            <div class="doc-tabs-contents">
+
+                                {# HTML doc #}
+                                <div id="tabpanel-html-3" role="tabpanel" aria-expanded="true" aria-labelledby="tab-html-3">
+
+                                    <pre><code class="html"><button class="[ButtonContained|ButtonOutlined|ButtonText] [is-primary|is-info|is-warning|is-danger|is-success]">...</button></code></pre>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="h2-like">
+                    Form variants
+                </h2>
+                <div class="row">
+
+                    <div class="col-xs-12 col-md-6">
+
+                        <button class="ButtonContained is-rounded">Contained rounded</button>
+                        <br><br>
+                        <button class="ButtonOutlined is-rounded">Outlined rounded</button>
+                        <br><br>
+                        <button class="ButtonText is-rounded">Text rounded</button>
+
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="doc-tabs" role="tablist" aria-orientation="horizontal">
+
+                            {# Tab bar ------------------------------- #}
+                            <ul class="doc-tabs-controls">
+                                <li>
+                                    <a id="tab-html-4" href="#tabpanel-html-4" role="tab" aria-posinset="1" aria-setsize="2" aria-controls="tabpanel-html-4" aria-selected="true">HTML</a>
+                                </li>
+                            </ul>
+
+                            {# Tab content ---------------------------- #}
+                            <div class="doc-tabs-contents">
+
+                                {# HTML doc #}
+                                <div id="tabpanel-html-4" role="tabpanel" aria-expanded="true" aria-labelledby="tab-html-4">
+
+                                    <pre><code class="html"><button class="[ButtonContained|ButtonOutlined|ButtonText] [is-rounded]">...</button></code></pre>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="h2-like">
+                    State variants
+                </h2>
+                <div class="row">
+
+                    <div class="col-xs-12">
+
+                        <button class="ButtonContained is-loading">Contained loading</button>
+                        <br><br>
+                        <button class="ButtonContained" disabled>Contained disabled</button>
+                        <br><br>
+                        <button class="ButtonOutlined is-loading">Outlined loading</button>
+                        <br><br>
+                        <button class="ButtonOutlined" disabled>Outlined disabled</button>
+                        <br><br>
+                        <button class="ButtonText is-loading">Text loading</button>
+                        <br><br>
+                        <button class="ButtonText" disabled>Text disabled</button>
+
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="doc-tabs" role="tablist" aria-orientation="horizontal">
+
+                            {# Tab bar ------------------------------- #}
+                            <ul class="doc-tabs-controls">
+                                <li>
+                                    <a id="tab-html-6" href="#tabpanel-html-6" role="tab" aria-posinset="1" aria-setsize="1" aria-controls="tabpanel-html-6" aria-selected="true">HTML</a>
+                                </li>
+                            </ul>
+
+                            {# Tab content ---------------------------- #}
+                            <div class="doc-tabs-contents">
+
+                                {# HTML doc #}
+                                <div id="tabpanel-html-6" role="tabpanel" aria-expanded="true" aria-labelledby="tab-html-6">
+
+                                    <pre><code class="html"><button class="[ButtonContained|ButtonOutlined|ButtonText] [is-loading|is-disabled]">...</button></code></pre>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="h2-like">
+                    Size variants
+                </h2>
+                <div class="row">
+
+                    <div class="col-xs-12">
+
+                        <button class="ButtonContained is-small">Small</button>
+                        <br><br>
+                        <button class="ButtonContained is-medium">Medium</button>
+                        <br><br>
+                        <button class="ButtonOutlined is-normal">Normal/Default</button>
+                        <br><br>
+                        <button class="ButtonText is-big">Big</button>
+                        <br><br>
+                        <button class="ButtonText is-full-width">Full width</button>
+
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="doc-tabs" role="tablist" aria-orientation="horizontal">
+
+                            {# Tab bar ------------------------------- #}
+                            <ul class="doc-tabs-controls">
+                                <li>
+                                    <a id="tab-html-7" href="#tabpanel-html-7" role="tab" aria-posinset="1" aria-setsize="1" aria-controls="tabpanel-html-7" aria-selected="true">HTML</a>
+                                </li>
+                            </ul>
+
+                            {# Tab content ---------------------------- #}
+                            <div class="doc-tabs-contents">
+
+                                {# HTML doc #}
+                                <div id="tabpanel-html-7" role="tabpanel" aria-expanded="true" aria-labelledby="tab-html-7">
+
+                                    <pre><code class="html"><button class="[ButtonContained|ButtonOutlined|ButtonText] [is-small|is-medium|is-normal|is-big|is-full-width]">...</button></code></pre>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        {% include  'partials/html-footer.html' %}
+    </div>
+</div>
+</body>
+</html>

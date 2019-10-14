@@ -65,3 +65,42 @@
 		}
 	}
 }
+
+@mixin is-loading($size: 20px, $bg: #FFFFFF) {
+	&.is-loading {
+		pointer-events: none;
+
+		&:before {
+			position: absolute;
+			z-index: 2;
+			top: calc(50% - #{$size / 2});
+			left: calc(50% - #{$size / 2});
+			content: ' ';
+			width: $size;
+			height: $size;
+			border: 3px solid rgba(map-get($colors, blue-foyer), .3);
+			border-radius: 50%;
+			border-top-color: map-get($colors, blue-foyer);
+			box-sizing: border-box;
+			animation: spinner-turn .6s linear infinite;
+			@keyframes spinner-turn {
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		}
+
+		&:after {
+			content: ' ';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			opacity: .7;
+			background: $bg;
+			box-sizing: border-box;
+		}
+	}
+}
