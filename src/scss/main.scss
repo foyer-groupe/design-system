@@ -30,8 +30,65 @@ $mq-small: 640px;
 $mq-medium: 880px;
 $mq-overflowing: $sidebar-width + $content-width + $padding-offset * 2; // To control overflowing elements
 
+// ---- Buttons ----------------------------------------------------------------------------------------------------- //
+//  Base (normal)
+$button-base-padding-sm				    : 10px 14px;
+$button-base-padding				    : 12px 16px;
+
+$button-base-font-size-sm               : 15px;
+$button-base-icon-size-sm     		    : 18px;
+$button-base-font-size                  : 16px;
+$button-base-icon-size				    : 24px;
+
+$button-base-height-sm				    : 40px;
+$button-base-height				        : 48px;
+
+//  Small
+$button-small-padding			        : 8px 12px;
+
+$button-small-font-size                 : 14px;
+$button-small-icon-size     		    : 16px;
+
+$button-small-height				    : 32px;
+
+//  Medium
+$button-medium-padding-sm			    : 8px 12px;
+$button-medium-padding			        : 10px 14px;
+
+$button-medium-font-size-sm             : 14px;
+$button-medium-icon-size-sm   		    : 16px;
+$button-medium-font-size                : 15px;
+$button-medium-icon-size			    : 18px;
+
+$button-medium-height-sm				: 32px;
+$button-medium-height				    : 40px;
+
+//  Big
+$button-big-padding-sm			        : 12px 16px;
+$button-big-padding			            : 14px 18px;
+
+$button-big-font-size-sm                : 16px;
+$button-big-icon-size-sm   		        : 18px;
+$button-big-font-size                   : 18px;
+$button-big-icon-size   		        : 26px;
+
+$button-big-height-sm				    : 48px;
+$button-big-height				        : 56px;
+
+$button-shadow       : 0 2px 4px rgba(2,8,20,0.1),0 1px 2px rgba(2,8,20,0.08);
+$button-shadow-hover : 0 4px 6px rgba(0,0,0,0.12),0 1px 3px rgba(0,0,0,0.08);
+
+
 $font-family: "Barlow", "DIN Pro", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-title: "Barlow", "Din Pro", "DIN", Helvetica, Arial, sans-serif;
+
+$font-weight-light     : 200;
+$font-weight-regular   : 400;
+$font-weight-medium    : 500;
+$font-weight-bold      : 700;
+$font-weight-black     : 800;
+
+$border-radius-default : 4px;
 
 .font-din-pro * {
 	font-family: 'DIN Pro', serif;
@@ -86,6 +143,7 @@ $breakpoints : (
 @import 'colors';
 @import 'grid';
 @import 'panel';
+@import 'buttons';
 @import 'documentation';
 
 * {
@@ -213,6 +271,7 @@ blockquote {
 	margin: 56px 16px 56px 40px;
 	font-size: 1.125em;
 	font-weight: 300;
+	font-style: italic;
 
 	&:before {
 		content: '“';
@@ -226,9 +285,9 @@ blockquote {
 		opacity: .15;
 	}
 
-	cite {
+	cite{
 		font-weight: 600;
-		font-style: normal;
+		font-style: italic;
 	}
 
 	&.is-big {
@@ -246,6 +305,9 @@ blockquote {
 			margin-top: 4em;
 		}
 	}
+}
+.cite-like {
+	font-style: italic;
 }
 
 /**
@@ -1049,6 +1111,22 @@ button:focus {
 		font-size: 1.5em;
 		font-weight: 600;
 		color: $color-foyer;
+
+		@supports (-webkit-text-fill-color: transparent) {
+			background-image: $linear-gradient-primary;
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+
+			&::-moz-selection {
+				-webkit-text-fill-color: white;
+			}
+			&::selection {
+				-webkit-text-fill-color: white;
+			}
+		}
+	}
+	.h4-like{
+
 
 		@supports (-webkit-text-fill-color: transparent) {
 			background-image: $linear-gradient-primary;
