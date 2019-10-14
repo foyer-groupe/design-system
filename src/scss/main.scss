@@ -210,6 +210,11 @@ a {
 	}
 }
 
+svg {
+	max-width: 100%;
+	height: auto;
+}
+
 strong {
 	font-weight: 600;
 }
@@ -484,7 +489,7 @@ blockquote {
 	}
 }
 
-.button {
+.button.button {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -495,6 +500,7 @@ blockquote {
 	line-height: 1.55;
 	font-weight: 600;
 	text-decoration: none;
+	border: 0 none;
 	color: white;
 	cursor: pointer;
 	border-radius: 4em; // pills
@@ -560,6 +566,26 @@ blockquote {
 			svg {
 				transform: scale(1);
 			}
+		}
+	}
+
+	&[disabled] {
+		box-shadow: none;
+		background: #999;
+		cursor: default;
+		cursor: not-allowed;
+
+		&:hover,
+		&:focus {
+			transform: none;
+
+			svg {
+				transform: none;
+			}
+		}
+
+		svg {
+			transition: none;
 		}
 	}
 
