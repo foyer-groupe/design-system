@@ -213,6 +213,7 @@ blockquote {
 	margin: 56px 16px 56px 40px;
 	font-size: 1.125em;
 	font-weight: 300;
+	font-style: italic;
 
 	&:before {
 		content: '“';
@@ -226,9 +227,9 @@ blockquote {
 		opacity: .15;
 	}
 
-	cite {
+	cite{
 		font-weight: 600;
-		font-style: normal;
+		font-style: italic;
 	}
 
 	&.is-big {
@@ -246,6 +247,9 @@ blockquote {
 			margin-top: 4em;
 		}
 	}
+}
+.cite-like {
+	font-style: italic;
 }
 
 /**
@@ -1049,6 +1053,22 @@ button:focus {
 		font-size: 1.5em;
 		font-weight: 600;
 		color: $color-foyer;
+
+		@supports (-webkit-text-fill-color: transparent) {
+			background-image: $linear-gradient-primary;
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text;
+
+			&::-moz-selection {
+				-webkit-text-fill-color: white;
+			}
+			&::selection {
+				-webkit-text-fill-color: white;
+			}
+		}
+	}
+	.h4-like{
+
 
 		@supports (-webkit-text-fill-color: transparent) {
 			background-image: $linear-gradient-primary;
