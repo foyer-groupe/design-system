@@ -61,7 +61,8 @@ gulp.task('default', function (done) {
 
 			// Copy image files
 			gulp.src([
-				'src/img/*'
+				'src/img/*',
+				'src/img/*/*'
 			]).pipe(gulp.dest('public/img/')),
 
 			// Copy font files
