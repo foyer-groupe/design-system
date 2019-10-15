@@ -939,7 +939,7 @@ button:focus {
 			content: "";
 			position: absolute;
 			left: 40px;
-			top: 10px;
+			top: 13px;
 			font-size: 20px;
 			font-family: "MaterialIcons";
 			opacity: .5;
@@ -1151,9 +1151,8 @@ button:focus {
 			}
 		}
 	}
+
 	.h4-like{
-
-
 		@supports (-webkit-text-fill-color: transparent) {
 			background-image: $linear-gradient-primary;
 			-webkit-text-fill-color: transparent;
