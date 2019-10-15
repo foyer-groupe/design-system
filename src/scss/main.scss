@@ -1170,6 +1170,23 @@ button:focus {
 				-webkit-text-fill-color: white;
 			}
 		}
+
+		&.is-gray {
+			color: #555;
+
+			@supports (-webkit-text-fill-color: transparent) {
+				background: #555;
+				-webkit-text-fill-color: transparent;
+				-webkit-background-clip: text;
+
+				&::-moz-selection {
+					-webkit-text-fill-color: white;
+				}
+				&::selection {
+					-webkit-text-fill-color: white;
+				}
+			}		
+		}
 	}
 
 	.h4-like{
