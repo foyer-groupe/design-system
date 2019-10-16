@@ -24,7 +24,7 @@
 
 	<ul class="doc-main-nav" aria-label="Foyer Design System sections">
 		<li class="{{ navGetStarted }}">
-			<a href="get-started.html">
+			<a class="doc-main-nav-link" href="get-started.html">
 				<img class="doc-nav-icon" src="{{ path_img }}icon-map-marker.svg" width="24" height="24" alt="">
 				<span class="nav-text">Get Started</span>
 			</a>
@@ -38,16 +38,16 @@
 
 			<ul id="doc-about" aria-hidden="{% if navAbout %}false{% else %}true{% endif %}">
 				<li {% if navWhoIs %}class="is-active"{% endif %}>
-					<a href="what-is-foyer.html">Foyer - The Company</a>
+					<a class="doc-main-nav-link" href="what-is-foyer.html">Foyer - The Company</a>
 				</li>
 				<li {% if navWhyDS %}class="is-active"{% endif %}>
-					<a href="why-a-design-system.html">Why a Design System?</a>
+					<a class="doc-main-nav-link" href="why-a-design-system.html">Why a Design System?</a>
 				</li>
 				<li {% if navWho %}class="is-active"{% endif %}>
-					<a href="who-are-our-users.html">Who are our users?</a>
+					<a class="doc-main-nav-link" href="who-are-our-users.html">Who are our users?</a>
 				</li>
 				<li {% if navContact %}class="is-active"{% endif %}>
-					<a href="contact.html">Contact Us</a>
+					<a class="doc-main-nav-link" href="contact.html">Contact Us</a>
 				</li>
 			</ul>
 		</li>
@@ -60,25 +60,25 @@
 
 			<ul id="doc-branding" aria-hidden="{% if navBranding %}false{% else %}true{% endif %}">
 				<li class="{{ navDesignPrinciples }}">
-					<a href="design-principles.html">Design Principles</a>
+					<a class="doc-main-nav-link" href="design-principles.html">Design Principles</a>
 				</li>
 				<li class="{{ navLogos }}">
-					<a href="logos.html">Logos</a>
+					<a class="doc-main-nav-link" href="logos.html">Logos</a>
 				</li>
 				<li class="{{ navColors }}">
-					<a href="colors.html">Colors</a>
+					<a class="doc-main-nav-link" href="colors.html">Colors</a>
 				</li>
 				<li class="{{ navTypography }}">
-					<a href="typography.html">Typography</a>
+					<a class="doc-main-nav-link" href="typography.html">Typography</a>
 				</li>
 				{#<li>
-					<a href="iconography.html" class="todo">Iconography</a>
+					<a class="doc-main-nav-link" href="iconography.html" class="todo">Iconography</a>
 				</li>#}
 				<li {% if navIllustration %}class="is-active"{% endif %}>
-					<a href="illustration.html">Illustration</a>
+					<a class="doc-main-nav-link" href="illustration.html">Illustration</a>
 				</li>
 				{#<li {% if navMotion %}class="is-active"{% endif %}>
-					<a href="motion.html" class="doing">Motion</a>
+					<a class="doc-main-nav-link" href="motion.html" class="doing">Motion</a>
 				</li>#}
 			</ul>
 		</li>
@@ -91,22 +91,22 @@
 
 			<ul id="doc-ui-element" aria-hidden="{% if navUIElement %}false{% else %}true{% endif %}">
 				<li>
-					<a href="interface-core.html" class="todo">Core</a>
+					<a class="doc-main-nav-link" href="interface-core.html" class="todo">Core</a>
 				</li>
 				<li class="{{ navGrid }}">
-					<a href="interface-grid-system.html">Grid System</a>
+					<a class="doc-main-nav-link" href="interface-grid-system.html">Grid System</a>
 				</li>
 				<li>
-					<a href="interface-layouts.html" class="todo">Layout Examples</a>
+					<a class="doc-main-nav-link" href="interface-layouts.html" class="todo">Layout Examples</a>
 				</li>
 				<li class="{{ navPanel }}">
-					<a href="interface-panel.html">Panel</a>
+					<a class="doc-main-nav-link" href="interface-panel.html">Panel</a>
 				</li>
 				<li class="{{ navButtons }}">
-					<a href="interface-buttons.html">Buttons</a>
+					<a class="doc-main-nav-link" href="interface-buttons.html">Buttons</a>
 				</li>
 				<li class="locked">
-					<a href="interface-ui-kit.html" class="todo">Complete UI Kit</a>
+					<a class="doc-main-nav-link" href="interface-ui-kit.html" class="todo">Complete UI Kit</a>
 				</li>
 			</ul>
 		</li>
@@ -119,19 +119,19 @@
 
 			<ul id="doc-strategy" aria-hidden="{% if navStrategy %}false{% else %}true{% endif %}">
 				<li {% if navOpenInnovation %}class="is-active"{% endif %}>
-					<a href="open-innovation.html">Open Innovation</a>
+					<a class="doc-main-nav-link" href="open-innovation.html">Open Innovation</a>
 				</li>
 				<li {% if navDesignProcess %}class="is-active"{% endif %}>
-					<a href="design-process.html">Design Process</a>
+					<a class="doc-main-nav-link" href="design-process.html">Design Process</a>
 				</li>
 				<li {% if navAPI %}class="is-active"{% endif %}>
-					<a href="api.html"><abbr title="Applications Programming Interface">API</abbr></a>
+					<a class="doc-main-nav-link" href="api.html"><abbr title="Applications Programming Interface">API</abbr></a>
 				</li>
 				{#<li>
-					<a href="features.html" class="todo">Features</a>
+					<a class="doc-main-nav-link" href="features.html" class="todo">Features</a>
 				</li>#}
 				<li {% if navRoadmap %}class="is-active"{% endif %}>
-					<a href="roadmap.html">Roadmap</a>
+					<a class="doc-main-nav-link" href="roadmap.html">Roadmap</a>
 				</li>
 			</ul>
 		</li>	
