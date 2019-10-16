@@ -15,9 +15,6 @@ var preLoad = function(){
 
 self.addEventListener('fetch', function(event) {
 	console.info('[SW] The service worker is serving the asset.');
-	caches.open(CACHE).then(function (cache) {
-		console.log(cache);
-	});
 	event.respondWith(checkResponse(event.request).catch(function() {
 		return returnFromCache(event.request)}
 	));
@@ -47,6 +44,13 @@ var addToCache = function(request){
 
 var returnFromCache = function(request){
 	return caches.open(CACHE).then(function (cache) {
+		cache.matchAll('/').then( (r)=> {
+			console.log(r);
+			r.forEach( function(element, index) {
+				console.log(element);
+			});
+		});
+
 		return cache.match(request).then(function (matching) {
 			if(!matching || matching.status == 404) {
 				return cache.match('offline.html')
