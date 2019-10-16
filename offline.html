@@ -223,12 +223,14 @@
 								return k.url;
 							});
 							
-							urls.forEach((url) => {
-								console.log(url);
-								if ( url.endsWith('.html') ) {
-									console.log(url);
-								}
-							})
+							if ( urls ) {
+								var list = document.getElementById('offline-list');
+								urls.forEach((url) => {
+									if ( url.endsWith('.html') ) {
+										list.innerHTML = list.innerHTML + '<li>< a href="' + url + '">' + url + '</a></li>';
+									}
+								});
+							}
 						});
 					});
 				</script>
