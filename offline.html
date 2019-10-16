@@ -216,7 +216,22 @@
 			<p>Here is a list of pages you already visited and can go back to:</p>
 
 			<ul id="offline-list">
-				
+				<script>
+					caches.open(CACHE).then(function(cache){
+						cache.keys().then(function(ks){
+							const urls = ks.map(function(k){
+								return k.url;
+							});
+							
+							urls.forEach((url) => {
+								console.log(url);
+								if ( url.endsWith('.html') ) {
+									console.log(url);
+								}
+							})
+						});
+					});
+				</script>
 			</ul>
 
 		</main>
