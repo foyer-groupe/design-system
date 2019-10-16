@@ -939,7 +939,7 @@ button:focus {
 			content: "";
 			position: absolute;
 			left: 40px;
-			top: 10px;
+			top: 13px;
 			font-size: 20px;
 			font-family: "MaterialIcons";
 			opacity: .5;
@@ -1047,6 +1047,26 @@ button:focus {
 		}
 	}
 
+	.can-overflow {
+		position: relative;
+		margin: 2em auto;
+		text-align: center;
+
+		@media (min-width: $mq-medium) {
+			width: calc(100vw - 320px);
+			margin-left: calc(-50vw + 160px);
+			margin-right: 0;
+			padding: 2em 24px;
+			left: 50%;
+		}
+
+		+ .h2-like {
+			margin-top: 0;
+			border-top: 0;
+			padding-top: 1em;
+		}
+	}
+
 	/**
 	 * TITLES
 	 */
@@ -1150,10 +1170,26 @@ button:focus {
 				-webkit-text-fill-color: white;
 			}
 		}
+
+		&.is-gray {
+			color: #555;
+
+			@supports (-webkit-text-fill-color: transparent) {
+				background: #555;
+				-webkit-text-fill-color: transparent;
+				-webkit-background-clip: text;
+
+				&::-moz-selection {
+					-webkit-text-fill-color: white;
+				}
+				&::selection {
+					-webkit-text-fill-color: white;
+				}
+			}		
+		}
 	}
+
 	.h4-like{
-
-
 		@supports (-webkit-text-fill-color: transparent) {
 			background-image: $linear-gradient-primary;
 			-webkit-text-fill-color: transparent;
