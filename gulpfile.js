@@ -32,7 +32,7 @@ gulp.task('default', function (done) {
 			gulp.src([
 				'CNAME',
 				'src/*.js',
-				'src/*.webmanifest'
+				'src/*.json'
 			]).pipe(gulp.dest('public/')),
 
 			// Compile CSS files

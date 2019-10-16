@@ -1,0 +1,32 @@
+{% set docTitle = 'Offline' %}
+{% include  'partials/html-header.html' %}
+
+<div class="documentation">
+
+	{% include 'partials/navigation.html' %}
+
+	<div class="doc-main">
+		<main class="fds">
+			<h1 class="h1-like">Offline</h1>
+
+			<div class="intro-block">
+				<p>Looks like you are offline or the network is too bad.</p>
+			</div>
+
+			<p>We decided to give you access to all the pages you already visited while you are offline.</p>
+
+			<h2 class="h2-like">You can go back to…</h2>
+
+			<p>Here is a list of pages you already visited and can go back to:</p>
+
+			<ul id="offline-list">
+				
+			</ul>
+
+		</main>
+
+		{% include  'partials/html-footer.html' %}
+	</div>
+</div>
+	</body>
+</html>
