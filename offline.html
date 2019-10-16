@@ -217,7 +217,7 @@
 
 			<ul id="offline-list">
 				<script>
-					caches.open(CACHE).then(function(cache){
+					caches.open('FoyerDesignSystem-1.0').then(function(cache){
 						cache.keys().then(function(ks){
 							const urls = ks.map(function(k){
 								return k.url;
