@@ -24,13 +24,15 @@ gulp.task('default', function (done) {
 
 			// Compile HTML files
 			gulp.src([
-				'src/*.html'
+				'src/*.html',
 			]).pipe(swig({ data: swigData }))
 				.pipe(gulp.dest('public/')),
 
-			// Compile HTML files
+			// Move some other files
 			gulp.src([
-				'CNAME'
+				'CNAME',
+				'src/*.js',
+				'src/*.webmanifest'
 			]).pipe(gulp.dest('public/')),
 
 			// Compile CSS files
