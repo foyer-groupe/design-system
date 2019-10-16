@@ -227,7 +227,7 @@
 								var list = document.getElementById('offline-list');
 								
 								urls.forEach((url) => {
-									if ( url.endsWith('.html') ) {
+									if ( url.endsWith('.html') && ! url.endsWith('offline.html') ) {
 										list.insertAdjacentHTML('beforeend', '<li><a href="' + url + '">' + url + '</a></li>');
 									}
 								});
