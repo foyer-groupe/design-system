@@ -15,6 +15,9 @@ var preLoad = function(){
 
 self.addEventListener('fetch', function(event) {
 	console.info('[SW] The service worker is serving the asset.');
+	caches.open(CACHE).then(function (cache) {
+		console.log(cache);
+	});
 	event.respondWith(checkResponse(event.request).catch(function() {
 		return returnFromCache(event.request)}
 	));
@@ -25,8 +28,6 @@ var checkResponse = function(request){
 	return new Promise(function(fulfill, reject) {
 		fetch(request).then(function(response){
 			if(response.status !== 404) {
-				console.log('response');
-				console.log(response);
 				fulfill(response)
 			} else {
 				reject()
