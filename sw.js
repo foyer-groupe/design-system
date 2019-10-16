@@ -44,13 +44,6 @@ var addToCache = function(request){
 
 var returnFromCache = function(request){
 	return caches.open(CACHE).then(function (cache) {
-		cache.matchAll('/').then( (r)=> {
-			console.log(r);
-			r.forEach( function(element, index) {
-				console.log(element);
-			});
-		});
-
 		return cache.match(request).then(function (matching) {
 			if(!matching || matching.status == 404) {
 				return cache.match('offline.html')
