@@ -452,12 +452,16 @@ blockquote {
 	}
 }
 
-.fds-logo img {
-	width: 120px;
-	height: auto;
+.fds-logo {
+	line-height: 0;
 
-	@media (min-width: $mq-small) {
-		width: auto;
+	img {
+		width: 104px;
+		height: auto;
+
+		@media (min-width: $mq-small) {
+			width: auto;
+		}
 	}
 }
 
@@ -645,7 +649,7 @@ blockquote {
 	display: flex;
 	background: none;
 	border: 0;
-	padding: 16px;
+	padding: 12px 16px;
 	align-items: center;
 	font-size: .875em;
 	font-weight: bold;
@@ -653,6 +657,10 @@ blockquote {
 	text-transform: uppercase;
 	border-radius: 3px;
 	transition: all .275s;
+
+	@media (min-width: $mq-medium) {
+		padding: 16px;
+	}
 
 	&:hover,
 	&:focus {

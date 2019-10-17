@@ -1,9 +1,11 @@
 .doc {
 	&-main {
 		width: calc(100% - #{$sidebar-width});
+		margin-left: $sidebar-width;
 
 		@media (max-width: $mq-medium) {
 			width: 100%;
+			margin-left: 0;
 		}
 
 		/* Main documentation pages */
@@ -238,13 +240,17 @@
 	&-nav {
 		$second-level-ident: 72px;
 		$third-level-ident: 88px;
-
+		
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
 		width: $sidebar-width;
-		min-height: 100vh;
 		flex-shrink: 0;
 		background: $linear-gradient-main-tob top left no-repeat fixed;
 		transition: all .325s;
 		z-index: $doc-nav-z-index;
+		overflow: auto;
 
 		~ * {
 			transition: transform .325s;
@@ -252,20 +258,15 @@
 
 
 		&.is-home {
-			position: fixed;
-			top: 0;
+			left: auto;
 			right: 0;
 			height: 100vh;
-			overflow: auto;
 			transform: translateX(100%);
 		}
 
 		@media (max-width: $mq-medium) {
-			position: fixed;
-			top: 0;
 			right: 0;
-			height: 100vh;
-			overflow: auto;
+			left: auto;
 			transform: translateX(100%);
 		}
 
@@ -279,8 +280,19 @@
 		}
 
 		&-logo {
-			padding: 40px 24px;
+			padding: 24px 16px;
 			text-align: center;
+			
+			@media (max-width: $mq-small) {
+				img {
+					width: 120px;
+					height: auto;
+				}
+			}	
+
+			@media (min-width: $mq-small) {
+				padding: 40px 24px;
+			}
 		}
 
 		ul, li {
@@ -292,15 +304,6 @@
 
 		> ul > li {
 			border-bottom: 1px solid rgba(255, 255, 255, .05);
-		}
-
-
-		> ul {
-			position: sticky;
-			top: 8px;
-			// 100% viewport height minus the height of the logo part to allow scrollable sticky menu.
-			height: calc(100vh - 134px);
-			overflow: auto;
 		}
 
 		ul {
