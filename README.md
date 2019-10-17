@@ -1,3 +1,5 @@
+![Foyer Design System](https://repository-images.githubusercontent.com/212557910/60527300-e937-11e9-9968-bb6c139f1680)
+
 # Foyer Design System
 
 This repository is here to centralized the content of our public Design System.
@@ -10,7 +12,7 @@ We decided to publish a little piece of our work to get feedback from the outsid
 
 ## The Website
 
-Website should be accessible at [https://design.foyer.lu](https://design.foyer.lu).
+Website is accessible at [https://design.foyer.lu](https://design.foyer.lu).
 
 ## Human Behind
 
