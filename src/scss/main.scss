@@ -210,7 +210,8 @@ a {
 	}
 }
 
-svg {
+svg,
+img {
 	max-width: 100%;
 	height: auto;
 }
@@ -621,6 +622,16 @@ blockquote {
 
 .text-right {
 	text-align: right;
+}
+
+.text-xs-center {
+	@media (max-width: $mq-small) {
+		text-align: center;
+
+		br {
+			display: none;
+		}
+	}
 }
 
 .text-medium {
@@ -1229,6 +1240,8 @@ button:focus {
 
 		.card-illu {
 			margin-right: 32px;
+			width: 138px;
+			flex: 0 0 auto;
 		}
 
 		.h3-like {
