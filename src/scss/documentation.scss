@@ -506,7 +506,8 @@
 				&:hover {
 					box-shadow: 0 8px 16px 8px rgba(0, 0, 0, .1); 
 				}
-				&:focus {
+				&:focus,
+				&:target {
 					outline: 2px solid $color-foyer;
 				}
 			}
