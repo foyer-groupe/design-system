@@ -271,6 +271,24 @@
 		});
 	}
 
+	/**
+	 * Installation Prompt Tracking
+	 */
+	
+	window.addEventListener("beforeinstallprompt", function(e) { 
+	
+		var platform = e.platforms; // e.g., ["web", "android", "windows"]
+
+		e.userChoice.then(function(choice) { 
+			var answer = choice.outcome; // either "accepted" or "dismissed"
+
+			// Send it as custom event for GTM.
+			dataLayer = dataLayer || [];
+			dataLayer.push({'event': 'PWA-Install', 'userDecision': answer, 'userPlatform': platform });
+
+		}); 
+	});
+
 })();
 (function(){
     let collapsablePanels = document.querySelectorAll('.Panel.is-collapsable'),
