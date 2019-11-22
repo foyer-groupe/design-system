@@ -1846,6 +1846,63 @@ button:focus {
 }
 
 /**
+ * Downloadable (PNG|SVG images for example)
+ */
+.downloadable {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 32px 0 48px;
+
+	&-image {
+		margin: 16px 0;
+	}
+
+	.dl-image {
+		padding: 16px;
+		text-align: center;
+		border-radius: 6px;
+		line-height: 0;
+	}
+
+	p.dl-links {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		margin-top: 8px;
+
+		&:first-child {
+			border-radius: 4px 0 0 4px;
+		}
+	}
+
+	.dl-link {
+		padding: 8px 16px;
+		border: 1px solid $color-foyer;
+		text-decoration: none;
+		font-weight: 600;
+
+		& + .dl-link {
+			margin-left: -1px;
+		}
+
+		&:first-of-type { // Can be first child or first type, better first of type though
+			border-radius: 4px 0 0 4px;
+		}
+
+		&:last-child {
+			border-radius: 0 4px 4px 0;
+		}
+
+		&:hover,
+		&:focus {
+			background: $color-foyer;
+			color: white;
+		}
+	}
+}
+
+/**
  * Inline Colors
  */
 .color {
