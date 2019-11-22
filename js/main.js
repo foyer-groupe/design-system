@@ -188,6 +188,10 @@
 		dpLayer = document.querySelector('.doc-color-detail-panel-back'),
 		i = 0,
 		closePanel = function(e) {
+			// If it's a keypress event and CMD or CTRL is activated, maybe a Copy attempt
+			if ( e.type === 'keydown' && ( ( e.ctrlKey && e.keyCode === 67 ) || ( e.metaKey && e.keyCode === 67 ) ) ) {
+				return;
+			}
 
 			// If it's a keypress event, close only if it's an Escape attempt.
 			if ( ( e.type === 'keydown' && e.keyCode !== 27 ) ) {
