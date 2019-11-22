@@ -484,14 +484,18 @@
 			}
 
 			@media (min-width: $mq-small) {
-				border: 1px solid #F2F2F2;
 				box-shadow: 0 16px 16px -16px rgba(102, 153, 204, .2);
+			}
+
+			.doc-main & + p {
+				margin-top: 80px;
 			}
 		}
 
 		&-block {
 			width: 100%; // will auto adjust
 			background: #FFF;
+			outline: 1px solid rgba(0,0,0,.05);
 
 			@media (max-width: $mq-small) {
 				margin: 1em 0;
