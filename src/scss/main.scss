@@ -1867,6 +1867,7 @@ button:focus {
 
 	p.dl-links {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		text-align: center;
 		margin-top: 8px;
@@ -1874,6 +1875,15 @@ button:focus {
 		&:first-child {
 			border-radius: 4px 0 0 4px;
 		}
+	}
+
+	.dl-action {
+		flex-basis: 100%;
+		text-align: center;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+		font-weight: 600;
 	}
 
 	.dl-link {
