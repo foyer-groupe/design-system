@@ -274,10 +274,9 @@ dl.counter {
 
 blockquote {
 	position: relative;
-	margin: 56px 16px 56px 40px;
-	font-size: 1.125em;
+	margin: 72px 16px 56px 40px;
+	font-size: 1.2em;
 	font-weight: 300;
-	font-style: italic;
 
 	&:before {
 		content: '“';
@@ -291,7 +290,7 @@ blockquote {
 		opacity: .15;
 	}
 
-	cite{
+	cite {
 		font-weight: 600;
 		font-style: italic;
 	}
