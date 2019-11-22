@@ -189,7 +189,8 @@
 		i = 0,
 		closePanel = function(e) {
 			// If it's a keypress event and CMD or CTRL is activated, maybe a Copy attempt
-			if ( e.type === 'keydown' && ( ( e.ctrlKey && e.keyCode === 67 ) || ( e.metaKey && e.keyCode === 67 ) ) ) {
+			// Let's user take control on Meta/Ctrl press.
+			if ( e.type === 'keydown' && ( e.ctrlKey || e.metaKey ) ) {
 				return;
 			}
 
