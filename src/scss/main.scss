@@ -1845,9 +1845,9 @@ button:focus {
 }
 
 /**
- * Downloadable (PNG|SVG images for example)
+ * Gallery image like for downloadable logo (PNG|SVG images for example)
  */
-.downloadable {
+.gallery {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -1857,7 +1857,7 @@ button:focus {
 		margin: 16px 0;
 	}
 
-	.dl-image {
+	.gl-image {
 		padding: 16px;
 		text-align: center;
 		border-radius: 6px;
@@ -1874,6 +1874,12 @@ button:focus {
 		&:first-child {
 			border-radius: 4px 0 0 4px;
 		}
+	}
+
+	ul.dl-links {
+		padding: 0;
+		margin-top: 0;
+		list-style: none;
 	}
 
 	.dl-action {

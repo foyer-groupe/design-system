@@ -1,4 +1,4 @@
-{% set docTitle = 'Panel' %}
+{% set docTitle = 'Button Component' %}
 {% include  'partials/html-header.html' %}
 
 <div class="documentation">
@@ -13,12 +13,97 @@
 
             <div class="intro-block">
                 <p>
-                    Buttons are the goto to trigger an action on a page. (TOCOMPLETE)
+                    Buttons are the goto to trigger an action on a page. They can trigger creative or  destructive actions, allow you to execute in-page action or let you go to a new page.
                 </p>
             </div>
 
-            <h2 class="h2-like">
-                Buttons kinds
+            <p>
+                A button is a visual aspect to catch the eye of the user and invite him to do something in a specific context. The DNA of our buttons is quite classical. The basic shape is coming with a lot of variations to cover several use cases.
+            </p>
+
+            <div class="toc">
+                <p id="toc-title" class="h3-like">Table of Contents</p>
+                <ul aria-labelledby="toc-title">
+                    <li>
+                        <a href="#button-dna">Button DNA</a>
+                    </li>
+                    <li>
+                        <a href="#variations">Variations</a>
+                    </li>
+                </ul>
+            </div>
+
+            <h2 class="h2-like" id="button-dna">
+                Button DNA
+            </h2>
+            
+            <p>
+                The buttons all come with a minimal surface area on which it is possible to interact to trigger actions. The smallest size variation is 32 pixels wide, and even if the visual size is that small, the minimum "touch" area is 40 pixels wide minimum.<br>
+                Here some technical information for basic buttons.
+            </p>
+
+             <p class="margin-big text-center">
+                <img src="{{ path_img }}components/button-dna-documentation.png" srcset="{{ path_img }}components/button-dna-documentation@2x.png" width="543" height="120" alt="A button with blue gradient and measurements here and there, described below.">
+            </p>
+
+            <h3 class="h3-like" id="button-detail">
+                Technical Basics
+            </h3>
+
+            <p>Information you need in order to build a basic button:</p>
+
+            <ul>
+                <li>DIN Pro Medium 16px Uppercase is used in white</li>
+                <li>Background is a <a href="colors.html#blue-tertiary">Blue Tertiary</a> from <span class="color">#4EABFF</span> to <span class="color">#0F8DFF</span> on normal state.</li>
+                <li>Padding left and right are 16px, top and bottom are 12px</li>
+                <li>Border Radius are 4 pixels</li>
+                <li>Total height is approximately 40px. Approx. because you never block the height of an element with a text inside of it (accessibility recommandation).</li>
+            </ul>
+
+            <h3 class="h3-like" id="state-variations">
+                State Variations
+            </h3>
+
+            <div class="gallery">
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <img src="{{ path_img }}components/button-primary-normal.png" srcset="{{ path_img }}components/button-primary-normal@2x.png" width="155" height="48" alt="Button Primary in a normal state">
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center">Description coming</li>
+                    </ul>
+                </div>
+
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <img src="{{ path_img }}components/button-primary-hover.png" srcset="{{ path_img }}components/button-primary-hover@2x.png" width="158" height="52" alt="Button Primary in a hover state">
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center">Description coming</li>
+                    </ul>
+                </div>
+
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <img src="{{ path_img }}components/button-primary-active.png" srcset="{{ path_img }}components/button-primary-active@2x.png" width="158" height="52" alt="Button Primary in a active state">
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center">Description coming</li>
+                    </ul>
+                </div>
+
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <img src="{{ path_img }}components/button-primary-disabled.png" srcset="{{ path_img }}components/button-primary-disabled@2x.png" width="155" height="48" alt="Button Primary in a disabled state">
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center">Description coming</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 class="h2-like" id="variations">
+                Buttons Variations
             </h2>
 
             <div class="doc-demo">
