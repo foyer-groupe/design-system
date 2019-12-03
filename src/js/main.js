@@ -218,6 +218,19 @@
 		};
 
 	if ( colors ) {
+
+		// While page loading, internal anchors are kind of messed up because content disappear after page load.
+		// Make it better after page load and JS loaded.
+		if ( window.location.hash ) {
+			let hash = window.location.hash;
+
+			window.location.hash = '';
+
+			setTimeout(function(){
+				window.location.hash =  hash;
+			}, 75);
+		}
+
 		colors.forEach(function(color){
 			i++;
 			var uniqid = 'color-block-detail-' + i,
