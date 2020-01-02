@@ -84,7 +84,7 @@ $font-family-title: "Barlow", "Din Pro", "DIN", Helvetica, Arial, sans-serif;
 
 $font-weight-light     : 200;
 $font-weight-regular   : 400;
-$font-weight-medium    : 500;
+$font-weight-medium    : 600;
 $font-weight-bold      : 700;
 $font-weight-black     : 800;
 
@@ -1065,6 +1065,15 @@ button:focus {
 		}
 	}
 
+	p,
+	li {
+		> code {
+			font-size: 1.2em;
+			line-height: 1.4;
+			color: purple;
+		}
+	}
+
 	.can-overflow {
 		position: relative;
 		margin: 2em auto;
@@ -1083,6 +1092,15 @@ button:focus {
 			border-top: 0;
 			padding-top: 1em;
 		}
+
+		pre {
+			overflow: auto;
+		}
+
+		pre code.hljs {
+			width: 820px;
+			max-width: 100%;
+		}
 	}
 
 	.u-is-bg-white pre .hljs {
@@ -1095,7 +1113,7 @@ button:focus {
 
 	.u-is-bg-white pre .hljs:before {
 		position: absolute;
-		bottom: calc(100% - 1em);
+		bottom: calc(100% - 2em);
 		content: 'Code Sample';
 		font-size: 1.2em;
 		text-transform: uppercase;
@@ -1108,8 +1126,6 @@ button:focus {
 	}
 
 	.can-overflow + .can-overflow {
-		padding-top: 0;
-		padding-bottom: 0;
 		margin-top: -3em;
 	}
 
