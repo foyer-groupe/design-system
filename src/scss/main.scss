@@ -165,13 +165,13 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth;
 }
 
 body {
 	font-family: "Barlow", Helvetica, Arial, sans-serif;
 	color: $color-grey-dark;
 	background: #F7FBFF;
-	scroll-behavior: smooth;
 }
 
 button,

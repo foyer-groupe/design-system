@@ -1,0 +1,108 @@
+{% set docTitle = 'Global Technical Guidelines' %}
+{% include  'partials/html-header.html' %}
+
+<div class="documentation">
+    
+    {% set navUIElement = 'is-active' %}
+    {% set navUIGlobalGuidelines = 'is-active' %}
+    {% include 'partials/navigation.html' %}
+
+    <div class="doc-main">
+        <main class="fds">
+            <h1 class="h1-like">Global Technical Guidelines</h1>
+
+            <div class="intro-block">
+                <p>
+                    Our work on UI element tends to cover a lot of quality and accessibility requirements.
+                </p>
+            </div>
+
+            <p>
+                While designing and coding UI Element, we work on solving user issues by following design and code standards, but also complying to accessibility guidelines: WCAG and Renow luxembourgish accessibility guidelines. We know there is a lot to do yet, but our teams are on it.
+            </p>
+
+            <div class="toc">
+                <p id="toc-title" class="h3-like">Table of Contents</p>
+                <ul aria-labelledby="toc-title">
+                    <li>
+                        <a href="#browser-support">Browser Support</a>
+                    </li>
+                    <li>
+                        <a href="#standards">Code Standards</a>
+                    </li>
+                    <li>
+                        <a href="#accessibility">Accessibility</a>
+                    </li>
+                </ul>
+            </div>
+
+            <h2 class="h2-like" id="browser-support">
+                Browser Support
+            </h2>
+            
+            <p>
+                We try to cover the majority of modern browsers. We have a lot of old software only compatible with old versions of Internet Explorer, but we launch a program to modernize our workplace (physically and virtually) and we are working on tacling this heritage.
+            </p>
+
+            <p>That's why our work when it comes to coding is to be compatible with:</p>
+
+            <ul>
+                <li>Opera: 49+</li>
+                <li>Internet Explorer: 11+</li>
+                <li>Microsoft Edge: 12+</li>
+                <li>Chrome: 49+</li>
+                <li>Safari: 9+</li>
+                <li>Firefox: 45+</li>
+            </ul>
+
+            <p>
+                Common Mobile Browsers on Mobiles and Tablets are included. Most of the interfaces we build are made for our Agents. As we control the type of device we distribute, we know that they are modern enough to support our developments.
+            </p>
+
+            <h2 class="h2-like" id="standards">
+                Code Standards
+            </h2>
+
+            <p>
+                <em>Section being written…</em>
+            </p>
+
+            <h2 class="h2-like" id="accessibility">
+                Accessibility
+            </h2>
+
+            <p>
+                One of our <a href="design-principles.html">Design Principles</a> we care the most at Foyer makes us build interfaces accessible for everyone. Accessibility here have to be taken as "available, readable and usable by people with disabilities", but by extension we would like to be accessible by everybody, under the principle of Inclusive Design.
+            </p>
+
+            <h3 class="h3-like" id="color-contrast">Contrasts</h3>
+
+            <p>
+                For example, one of our job is to make User Interface contrasted enough through a good <a href="colors.html#accessibility">color palette</a>, avoiding combination of colors that would be not contrasted enough. That's why you will find a table of color combinations (still work in progress) for every colors of our palette, to better know if 2 colors are compatible as foreground/background.
+            </p>
+
+            <p>
+                This work is not only done on colors, but also on <a href="typography.html">typography</a>, using the right font weight at the right place to bring a better readability to users.
+            </p>
+
+            <h3 class="h3-like" id="color-contrast">Screen Readers</h3>
+
+            <p>
+                Screen Readers are softwares and sometimes hardwares that read the page for you when you are not able to do it on your own. For example, VoiceOver on Mac or iPhone/iPad is installed natively on you device and can be activated to read the content of the screen and help you interact with it.
+            </p>
+
+            <p>
+                Most of the time, native HTML 5 elements are compatible and well supported by screen readers. But with modern developments in JavaScript, you have to be careful (as a developer) of what you are building and how you do it. That's why we decided to take care of the accessibility part of the code within the UX Team, with the help of our developers.<br>
+                As soon as we can, and as soon as necessary, we use semantic HTML elements and we implement the <a href="https://www.w3.org/TR/wai-aria-1.1/"><abbr title="Web Accessibility Interface - Accessible Rich Internet Applications">WAI-ARIA</abbr></a> standard in our developments.
+            </p>
+
+            <p>
+                Accessibility requirements and advices are usually distributed with our technical documentation within the component documentation pages itselves.
+            </p>
+        </main>
+
+        {% include  'partials/html-footer.html' %}
+    </div>
+</div>
+</body>
+</html>

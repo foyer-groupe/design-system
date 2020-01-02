@@ -59,16 +59,16 @@
 			</button>
 
 			<ul id="doc-branding" aria-hidden="{% if navBranding %}false{% else %}true{% endif %}">
-				<li class="{{ navDesignPrinciples }}">
+				<li {% if navDesignPrinciples %}class="is-active"{% endif %}>
 					<a class="doc-main-nav-link" href="design-principles.html">Design Principles</a>
 				</li>
-				<li class="{{ navLogos }}">
+				<li {% if navLogos %}class="is-active"{% endif %}>
 					<a class="doc-main-nav-link" href="logos.html">Logos</a>
 				</li>
-				<li class="{{ navColors }}">
+				<li {% if navColors %}class="is-active"{% endif %}>
 					<a class="doc-main-nav-link" href="colors.html">Colors</a>
 				</li>
-				<li class="{{ navTypography }}">
+				<li {% if navTypography %}class="is-active"{% endif %}>
 					<a class="doc-main-nav-link" href="typography.html">Typography</a>
 				</li>
 				{#<li>
@@ -90,19 +90,22 @@
 			</button>
 
 			<ul id="doc-ui-element" aria-hidden="{% if navUIElement %}false{% else %}true{% endif %}">
+				<li {% if navUIGlobalGuidelines %}class="is-active"{% endif %}>
+					<a class="doc-main-nav-link" href="interface-global-guidelines.html">Global Guidelines</a>
+				</li>
 				{#<li>
 					<a class="doc-main-nav-link" href="interface-core.html" class="todo">Core</a>
 				</li>#}
-				<li class="{{ navGrid }}">
+				<li {% if navGrid %}class="is-active"{% endif %}>
 					<a class="doc-main-nav-link" href="interface-grid-system.html">Grid System</a>
 				</li>
 				{#<li>
 					<a class="doc-main-nav-link" href="interface-layouts.html" class="todo">Layout Examples</a>
 				</li>#}
-				<li class="{{ navPanel }}">
+				<li {% if navPanel %}class="is-active"{% endif %}>
 					<a class="doc-main-nav-link" href="interface-panel.html">Panel</a>
 				</li>
-				<li class="{{ navButtons }}">
+				<li {% if navButtons %}class="is-active"{% endif %}>
 					<a class="doc-main-nav-link" href="interface-buttons.html">Buttons</a>
 				</li>
 				{#<li class="locked">
