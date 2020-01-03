@@ -208,7 +208,7 @@
             <div class="can-overflow u-is-bg-white">
 
                 <pre><code class="html"><button class="ButtonContained [is-success|is-warning|is-danger]" type="button">
-    Normal
+    Button Label
 </button>
 </code></pre>
             </div>
@@ -277,7 +277,7 @@
             <div class="can-overflow u-is-bg-white">
 
                 <pre><code class="html"><button class="ButtonOutlined [is-success|is-warning|is-danger|is-neutral]" type="button">
-    Normal
+    Button Label
 </button>
 </code></pre>
             </div>
@@ -346,7 +346,7 @@
             <div class="can-overflow u-is-bg-white">
 
                 <pre><code class="html"><button class="ButtonText [is-success|is-warning|is-danger|is-neutral]" type="button">
-    Normal
+    Button Label
 </button>
 </code></pre>
             </div>
@@ -415,7 +415,7 @@
             <div class="can-overflow u-is-bg-white">
 
                 <pre><code class="html"><button class="ButtonContained [is-success|is-warning|is-danger]" type="button">
-    Color Variation
+    Button Label
 </button>
 </code></pre>
             </div>
@@ -477,7 +477,7 @@
             <div class="can-overflow u-is-bg-white">
 
                 <pre><code class="html"><button class="ButtonContained is-neutral" type="button">
-    Color Variation
+    Button Label
 </button>
 </code></pre>
             </div>
@@ -535,7 +535,7 @@
             <div class="can-overflow u-is-bg-white">
 
                 <pre><code class="html"><button class="ButtonContained is-rounded" type="button">
-    Rounded Button
+    Button Label
 </button>
 </code></pre>
             </div>
@@ -548,97 +548,178 @@
                 Size variations
             </h3>
 
-            <p><strong><em>The section below is being written… Stay tuned!</em></strong></p>
+            <p>
+                We work in a complexe environment where responsive and rich interfaces are kind of our daily basic designer challenge. And size matters.
+            </p>
 
-            <div class="row">
-
-                <div class="col-xs-12">
-
-                    <button class="ButtonContained is-small">Small</button>
-                    <br><br>
-                    <button class="ButtonContained is-medium">Medium</button>
-                    <br><br>
-                    <button class="ButtonOutlined is-normal">Normal/Default</button>
-                    <br><br>
-                    <button class="ButtonText is-big">Big</button>
-                    <br><br>
-                    <button class="ButtonText is-full-width">Full width</button>
-
-                </div>
-
-                <div class="col-xs-12">
-                    <div class="doc-tabs" role="tablist" aria-orientation="horizontal">
-
-                        {# Tab bar ------------------------------- #}
-                        <ul class="doc-tabs-controls">
-                            <li>
-                                <a id="tab-html-7" href="#tabpanel-html-7" role="tab" aria-posinset="1" aria-setsize="1" aria-controls="tabpanel-html-7" aria-selected="true">HTML</a>
-                            </li>
-                        </ul>
-
-                        {# Tab content ---------------------------- #}
-                        <div class="doc-tabs-contents">
-
-                            {# HTML doc #}
-                            <div id="tabpanel-html-7" role="tabpanel" aria-expanded="true" aria-labelledby="tab-html-7">
-
-                                <pre><code class="html"><button class="[ButtonContained|ButtonOutlined|ButtonText] [is-small|is-medium|is-normal|is-big|is-full-width]">...</button></code></pre>
-
-                            </div>
-
-                        </div>
-
+            <div class="gallery can-overflow u-is-bg-white">
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <button class="ButtonContained is-small" type="button">
+                            Small Button
+                        </button>
                     </div>
+                    <ul class="dl-links">
+                        <li class="text-center"><strong>Small</strong></li>
+                        <li class="text-center"><code>.is-small</code></li>
+                        <li class="text-center">≈ 24px height</li>
+                    </ul>
                 </div>
 
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <button class="ButtonContained is-medium" type="button">
+                            Medium Button
+                        </button>
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center"><strong>Medium</strong></li>
+                        <li class="text-center"><code>.is-medium</code></li>
+                        <li class="text-center">≈ 24px height</li>
+                    </ul>
+                </div>
+
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <button class="ButtonContained is-normal" type="button">
+                            Normal Button
+                        </button>
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center"><strong>Normal</strong></li>
+                        <li class="text-center"><code>.is-normal / empty</code></li>
+                        <li class="text-center">≈ 24px height</li>
+                    </ul>
+                </div>
+
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <button class="ButtonContained is-big" type="button">
+                            Big Button
+                        </button>
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center"><strong>Big</strong></li>
+                        <li class="text-center"><code>.is-big</code></li>
+                        <li class="text-center">≈ 24px height</li>
+                    </ul>
+                </div>
+
+                <div class="gallery-image" style="width:820px; max-width: 100%;">
+                    <div class="gl-image">
+                        <button class="ButtonContained is-big is-full-width" type="button">
+                            Full Width Button
+                        </button>
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center"><strong>Full Width</strong></li>
+                        <li class="text-center"><code>.is-full-width</code></li>
+                        <li class="text-center">Takes 100% of container width</li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="can-overflow u-is-bg-white">
+
+                <pre><code class="html"><button class="ButtonContained [is-small|is-medium|is-big|is-full-width]" type="button">
+    Button Label
+</button>
+</code></pre>
+            </div>
+
+            <p>
+                All size variations are compatible with all the previous modifiers, and <code>.is-full-width</code> compatible with sizes as well.<br>
+                The height of each button is approximative because we don't fix the height of our element and component for accessibility reasons. Dimensions of containers have to be flexible.
+            </p>
 
             <h3 class="h3-like" id="status-variations">
                 Status variations
             </h3>
-            <div class="row">
 
-                <div class="col-xs-12">
+            <p>
+                While using buttons, one's can change their status depending on the action behind it. For example, after activating one, you could need to wait for server response, the waiting/loading status is applied. Another example: if a form is not well filled in, the submit button would be disabled.
+            </p>
 
-                    <button class="ButtonContained is-loading">Contained loading</button>
-                    <br><br>
-                    <button class="ButtonContained" disabled>Contained disabled</button>
-                    <br><br>
-                    <button class="ButtonOutlined is-loading">Outlined loading</button>
-                    <br><br>
-                    <button class="ButtonOutlined" disabled>Outlined disabled</button>
-                    <br><br>
-                    <button class="ButtonText is-loading">Text loading</button>
-                    <br><br>
-                    <button class="ButtonText" disabled>Text disabled</button>
-
-                </div>
-
-                <div class="col-xs-12">
-                    <div class="doc-tabs" role="tablist" aria-orientation="horizontal">
-
-                        {# Tab bar ------------------------------- #}
-                        <ul class="doc-tabs-controls">
-                            <li>
-                                <a id="tab-html-6" href="#tabpanel-html-6" role="tab" aria-posinset="1" aria-setsize="1" aria-controls="tabpanel-html-6" aria-selected="true">HTML</a>
-                            </li>
-                        </ul>
-
-                        {# Tab content ---------------------------- #}
-                        <div class="doc-tabs-contents">
-
-                            {# HTML doc #}
-                            <div id="tabpanel-html-6" role="tabpanel" aria-expanded="true" aria-labelledby="tab-html-6">
-
-                                <pre><code class="html"><button class="[ButtonContained|ButtonOutlined|ButtonText] [is-loading|is-disabled]">...</button></code></pre>
-
-                            </div>
-
-                        </div>
-
+            <div class="gallery can-overflow u-is-bg-white">
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <button class="ButtonContained is-loading" type="button">
+                            Loading Button
+                        </button>
                     </div>
+                    <ul class="dl-links">
+                        <li class="text-center"><strong>Loading Button</strong></li>
+                        <li class="text-center"><code>.is-loading</code></li>
+                    </ul>
                 </div>
 
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <button class="ButtonContained" disabled type="button">
+                            Disabled Button
+                        </button>
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center"><strong>Disabled Button</strong></li>
+                        <li class="text-center"><code>[disabled]</code></li>
+                    </ul>
+                </div>
+
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <button class="ButtonOutlined is-loading" type="button">
+                            Loading Button
+                        </button>
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center"><strong>Loading Button</strong></li>
+                        <li class="text-center"><code>.is-loading</code></li>
+                    </ul>
+                </div>
+
+                <div class="gallery-image">
+                    <div class="gl-image">
+                        <button class="ButtonOutlined" disabled type="button">
+                            Disabled Button
+                        </button>
+                    </div>
+                    <ul class="dl-links">
+                        <li class="text-center"><strong>Disabled Button</strong></li>
+                        <li class="text-center"><code>[disabled]</code></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="can-overflow u-is-bg-white">
+
+                <pre><code class="html"><button class="ButtonContained [is-loading]" [disabled] type="button">
+    Button Label
+</button>
+</code></pre>
+            </div>
+
+            <p>
+                <code>disabled</code> attribute is used for styling not enabled buttons, but the styling also works with <code>aria-disabled="true"</code> attribute, which has the same meaning.
+            </p>
+
+
+
+
+            <h2 class="h2-like text-center">Go further with:</h2>
+
+            <div class="discover row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <a href="interface-panel.html" class="disco-1">
+                        <p class="h3-like">Panel</p>
+                        <p>The basic component AKA "card" in some Design Systems.</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <a href="interface-grid-system.html" class="disco-2">
+                        <p class="h3-like">Grid System</p>
+                        <p>Want to know more about our spacing model? Discover our Grid.</p>
+                    </a>
+                </div>
             </div>
 
         </main>
