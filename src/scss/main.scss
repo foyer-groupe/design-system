@@ -1097,7 +1097,8 @@ button:focus {
 
 	.can-overflow {
 		position: relative;
-		margin: 2em auto;
+		margin: 2em -24px;
+		padding: 2em 16px;
 		text-align: center;
 
 		@media (min-width: $mq-medium) {
