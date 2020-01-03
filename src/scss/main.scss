@@ -769,6 +769,10 @@ button:focus {
 	background: $linear-gradient-main-tob top left no-repeat fixed;
 	transition: all .325s;
 	z-index: $doc-nav-z-index;
+	
+	@media (max-width: 360px) {
+		width: 270px;
+	}
 
 	~ * {
 		transition: transform .325s;
@@ -803,8 +807,14 @@ button:focus {
 	}
 
 	&-logo {
-		padding: 40px 24px;
+		padding: 24px;
+		border-bottom: 1px solid rgba(255,255,255,.05);
 		text-align: center;
+
+		@media (min-width: $mq-small) {
+			padding: 40px 24px;
+			border-bottom-color: transparent;
+		}
 	}
 
 	ul, li {
@@ -875,7 +885,8 @@ button:focus {
 			border-bottom: 0;
 			color: #FFFFFF;
 			font-family: $font-family-title;
-			font-size: 18px;
+			font-size: 16px;
+			font-weight: 600;
 			text-decoration: none;
 			cursor: pointer;
 			transition: all .3s ease;
@@ -890,9 +901,18 @@ button:focus {
 
 			.doc-nav-icon {
 				display: inline-block;
-				width: 24px;
-				margin-right: 16px;
+				width: 22px;
+				margin-right: 12px;
 				vertical-align: middle;
+			}
+
+			@media (min-width: $mq-small) {
+				font-size: 18px;
+
+				.doc-nav-icon {
+					width: 24px;
+					margin-right: 16px;
+				}
 			}
 		}
 
@@ -921,9 +941,14 @@ button:focus {
 
 			a {
 				color: $color-foyer;
-				font-size: 16px;
+				font-size: 15px;
 				font-weight: normal;
-				padding: 15px 24px 12px $second-level-ident;
+				padding: 15px 24px 12px 32px;
+
+				@media (min-width: $mq-small) {
+					font-size: 16px;
+					padding: 15px 24px 12px $second-level-ident;
+				}
 
 				&:hover,
 				&:focus {
@@ -944,10 +969,6 @@ button:focus {
 				}
 			}
 		}
-	}
-
-	.nav-text {
-		padding-top: 3px;
 	}
 
 	.locked {
