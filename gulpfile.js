@@ -49,6 +49,11 @@ gulp.task('default', function (done) {
 			]).pipe(concat('main.js'))
 				.pipe(gulp.dest('public/js/')),
 
+			// JS Exception
+			gulp.src([
+				'src/js/outdated-browser.js'
+			]).pipe(gulp.dest('public/js/')),
+
 			// Compile vendor JS files
 			gulp.src([
 				'node_modules/highlightjs/highlight.pack.min.js'
