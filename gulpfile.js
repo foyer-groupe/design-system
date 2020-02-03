@@ -45,6 +45,7 @@ gulp.task('default', function (done) {
 			// Compile JS files
 			gulp.src([
 				'src/js/*.js'
+				'!src/js/outdated-browser.js'
 			]).pipe(concat('main.js'))
 				.pipe(gulp.dest('public/js/')),
 
