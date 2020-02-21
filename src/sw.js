@@ -1,5 +1,5 @@
+/*
 var CACHE = 'FoyerDesignSystem-1.0';
-
 // Install stage sets up the offline page in the cache and opens a new cache.
 self.addEventListener('install', function(event) {
 	event.waitUntil( preLoad() );
@@ -14,6 +14,8 @@ var preLoad = function(){
 }
 
 self.addEventListener('fetch', function(event) {
+	if ( event.request.method !== "GET" ) return;
+
 	console.info('[SW] The service worker is serving the asset.');
 	event.respondWith(checkResponse(event.request).catch(function() {
 		return returnFromCache(event.request)}
@@ -53,3 +55,72 @@ var returnFromCache = function(request){
 		});
 	});
 };
+*/
+
+/**
+ * This is a "Offline + Copy of visited page" politics.
+ */
+
+const CACHE = "pwabuilder-offline-page";
+const offlineFallbackPage = "offline.html";
+const preCachedResources = [];
+
+// Install stage sets up the offline page in the cache and opens a new cache
+self.addEventListener("install", function (event) {
+  console.log("[PWA Builder] Install Event processing");
+
+  event.waitUntil(
+    caches.open(CACHE).then(function (cache) {
+      console.log("[PWA Builder] Cached offline page during install, and other resources");
+      var preCached = preCachedPages.push( offlineFallbackPage );
+      return cache.addAll( preCached );
+    })
+  );
+});
+
+// If any fetch fails, it will look for the request in the cache and serve it from there first
+self.addEventListener("fetch", function (event) {
+  if (event.request.method !== "GET") return;
+
+  event.respondWith(
+    fetch(event.request)
+      .then(function (response) {
+        console.log("[PWA Builder] add page to offline cache: " + response.url);
+
+        // If request was success, add or update it in the cache
+        event.waitUntil(updateCache(event.request, response.clone()));
+
+        return response;
+      })
+      .catch(function (error) {
+        console.log("[PWA Builder] Network request Failed. Serving content from cache: " + error);
+        return fromCache(event.request);
+      })
+  );
+});
+
+function fromCache(request) {
+  // Check to see if you have it in the cache
+  // Return response
+  // If not in the cache, then return the offline page
+  return caches.open(CACHE).then(function (cache) {
+    return cache.match(request).then(function (matching) {
+      if (!matching || matching.status === 404) {
+        // The following validates that the request was for a navigation to a new document
+        if (request.destination !== "document" || request.mode !== "navigate") {
+          return Promise.reject("no-match");
+        }
+
+        return cache.match(offlineFallbackPage);
+      }
+
+      return matching;
+    });
+  });
+}
+
+function updateCache(request, response) {
+  return caches.open(CACHE).then(function (cache) {
+    return cache.put(request, response);
+  });
+}
