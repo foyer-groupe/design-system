@@ -62,7 +62,7 @@ var returnFromCache = function(request){
  */
 
 const CACHE = "pwabuilder-offline-page";
-const offlineFallbackPage = "offline.html";
+const offlineFallbackPage = "/offline.html";
 const preCachedResources = [];
 
 // Install stage sets up the offline page in the cache and opens a new cache
@@ -73,6 +73,7 @@ self.addEventListener("install", function (event) {
     caches.open(CACHE).then(function (cache) {
       console.log("[PWA Builder] Cached offline page during install, and other resources");
       var preCached = preCachedResources.push( offlineFallbackPage );
+      console.log("preCached", preCached );
       return cache.addAll( preCached );
     })
   );
