@@ -82,11 +82,11 @@ $button-shadow-hover : 0 4px 6px rgba(0,0,0,0.12),0 1px 3px rgba(0,0,0,0.08);
 $font-family: "Barlow", "DIN Pro", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-title: "Barlow", "Din Pro", "DIN", Helvetica, Arial, sans-serif;
 
-$font-weight-light     : 200;
+$font-weight-light     : 300;
 $font-weight-regular   : 400;
-$font-weight-medium    : 600;
+$font-weight-medium    : 500;
 $font-weight-bold      : 700;
-$font-weight-black     : 800;
+$font-weight-black     : 900;
 
 $border-radius-default : 4px;
 
@@ -213,7 +213,7 @@ img {
 }
 
 strong {
-	font-weight: 600;
+	font-weight: $font-weight-medium;
 }
 
 dl {
@@ -222,7 +222,7 @@ dl {
 
 dt {
 	color: $color-foyer;
-	font-weight: 600;
+	font-weight: $font-weight-medium;
 
 	dd + & {
 		margin-top: 1.5em;
@@ -240,7 +240,7 @@ dl.counter {
 	dt {
 		position: relative;
 		display: block;
-		font-weight: 600;
+		font-weight: $font-weight-medium;
 		padding-left: 40px;
 		counter-increment: ol;
 
@@ -256,7 +256,7 @@ dl.counter {
 			height: 26px;
 			padding-bottom: 2px;
 			color: white;
-			font-weight: 600;
+			font-weight: $font-weight-medium;
 			background: $color-illu-blue;
 			border-radius: 46% 54% 37% 63% / 44% 26% 74% 56%;
 		}
@@ -272,7 +272,7 @@ blockquote {
 	position: relative;
 	margin: 72px 16px 56px 40px;
 	font-size: 1.2em;
-	font-weight: 300;
+	font-weight: $font-weight-light;
 
 	&:before {
 		content: '“';
@@ -287,7 +287,7 @@ blockquote {
 	}
 
 	cite {
-		font-weight: 600;
+		font-weight: $font-weight-medium;
 		font-style: italic;
 	}
 
@@ -348,7 +348,7 @@ blockquote {
 	background: $color-foyer;
 	color: white;
 	text-decoration: none;
-	font-weight: bold;
+	font-weight: $font-weight-bold;
 }
 
 /**
@@ -395,7 +395,7 @@ blockquote {
 		letter-spacing: .05em;
 		text-transform: uppercase;
 		color: white;
-		font-weight: 600;
+		font-weight: $font-weight-medium;
 		text-decoration: none;
 	}
 
@@ -403,7 +403,7 @@ blockquote {
 		margin-top: 0;
 		padding-top: 140px;
 		font-size: 2.4em;
-		font-weight: 300;
+		font-weight: $font-weight-light;
 
 		@media (min-width: $mq-small) {
 			padding-top: 192px;
@@ -411,14 +411,14 @@ blockquote {
 		}
 
 		span {
-			font-weight: 600;
+			font-weight: $font-weight-medium;
 		}
 
 		+ p {
 			margin-top: -.875em;
 			font-size: 1.25em;
 			line-height: 1.5;
-			font-weight: 300;
+			font-weight: $font-weight-light;
 
 			@media (min-width: $mq-small) {
 				margin-top: -1em;
@@ -483,7 +483,7 @@ blockquote {
 			background: #F5F2F0;
 			tab-size: 2;
 			font-family: "Fira Code", "Lucida Console", monospace;
-			font-weight: normal;
+			font-weight: $font-weight-regular;
 			line-height: 1.5;
 		}
 	}
@@ -498,7 +498,7 @@ blockquote {
 	font-size: 1em;
 	letter-spacing: .05em;
 	line-height: 1.55;
-	font-weight: 600;
+	font-weight: $font-weight-medium;
 	text-decoration: none;
 	border: 0 none;
 	color: white;
@@ -635,7 +635,7 @@ blockquote {
 }
 
 .text-bold {
-	font-weight: bold;
+	font-weight: $font-weight-bold;
 }
 
 /**
@@ -658,7 +658,7 @@ blockquote {
 	padding: 12px 16px;
 	align-items: center;
 	font-size: .875em;
-	font-weight: bold;
+	font-weight: $font-weight-bold;
 	color: inherit;
 	text-transform: uppercase;
 	border-radius: 3px;
@@ -850,7 +850,7 @@ button:focus {
 				}
 
 				> a, > button {
-					font-weight: bold;
+					font-weight: $font-weight-bold;
 
 					&:after {
 						transform: rotate(180deg);
@@ -882,7 +882,7 @@ button:focus {
 			color: #FFFFFF;
 			font-family: $font-family-title;
 			font-size: 16px;
-			font-weight: 600;
+			font-weight: $font-weight-medium;
 			text-decoration: none;
 			cursor: pointer;
 			transition: all .3s ease;
@@ -938,7 +938,7 @@ button:focus {
 			a {
 				color: $color-foyer;
 				font-size: 15px;
-				font-weight: normal;
+				font-weight: $font-weight-regular;
 				padding: 15px 24px 12px 32px;
 
 				@media (min-width: $mq-small) {
@@ -1135,7 +1135,7 @@ button:focus {
 		content: 'Code Sample';
 		font-size: 1.2em;
 		text-transform: uppercase;
-		font-weight: bold;
+		font-weight: $font-weight-bold;
 		font-family: $font-family;
 		line-height: 1.2;
 		letter-spacing: .2em;
@@ -1185,7 +1185,7 @@ button:focus {
 	.h1-like {
 		margin-top: .25em;
 		font-size: 2.2em;
-		font-weight: 300;
+		font-weight: $font-weight-light;
 		color: $color-foyer;
 
 		@media (min-width: $mq-small) {
@@ -1208,7 +1208,7 @@ button:focus {
 
 	.h2-like {
 		font-size: 1.8em;
-		font-weight: 300;
+		font-weight: $font-weight-light;
 		color: $color-foyer;
 
 		@media (min-width: $mq-small) {
@@ -1229,13 +1229,13 @@ button:focus {
 		}
 
 		strong {
-			font-weight: 600;
+			font-weight: $font-weight-medium;
 		}
 	}
 
 	.h3-like {
 		font-size: 1.5em;
-		font-weight: 600;
+		font-weight: $font-weight-medium;
 		color: $color-foyer;
 
 		@supports (-webkit-text-fill-color: transparent) {
@@ -1362,7 +1362,7 @@ button:focus {
 	.peops-lastname {
 		font-size: .875em;
 		text-transform: uppercase;
-		font-weight: 700;
+		font-weight: $font-weight-bold;
 	}
 
 	.peops-job {
@@ -1384,7 +1384,7 @@ button:focus {
 		padding: 32px 0;
 		margin: 0;
 		font-size: 24px;
-		font-weight: 200;
+		font-weight: $font-weight-light;
 		letter-spacing: 0.01em;
 		color: #666;
 		background: #F8F8F8;
@@ -1413,7 +1413,7 @@ button:focus {
 		background: #FFF;
 		font-family: $font-family-title;
 		font-size: 40px;
-		font-weight: 200;
+		font-weight: $font-weight-light;
 		letter-spacing: 0.01em;
 
 		span {
@@ -1427,11 +1427,11 @@ button:focus {
 		}
 
 		strong {
-			font-weight: 600;
+			font-weight: $font-weight-medium;
 
 			&:before {
 				content: '– ';
-				font-weight: 200;
+				font-weight: $font-weight-light;
 			}
 		}
 
@@ -1444,7 +1444,7 @@ button:focus {
 		color: $color-foyer;
 		font-family: $font-family;
 		font-size: 32px;
-		font-weight: 300;
+		font-weight: $font-weight-light;
 
 		& > .anchor {
 			position: absolute;
@@ -1472,7 +1472,7 @@ button:focus {
 		color: $color-foyer;
 		font-family: $font-family;
 		font-size: 24px;
-		font-weight: 400;
+		font-weight: $font-weight-regular;
 	}
 
 	&-h4 {
@@ -1480,7 +1480,7 @@ button:focus {
 		color: $color-grey-dark;
 		font-family: $font-family;
 		font-size: 16px;
-		font-weight: 700;
+		font-weight: $font-weight-bold;
 	}
 
 	&-p {
@@ -1489,7 +1489,7 @@ button:focus {
 		font-size: 18px;
 		line-height: 1.6;
 		letter-spacing: .01em;
-		font-weight: 200;
+		font-weight: $font-weight-light;
 		color: $color-grey-dark;
 	}
 
@@ -1625,7 +1625,7 @@ button:focus {
 		font-size: .875em;
 		text-transform: uppercase;
 		letter-spacing: 0.025em;
-		font-weight: 700;
+		font-weight: $font-weight-bold;
 	}
 
 	ul {
@@ -1859,13 +1859,13 @@ button:focus {
 .event-time {
 	color: $color-foyer;
 	font-size: 1.2rem;
-	font-weight: 600;
+	font-weight: $font-weight-medium;
 }
 
 .doc-main .fds .event-title {
 	margin: 0;
 	font-size: .875em;
-	font-weight: 600;
+	font-weight: $font-weight-medium;
 
 	@media (max-width:639px){
 		font-size: .9em;
@@ -1954,14 +1954,14 @@ button:focus {
 		font-size: 14px;
 		text-transform: uppercase;
 		letter-spacing: 0.03em;
-		font-weight: 600;
+		font-weight: $font-weight-medium;
 	}
 
 	.dl-link {
 		padding: 8px 16px;
 		border: 1px solid $color-foyer;
 		text-decoration: none;
-		font-weight: 600;
+		font-weight: $font-weight-medium;
 
 		& + .dl-link {
 			margin-left: -1px;
@@ -1988,7 +1988,7 @@ button:focus {
  */
 .color {
 	display: inline-block;
-	font-weight: 600;
+	font-weight: $font-weight-medium;
 	align-items: center;
 
 	.color-thumbnail {
