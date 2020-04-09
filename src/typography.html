@@ -12,30 +12,31 @@
             <h1 class="h1-like">Typography</h1>
 
             <div class="intro-block">
-                <p>Typography is a main part of visual identity. To maintain a homogeneous and easily recognizable image, a family of characters has been chosen: <strong>DIN Pro</strong>.</p>
+                <p>Typography is a main part of visual identity. To maintain a homogeneous and easily recognizable image, a family of characters has been chosen: <strong>Barlow</strong>.</p>
             </div>
             
             <p>
-                This typeface must be systematically used and applied to all supports except for some specific ones. <a href="#Exceptions">Check exceptions list.</a>
+                This typeface must be systematically used and applied to all supports except for some specific ones. <a href="#Exceptions">Check exceptions list.</a><br>
+                Historically, we used DIN Pro as main typography, but the brand evolved. <b>Foyer</b> wants to use more Open Source solution, <a href="https://fonts.google.com/specimen/Barlow">Barlow</a> is the closest font we found.
             </p>
             <p>
-                For legal reasons, the name <b>Foyer</b> presents in text blocs must be in bold. The first name letter must be in uppercase, and the rest in lowercase.
+                For legal reasons, the name <b>Foyer</b> found in text blocs must be in bold. The first name letter must be in uppercase, and the rest in lowercase.
             </p>
 
             <div class="toc">
                 <p id="toc-title" class="h3-like">Table of Contents</p>
                 <ul aria-labelledby="toc-title">
                     <li>
-                        <a href="#din-pro-preview">Din Pro preview</a>
+                        <a href="#barlow-preview">Barlow preview</a>
                     </li>
                     <li>
-                        <a href="#web-apps-environment">Rules & Guidelines for Web Applications</a>
+                        <a href="#web-apps-environment">Rules &amp; Guidelines for Web Applications</a>
                     </li>
                     <li>
-                        <a href="#print-environment">Rules & Guidelines for Print</a>
+                        <a href="#print-environment">Rules &amp; Guidelines for Print</a>
                     </li>
                     <li>
-                        <a href="#public-websites-environment">Rules & Guidelines for Public Websites</a>
+                        <a href="#public-websites-environment">Rules &amp; Guidelines for Public Websites</a>
                     </li>
                     <li>
                         <a href="#Exceptions">Exceptions list</a>
@@ -44,16 +45,12 @@
             </div>
             
 
-            <h2 class="h2-like" id="din-pro-preview">Din Pro preview</h2>
+            <h2 class="h2-like" id="barlow-preview">Barlow Preview</h2>
             <div class="row">
                 <div class="col-xs-12 col-md-10">
                     
-                    <div class="doc-font font-din-pro">
-                        <div class="doc-font-watermark">Din</div>
-                        
-                        <!-- <div class="doc-font-name">
-                            DIN Pro
-                        </div> -->
+                    <div class="doc-font">
+                        <div class="doc-font-watermark">Bar</div>
 
                         <div class="doc-font-details">
                             <div class="doc-font-details-header">Characters</div>
@@ -63,11 +60,11 @@
                                 <div>0123456789</div>
                                 <div>éèêëàâäùûüîïôöç</div>
                                 <div style="text-transform: uppercase;">éèêëàâäùûüîïôöç</div>
-                                <div>&"'`@%*µ§~#¤^¨()[]{}-_²/\|.,;:?!><​‌-​‌+​‌÷​‌×​‌=​‌>​‌®​‌©‌$​‌€​‌£​‌¥​‌¢</div>
+                                <div>&amp;"'`@%*µ§~#¤^¨()[]{}-_²/\|.,;:?!><​‌-​‌+​‌÷​‌×​‌=​‌>​‌®​‌©‌$​‌€​‌£​‌¥​‌¢</div>
                             </div>
                         </div>
                         <div class="doc-font-details">
-                            <div class="doc-font-details-header">Font weights & styles</div>
+                            <div class="doc-font-details-header">Font weights &amp; styles</div>
                             <div class="doc-font-details-body">
                                 <div style="font-weight: 200;">200 - Light <span style="font-style: italic;">italic</span></div>
                                 <div style="font-weight: 400;">400 - Regular <span style="font-style: italic;">italic</span></div>
@@ -87,21 +84,12 @@
                                 <div style="font-size: 40px;">40px - lorem ipsum</div>
                             </div>
                         </div>
-                        <!-- <div class="doc-font-details">
-                            <div class="doc-font-details-header">Usage</div>
-                            <div class="doc-font-details-body doc-p">
-                                DIN Pro is used for all texts in our applications. <br>
-                                <br>
-                                Utility class available : <span class="doc-u-is-txt-class-color">.u-font-dinpro</span>. <br>
-                                Utility variable available : <span class="doc-u-is-txt-var-color">$font-din-pro</span>. <br>
-                            </div>
-                        </div> -->
                     </div>
 
                 </div>
             </div>
 
-            <h2 class="h2-like" id="web-apps-environment">Rules & Guidelines for Web Applications</h2>
+            <h2 class="h2-like" id="web-apps-environment">Rules &amp; Guidelines for Web Applications</h2>
             <div class="row">
                 <div class="col-xs-12 col-md-10">
 
@@ -126,7 +114,7 @@
                         <div>
                             <p>16 pixels is defined as a common base for body texts in all our Web Apps. For accessibility purpose, the minimal font-size authorized is 12 pixels.</p>
                             
-                            <p>In practice, to avoid too small nuances between closed texts, we advise to use an increment of 2 pixels.</p>
+                            <p>In practice, to avoid too small nuances between closed texts, we advise to use an increment of 2 pixels, at least.</p>
                         </div>
                         
                         <h4 class="h4-like">Font-weights</h4>
@@ -134,11 +122,13 @@
                             <p>In most of our Designs, the base font-weight used is Regular (400).</p>
                             
                             <p>In practice, to sufficiently mark the difference between two close texts, we advise to have at least a gap of one font-weight.</p>
+
+                            <p>Example: if your normal text is Regular (400), use at least a Bold (700) font-weight to highlight important text. Medium (500) would not be sufficient. With the same logic, if your normal text is Medium (500), important text would be Black (800)</p>
                         </div>
 
                         <h4 class="h4-like">Underlining</h4>
                         <div>
-                            <p>To avoid confusing users since it is a common web convention, underlining is reserved to links.</p>
+                            <p>To avoid confusion since it is a common web convention, underlining is reserved to links, and only links, within digital interfaces.</p>
                         </div>
 
                         <h4 class="h4-like">Letter casing</h4>
@@ -154,34 +144,53 @@
 
                             <p>In practice, we try to use all capital letters in a light and punctual way. Like for tab labels, panel titles, or in short "call to action" that requires the special attention of the user.</p>
 
-                            <p>The most important thing to keep in mind while designing is to make the text readable, scannable, and reduce the cognitive load on the user.</p>
+                            <p>The most important thing to keep in mind while designing is to make the text readable, scannable, and reduce the cognitive load on the user. It's the best way to keep long texts accessible.</p>
 
                         </div>
 
                         <h4 class="h4-like">Italicizing</h4>
                         <div>
                             <p>Usage of italic can seems as a detail but when accessibility is part of our consideration we cannot ignore that a lot of respected and trusted accessibility resources advise against the use of blocks of italic text.</p>
+
                             <p>It should also be noted that many conventions for the use of italics are enshrined in international standards, including <span class="cite-like">BS 5605 (citing and referencing published material)</span>, <span class="cite-like">BS ISO 690 (bibliographic references and citations)</span>, and <span class="cite-like">ISO 999 (content, organization and presentation of indexes)</span>.</p>
-                            <p>Based on that, in practice, we decided to follow international standards and for all others cases limit the usage of italic.</p>
+
+                            <p>Based on that, in practice, we decided to follow international standards and for all others cases limit the usage of italic. We use it only for short texts to put emphasis on it.</p>
                         </div>
 
                         {#
                         <h4 class="h4-like">Hyphenation</h4>
                         <div>
-                            <p>– COMING SOON –</p>
+                            <p>The hyphenation is the thing you mostly find in newspaper at the end of a text line: an hyphen that cut the word between two syllables to keep columns clean and well designed.</p>
+
+                            <p>As the Digital offers a lot of way to communicate information. We decided not to allow hyphenation within our interfaces to avoid confusion and to keep our interfaces accessible.</p>
+
+                            <p>The most common illustration to that is the hyphenation of an URL. Imagine you write an URL like "https://mysuperwebsite.com" and this part of the text arrives at the end of a line. The hyphenation algorithm will write something like: https://mysuper-<br>website.com and you won't be able as a reader to know if there is actually an hyphen within the URL or not.</p>
+
+                            <p>No hyphenation, no risks.</p>
                         </div>
 
                         <h4 class="h4-like">Truncation</h4>
                         <div>
-                            <p>– COMING SOON –</p>
+                            <p>Truncation is when you cut a line of text before the end, oftentime using the ellipsis (…) ponctuation mark to explicit the fact that the text is not whole.</p>
+
+                            <p>By default we don't use it. But there are exceptions, and most follow those rules:</p>
+
+                            <ul>
+                                <li>The screen displays an high-density level of information,</li>
+                                <li>The truncated text is not fully necessary as its own, it mostly an hint,</li>
+                                <li>The truncated text must not be the only way to distinguish 2 similar items.</li>
+                            </ul>
                         </div>
                         #}
 
 
                     <h3 class="h3-like" id="web-apps-fallback-strategy">Font fallback strategy</h3>
-                        <p>In some situations, the DIN Pro – <span>the primary font</span> – could not be available or usable for technical reasons/limitations. Then to protect the homogeneity of Foyer's image, we defined a list of fonts that will be used as fallbacks.</p>
+                        <p>In some situations, the Barlow – <span>the primary font</span> – might not be available or usable for technical reasons/limitations. Then to protect the homogeneity of Foyer's identity, we defined a list of fonts that will be used as fallbacks.</p>
+
                         <p>Here is the ordered list:</p>
+
                         <ol>
+                            <li>"Barlow"</li>
                             <li>“DIN Pro”,</li>
                             <li>Roboto,</li>
                             <li>“Helvetica Neue”,</li>
@@ -192,11 +201,10 @@
 
                         <p>So to be really verbose here, what that rule is saying is:</p>
                         <ol>
-                            <li>I'd like to use the "Din Pro" font, please.</li>
-                            <li>If you don't have that, try Roboto next.</li>
-                            <li>you don't have that, try "HelveticaNeue",</li>
-                            <li>you don't have that, try Helvetica,</li>
-                            <li>you don't have that, try Arial,</li>
+                            <li>I'd like to use the "Barlow" font, please.</li>
+                            <li>If you don't have that, try "Din Pro" font, please.</li>
+                            <li>you don't have that, try "Roboto" next.</li>
+                            <li>etc.</li>
                             <li>All else fails, use whatever you've got for the generic keyword Sans-Serif</li>
                         </ol>
 
@@ -206,14 +214,14 @@
                 </div>
             </div>
 
-            <h2 class="h2-like" id="print-environment">Rules & Guidelines for Print</h2>
+            <h2 class="h2-like" id="print-environment">Rules &amp; Guidelines for Print</h2>
             <div class="row">
                 <div class="col-xs-12 col-md-10">
                     <p>– COMING SOON –</p>
                 </div>
             </div>
 
-            <h2 class="h2-like" id="public-websites-environment">Rules & Guidelines for Public Websites</h2>
+            <h2 class="h2-like" id="public-websites-environment">Rules &amp; Guidelines for Public Websites</h2>
             <div class="row">
                 <div class="col-xs-12 col-md-10">
                     <p>– COMING SOON –</p>
