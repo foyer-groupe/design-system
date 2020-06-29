@@ -28,6 +28,10 @@ gulp.task('default', function (done) {
 			]).pipe(swig({ data: swigData }))
 				.pipe(gulp.dest('public/')),
 
+			gulp.src([
+				'src/blog/*',
+			]).pipe(gulp.dest('public/blog/')),
+
 			// Move some other files
 			gulp.src([
 				'CNAME',
