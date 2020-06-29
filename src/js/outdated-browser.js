@@ -178,14 +178,15 @@
 		  document.getElementById("outdated-link-safari").href = "https://support.apple.com/downloads/safari";
 
 		  var outdated = document.getElementById("outdated");
-		  var appRoot = document.getElementsByTagName("app-root")[0] || document.getElementById("app-root");
+		  var appRoots = document.querySelectorAll("[data-root]");
 		  var copyright = document.getElementById("copyright-year");
 		  copyright.innerText = new Date().getFullYear() + ' ';
 
 		  addClass(body, 'outdated');
 		  addClass(outdated, 'is-visible');
-		  if(appRoot)
-			addClass(appRoot, 'outdated-is-hidden');
+		  for(var rootIndex = 0; rootIndex < appRoots.length; rootIndex++) {
+			addClass(appRoots[rootIndex], 'outdated-is-hidden');
+		  }
 		  i18n(language);
 		}
 	}
