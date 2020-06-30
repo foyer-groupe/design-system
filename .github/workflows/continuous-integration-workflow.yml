@@ -23,12 +23,12 @@ jobs:
         uses: ./.github/actions/generate-public-doc
       - name: Create blog directory
         run: |
-          mkdir public/blog
+          mkdir ./public/blog
       - name: Checkout blog
         uses: actions/checkout@master
         with:
           ref: blog
-          path: public/blog
+          path: ./public/blog
       - name: Publish pages
         uses: peaceiris/actions-gh-pages@v2.4.0
         env:
