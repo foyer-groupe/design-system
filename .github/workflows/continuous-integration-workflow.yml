@@ -4,9 +4,11 @@ on:
   push:
       branches:
         - develop
+        - blog
   pull_request:
       branches:
         - develop
+        - blog
 
 jobs:
   publish:
@@ -15,8 +17,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+        with:
+          ref: develop
       - name: Generate public directory
         uses: ./.github/actions/generate-public-doc
+      - name: Copy blog assets
+        run: |
+          mkdir public/blog
+      - name: Checkout blog
+        uses: actions/checkout@master
+        with:
+          ref: blog
+          path: public/blog
       - name: Publish pages
         uses: peaceiris/actions-gh-pages@v2.4.0
         env:
