@@ -1,12 +1,12 @@
-name: Publish Github Pages
+name: Publish Blog
 # This workflow is triggered on pushes to the repository.
 on:
   push:
-      branches:
-        - develop
+    branches:
+      - blog
   pull_request:
-      branches:
-        - develop
+    branches:
+      - blog
 
 jobs:
   publish:
@@ -15,8 +15,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
-      - name: Generate public directory
-        uses: ./.github/actions/generate-public-doc
+     - name: Setup assets
+       run: |
+         mkdir blog
+         mv * ./blog/
+         mkdir public
+         mv ./blog ./public/
       - name: Publish Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
