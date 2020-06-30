@@ -21,9 +21,6 @@ jobs:
           ref: develop
       - name: Generate public directory
         uses: ./.github/actions/generate-public-doc
-      - name: Create blog directory
-        run: |
-          mkdir ./public/blog
       - name: Checkout blog
         uses: actions/checkout@master
         with:
