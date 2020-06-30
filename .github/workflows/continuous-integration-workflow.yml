@@ -21,7 +21,7 @@ jobs:
           ref: develop
       - name: Generate public directory
         uses: ./.github/actions/generate-public-doc
-      - name: Copy blog assets
+      - name: Create blog directory
         run: |
           mkdir public/blog
       - name: Checkout blog
