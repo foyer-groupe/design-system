@@ -26,16 +26,15 @@ jobs:
         with:
           ref: blog
           path: ./public/blog
-      - name: Publish Pages
-        uses: peaceiris/actions-gh-pages@v3
+#      - name: Publish Pages
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+#          publish_branch: gh-pages
+#          publish_dir: ./public
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_branch: gh-pages
-          publish_dir: ./public
-      - name: Publish Blog
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_branch: gh-pages
-          publish_dir: ./public/blog
-          keep_files: true
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: public # The folder the action should deploy.
