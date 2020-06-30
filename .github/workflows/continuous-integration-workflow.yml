@@ -35,4 +35,4 @@ jobs:
         with:
           SSH: true
           BRANCH: gh-pages
-          FOLDER: public/blog
+          FOLDER: public
