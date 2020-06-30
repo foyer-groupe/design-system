@@ -21,11 +21,11 @@ jobs:
           ref: develop
       - name: Generate public directory
         uses: ./.github/actions/generate-public-doc
-      - name: Checkout blog
-        uses: actions/checkout@master
-        with:
-          ref: blog
-          path: ./public/blog
+#      - name: Checkout blog
+#        uses: actions/checkout@master
+#        with:
+#          ref: blog
+#          path: ./public/blog
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.2.0
         with:
