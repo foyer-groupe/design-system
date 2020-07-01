@@ -18,7 +18,8 @@ jobs:
       - name: Setup assets
         run: |
           mkdir blog
-          mv * ./blog/
+          shopt -s extglob
+          mv !(blog) ./blog/
           mkdir public
           mv ./blog ./public/
       - name: Publish Pages
