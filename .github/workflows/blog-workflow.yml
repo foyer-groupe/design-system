@@ -8,7 +8,7 @@ on:
     branches:
       - blog
   schedule:
-    - cron:  '0 8 * * *' # everyday
+    - cron:  '0 * * * *' # everyday
 
 jobs:
   publish:
