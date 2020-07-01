@@ -1,0 +1,253 @@
+// ------------------------------------------------------------------------------------------------------------------ //
+//      #GridFlex
+// ------------------------------------------------------------------------------------------------------------------ //
+.GridFlex {
+	$grid-max-columns : 12;
+	$grid-min-columns :  2;
+	$grid-gutters : (
+			xxs  :  8px,
+			xs  :  8px,
+			sm  : 16px,
+			md  : 24px,
+			lg  : 24px,
+			xl  : 24px
+	);
+
+	position: relative;
+	flex-grow: 1; // fix to have width 100% even in a flex container
+	max-width: $max-width;
+	margin: 0 auto;
+
+	&.is-full-width {
+		max-width: 100%
+	}
+
+	// ---- Row ----------------------------------------------------------------------------------------------------- //
+
+	& &-row {
+		display: flex;
+		flex: 0 1 auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		@each $name, $width in $breakpoints {
+			@media only screen and (min-width: $width) {
+				margin-right: map-get($grid-gutters, $name) / 2 * -1;
+				margin-left: map-get($grid-gutters, $name) / 2 * -1;
+			}
+		}
+
+		&.is-reversed {
+			flex-direction: row-reverse;
+		}
+
+		&.is-aligned-start {
+			justify-content: flex-start;
+		}
+
+		&.is-aligned-center {
+			justify-content: center;
+		}
+
+		&.is-aligned-end {
+			justify-content: flex-end;
+		}
+
+		&.is-aligned-top {
+			align-items: flex-start;
+		}
+
+		&.is-aligned-middle {
+			align-items: center;
+		}
+
+		&.is-aligned-bottom {
+			align-items: flex-end;
+		}
+
+		&.is-justified-around {
+			justify-content: space-around;
+		}
+
+		&.is-justified-between {
+			justify-content: space-between;
+		}
+
+		&.is-direction-column {
+			flex-direction: column;
+		}
+
+	}
+
+
+	// ---- Columns ------------------------------------------------------------------------------------------------- //
+
+	[class*=" GridFlex-col-"],
+	[class^="GridFlex-col-"] {
+		flex-grow     : 0;
+		flex-shrink   : 0;
+
+		@each $name, $width in $breakpoints {
+			@media only screen and (min-width: $width) {
+				padding-right : map-get($grid-gutters, $name) / 2;
+				padding-left  : map-get($grid-gutters, $name) / 2;
+			}
+		}
+
+		// Ordering ------------------------------------------------
+		&.is-ordered-first {
+			order: -1;
+		}
+		&.is-ordered-last {
+			order: $grid-max-columns + 1;
+		}
+		@for $i from 1 through $grid-max-columns {
+			&.is-ordered-#{$i} { order: $i; }
+		}
+	}
+
+	// Sizing --------------------------------------------------
+	@for $i from 1 through $grid-max-columns {
+		.GridFlex-col-#{$i} {
+			flex-basis: 100% / $grid-max-columns * $i;
+			max-width: 100% / $grid-max-columns * $i;
+		}
+	}
+	$current-max-columns: $grid-max-columns;
+	@while ($current-max-columns >= $grid-min-columns) {
+		&.has-#{$current-max-columns}-columns {
+			@for $i from 1 through $current-max-columns {
+				.GridFlex-col-#{$i} {
+					flex-basis: 100% / $current-max-columns * $i;
+					max-width: 100% / $current-max-columns * $i;
+				}
+			}
+		}
+		$current-max-columns: $current-max-columns - 1;
+	}
+	& &-col-auto {
+		flex-grow: 1 !important;
+		flex-basis: 0;
+		max-width: 100%;
+	}
+	& &-col-fixed {
+		flex-grow: 0 !important;
+		flex-shrink: 0 !important;
+		flex-basis: 0;
+		max-width: 100%;
+	}
+
+	// Offset --------------------------------------------------
+	[class*=" GridFlex-col-"],
+	[class^="GridFlex-col-"] {
+		@for $i from 1 through $grid-max-columns - 1 {
+			&.is-offset-#{$i},
+			&.is-offsetted-#{$i} {
+				margin-left: 100% / $grid-max-columns * $i;
+			}
+		}
+	}
+	$current-max-columns: $grid-max-columns;
+	@while ($current-max-columns >= $grid-min-columns) {
+		&.has-#{$current-max-columns}-columns {
+			[class*=" GridFlex-col-"],
+			[class^="GridFlex-col-"] {
+				@for $i from 1 through $current-max-columns - 1 {
+					&.is-offset-#{$i},
+					&.is-offsetted-#{$i} {
+						margin-left: 100% / $current-max-columns * $i;
+					}
+				}
+			}
+		}
+		$current-max-columns: $current-max-columns - 1;
+	}
+
+
+	// ---- Specific responsive ------------------------------------------------------------------------------------- //
+
+	@each $name, $size in $breakpoints {
+
+		@media only screen and (min-width: $size) {
+
+			// Sizing ---------------------------------------------------
+			@for $i from 1 through $grid-max-columns {
+				.GridFlex-col-#{$name}-#{$i} {
+					flex-basis: 100% / $grid-max-columns * $i;
+					max-width: 100% / $grid-max-columns * $i;
+				}
+			}
+			$current-max-columns: $grid-max-columns;
+			@while ($current-max-columns >= $grid-min-columns) {
+				&.has-#{$current-max-columns}-columns {
+					@for $i from 1 through $current-max-columns {
+						.GridFlex-col-#{$name}-#{$i} {
+							flex-basis: 100% / $current-max-columns * $i;
+							max-width: 100% / $current-max-columns * $i;
+						}
+					}
+				}
+				$current-max-columns: $current-max-columns - 1;
+			}
+			& &-col-#{$name}-auto {
+				flex-grow: 1 !important;
+				flex-basis: 0;
+				max-width: 100%;
+			}
+
+			& &-col-#{$name}-fixed {
+				flex-grow: 0 !important;
+				flex-shrink: 0 !important;
+				flex-basis: 0;
+				max-width: 100%;
+			}
+
+			// Offset ---------------------------------------------------
+			[class*=" GridFlex-col-"],
+			[class^="GridFlex-col-"] {
+				@for $i from 1 through $grid-max-columns - 1 {
+					&.is-offset-#{$name}-#{$i},
+					&.is-offsetted-#{$name}-#{$i} {
+						margin-left: 100% / $grid-max-columns * $i;
+					}
+				}
+			}
+			$current-max-columns: $grid-max-columns;
+			@while ($current-max-columns >= $grid-min-columns) {
+				&.has-#{$current-max-columns}-columns {
+					[class*=" GridFlex-col-"],
+					[class^="GridFlex-col-"] {
+						@for $i from 1 through $current-max-columns - 1 {
+							&.is-offset-#{$name}-#{$i},
+							&.is-offsetted-#{$name}-#{$i} {
+								margin-left: 100% / $current-max-columns * $i;
+							}
+						}
+					}
+				}
+				$current-max-columns: $current-max-columns - 1;
+			}
+
+			// Ordering ---------------------------------------------------
+			[class*=" GridFlex-col-"],
+			[class^="GridFlex-col-"] {
+
+				&.is-ordered-#{$name}-first {
+					order: -1;
+				}
+				&.is-ordered-#{$name}-last {
+					order: $grid-max-columns + 1;
+				}
+				@for $i from 1 through $grid-max-columns {
+					&.is-ordered-#{$name}-#{$i} { order: $i; }
+				}
+			}
+			& &-row {
+				&.is-reversed-#{$name} {
+					flex-direction: row-reverse;
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,53 @@
+{% set docTitle = 'Offline' %}
+{% include  'partials/html-header.html' %}
+
+<div class="documentation" data-root>
+
+	{% include 'partials/navigation.html' %}
+
+	<div class="doc-main">
+		<main class="fds">
+			<h1 class="h1-like">Offline</h1>
+
+			<div class="intro-block">
+				<p>Looks like you are offline or the network is too bad.</p>
+			</div>
+
+			<p>We decided to give you access to all the pages you already visited while you are offline.</p>
+
+			<h2 class="h2-like">You can go back to…</h2>
+
+			<p>Here is a list of pages you already visited and can go back to:</p>
+
+			<ul id="offline-list">
+				<script>
+					caches.open('FoyerDesignSystem-1.0').then(function(cache){
+						cache.keys().then(function(ks){
+							const urls = ks.map(function(k){
+								return k.url;
+							});
+							
+							if ( urls ) {
+								var list = document.getElementById('offline-list');
+								
+								urls.forEach((url) => {
+									if ( url.endsWith('.html') && ! url.endsWith('offline.html') ) {
+										var textURL = url.split('design.foyer.lu/')[1],
+											text    = textURL.split('.html')[0].replace('-', ' ');
+
+										list.insertAdjacentHTML('beforeend', '<li class="offline-pages"><a href="' + url + '">' + text + '</a></li>');
+									}
+								});
+							}
+						});
+					});
+				</script>
+			</ul>
+
+		</main>
+
+		{% include  'partials/html-footer.html' %}
+	</div>
+</div>
+	</body>
+</html>

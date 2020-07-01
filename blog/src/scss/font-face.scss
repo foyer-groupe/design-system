@@ -1,0 +1,44 @@
+@font-face {
+	font-family: "Barlow";
+	src: url("../fonts/Barlow-Regular.woff2") format("woff2"),
+		 url("../fonts/Barlow-Regular.woff") format("woff"),
+		 url("../fonts/Barlow-Regular.otf") format("opentype");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Barlow";
+	src: url("../fonts/Barlow-Medium.woff2") format("woff2"),
+		 url("../fonts/Barlow-Medium.woff") format("woff"),
+		 url("../fonts/Barlow-Medium.otf") format("opentype");
+	font-style: normal;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family:"Barlow";
+	src: url("../fonts/Barlow-Light.woff2") format("woff2"),
+		 url("../fonts/Barlow-Light.woff") format("woff"),
+		 url("../fonts/Barlow-Light.otf") format("opentype");
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: "Barlow";
+	src: url("../fonts/Barlow-Bold.woff2") format("woff2"),
+		 url("../fonts/Barlow-Bold.woff") format("woff"),
+		 url("../fonts/Barlow-Bold.otf") format("opentype");
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Barlow";
+	src: url("../fonts/Barlow-Black.woff2") format("woff2"),
+		 url("../fonts/Barlow-Black.woff") format("woff"),
+		 url("../fonts/Barlow-Black.otf") format("opentype");
+	font-style: normal;
+	font-weight: 900;
+}

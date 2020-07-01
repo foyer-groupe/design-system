@@ -1,0 +1,116 @@
+{% set docTitle = 'Design Principles' %}
+{% include  'partials/html-header.html' %}
+
+<div class="documentation" data-root>
+
+	{% set navBranding = 'is-active' %}
+	{% set navDesignPrinciples = 'is-active' %}
+	{% include 'partials/navigation.html' %}
+
+	<div class="doc-main">
+		<main class="fds">
+			<h1 class="h1-like">Design Principles</h1>
+
+			<div class="intro-block">
+				<p>Design Principles are our core principles that guide design decision and help us keeping consistency.</p>
+			</div>
+
+			<div class="toc">
+				<p id="toc-title" class="h3-like">Table of Contents</p>
+				<ul aria-labelledby="toc-title">
+					<li>
+						<a href="#principles">Our Design Principles</a>
+					</li>
+					<li>
+						<a href="#why">Why Defining Design Principles</a>
+					</li>
+				</ul>
+			</div>
+
+			<h2 class="h2-like" id="principles">Our Principles</h2>
+
+			<blockquote class="is-big">
+				<p>
+					We keep the users in mind, all of them
+				</p>
+			</blockquote>
+
+			<p>
+				When you work for a company like Foyer, your end users are plural: agents, administration people, clients, business partners. They all have specific needs. Designing for all is designing for everyone, including people with disabilities, impairement, young, old, etc. Digital accessibility is one of our spearhead.
+			</p>
+
+
+			<blockquote class="is-big">
+				<p>
+					We keep it simple and stupid
+				</p>
+			</blockquote>
+
+			<p>
+				We usually work on making interface smooth and simple for our users. Even for complex data display, we will show the users only data they need at the right time, using motion for helping discoverability, for instance.
+			</p>
+
+
+			<blockquote class="is-big">
+				<p>
+					We keep things consistent
+				</p>
+			</blockquote>
+
+			<p>
+				To help people on using our different interfaces and media, consistency is a key for a better user experience. We build internal tool to help us on this task: keeping things consistent and easy to use.
+			</p>
+
+
+			<blockquote class="is-big">
+				<p>
+					We allow errors
+				</p>
+			</blockquote>
+
+			<p>
+				Errors are the basis of our learning. That's why, even if we try to prevent errors, we allow users and employees to make mistakes and learn from them.
+			</p>
+
+
+			<blockquote class="is-big">
+				<p>
+					We empower our users
+				</p>
+			</blockquote>
+
+			<p>
+				Insurance is all about responsibilities. Foyer is here to guide people in the intricacies of insurance clauses, and empower users who want more independence.
+			</p>
+
+			<h2 class="h2-like" id="why">Why defining Design Principles?</h2>
+
+			<p>
+				Defining and aligning on Design Principles is a way to keep all the company in track with what have been decided as key guidelines, main principles. It will help improving the decision process of your teams, reducing arguments, forcing clarity, and aligning the team on what really matters.
+			</p>
+
+			{# inpiration: https://medium.muz.li/design-principles-behind-great-products-6ef13cd74ccf #}
+
+			<h2 class="h2-like text-center">Go further with:</h2>
+			<div class="discover row">
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="what-is-foyer.html" class="disco-1">
+						<p class="h3-like">What is Foyer?</p>
+						<p>You may not know Foyer Group. Context!</p>
+					</a>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="why-a-design-system.html" class="disco-2">
+						<p class="h3-like">Why a Design System?</p>
+						<p>Want to know our approach. Follow us.</p>
+					</a>
+				</div>
+			</div>
+
+		</main>
+
+		{% include  'partials/html-footer.html' %}
+	</div>
+</div>
+	</body>
+</html>
