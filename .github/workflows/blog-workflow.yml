@@ -1,14 +1,7 @@
 name: Publish Blog
-# This workflow is triggered on pushes to the repository.
 on:
-  push:
-    branches:
-      - blog
-  pull_request:
-    branches:
-      - blog
   schedule:
-    - cron:  '0 * * * *' # everyday
+    - cron:  '0 * * * *'
 
 jobs:
   publish:
