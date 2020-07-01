@@ -2,11 +2,11 @@ name: Publish Github Pages
 # This workflow is triggered on pushes to the repository.
 on:
   push:
-      branches:
-        - develop
+    branches:
+      - develop
   pull_request:
-      branches:
-        - develop
+    branches:
+      - develop
 
 jobs:
   publish:
