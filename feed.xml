@@ -3,12 +3,59 @@
     <title>Foyer Design Blog</title>
     <link href="https://www.design.foyer.lu/blog/feed.xml" rel="self" />
     <link href="https://www.design.foyer.lu/blog" />
-    <updated>2020-07-01T12:09:44+02:00</updated>
+    <updated>2020-07-02T15:32:49+02:00</updated>
     <author>
         <name>Geoffrey Crofte</name>
     </author>
     <id>https://www.design.foyer.lu/blog</id>
 
+    <entry>
+        <title>Design Blog Foyer: What for?</title>
+        <author>
+            <name>Geoffrey Crofte</name>
+        </author>
+        <link href="https://www.design.foyer.lu/blog/design-blog-foyer-what-for.html"/>
+        <id>https://www.design.foyer.lu/blog/design-blog-foyer-what-for.html</id>
+
+        <updated>2020-07-02T14:44:00+02:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://www.design.foyer.lu/blog/media/posts/3/foyer-design-system-luxembourg-kaorianne.jpg" alt="" />
+                    <p>Some years ago, the Design Team of Foyer didn't exist. It's only in 2016 that we start building a dedicated team to design and user research to make their needs at the center of our decision-making. In 4 years, we built a lot, we made mistakes, we had great successes. This blog is to share all of that with you.</p>
+<hr>
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://www.design.foyer.lu/blog/media/posts/3/foyer-design-system-luxembourg-kaorianne.jpg" alt="" />
+                <p>Some years ago, the Design Team of Foyer didn't exist. It's only in 2016 that we start building a dedicated team to design and user research to make their needs at the center of our decision-making. In 4 years, we built a lot, we made mistakes, we had great successes. This blog is to share all of that with you.</p>
+<hr>
+<h2 id="mcetoc_1ec7kr6c92">Evolution of a Design Team</h2>
+<p>We started small, I was a contractor working from Paris and sometimes at Foyer Head Quarters. I quickly got support from some people within the company who share the same vision has mine.</p>
+<p>Design is oftentime put on the side, in addition of some other "constraints" —like it's a constraint…— while it should be put right at the top of the first reflexions.</p>
+<p>The team got the opportunity to grow up quickly, 3 new team members in 2017, and now we are 10. Yes, 10, I'm so proud of that, and glad that Foyer have trust in our vision!</p>
+<figure class="post__image post__image--center" ><img src="https://www.design.foyer.lu/blog/media/posts/3/foyer-design-system-luxembourg-kaorianne.jpg" alt="" width="1818" height="1356">
+<figcaption >From left to right: Matthieu, Bastien, Laurent, Steven B., Florentin, Jordan, Julie, Geoffrey, Steven L., Léa</figcaption>
+</figure>
+<h2 id="mcetoc_1ec7m70p20">Evolution of our Projects and Tools</h2>
+<p>As designers, we tend to find the right tools/solutions for the right needs. Some years ago developers would take all the design decisions by guessing user needs. No need to tell you that guessing is not the best way to get it done properly.</p>
+<p>Today, we use and maintain a <a href="https://www.design.foyer.lu/">Design System</a> to build user interfaces, design decisions are made after long phases of user research, or at least a way better understanding of our user needs. Almost all the projects start with a scrum framework and at least a designer in the team: this was not even imaginable some days ago.</p>
+<p>The other big change is that we came from designing for one entity, Foyer Assurances, to 4 different Foyer entities: Wealins, CapitalatWork, Foyer Global Health, mostly for their internal tools and interfaces.</p>
+<p>To be able to handle all of that, our tools evolved: we abandoned Sketch and Zeplin to give a chance to Figma, and we don't regret it. <a href="https://www.design.foyer.lu/blog/design-system-great-tools.html">Figma</a> allows a big scalability, the tool evolve in the good way, and the management of our design system is made much easier. And it's only an example among others.</p>
+<hr>
+<h2 id="mcetoc_1ec7nb8tc1">Blog Post to Expect</h2>
+<p>Frankly? We don't know yet. Geoffrey proposed 2 blog posts to kick start the blog, and I'm sure our Designers would be glad to share with you all kind of content: Illustration research, Accessibility, user research, usability, etc.</p>
+<p>Don't expect a steady pace from us, our team is quite busy, but we will put our best effort in it to bring new posts to you.</p>
+<h2 id="mcetoc_1ec7ocmj62">Read our friends</h2>
+<p>We are not the only ones publishing, we've even been inspired by our friend from:</p>
+<ul>
+<li>Maif, the french Designer's blog: <a href="https://design.maif.fr/blog/">https://design.maif.fr/blog/</a></li>
+<li>Société Générale, Stories from UX Practitioners: <a href="https://medium.com/societe-generale-design">https://medium.com/societe-generale-design</a></li>
+</ul>
+<p>Happy reading to you!</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Design System: Great Tools for building your System</title>
         <author>
@@ -17,7 +64,7 @@
         <link href="https://www.design.foyer.lu/blog/design-system-great-tools.html"/>
         <id>https://www.design.foyer.lu/blog/design-system-great-tools.html</id>
 
-        <updated>2020-06-30T18:19:50+02:00</updated>
+        <updated>2020-07-02T09:34:29+02:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://www.design.foyer.lu/blog/media/posts/2/design-system-tool-figma2x.jpg" alt="" />
@@ -32,28 +79,28 @@
 
 <p>To help you with those 20%, I made a little list of tools that helped me and keep helping me in a daily basis, and also some tools that could be interesting for you even if I don’t use those tools. It’s a pretty good addition to the <a href="https://www.creativejuiz.fr/blog/en/resources-tools/ux-ui-designer-tools">UX/UI Designer Tools</a> list I made for you earlier.</p>
 <p>I’ll detail a bit the usage I have of each tool I use, and for the ones I tried once but don’t use in a daily basis I’ll be briefer, even if they caught my attention at some point.</p>
-<p>I’ll try to separate <strong><a href="https://www.creativejuiz.fr/blog/en/user-experience/design-system-great-tools-to-build-one#visual-library">Visual Library tools</a></strong> from <strong><a href="https://www.creativejuiz.fr/blog/en/user-experience/design-system-great-tools-to-build-one#code">Coded Component tools</a></strong>, even if, you’ll see, the separation is quite difficult sometimes.</p>
+<p>I’ll try to separate <strong><a href="#visual-library">Visual Library tools</a></strong> from <strong><a href="#code">Coded Component tools</a></strong>, even if, you’ll see, the separation is quite difficult sometimes.</p>
 <h2 id="visual-library">Design System Visual Library</h2>
 <p>During my first experience of building a Design System, I started with Sketch App but after a while, the library was too big for this poor little Sketch and it started to be too laggy to be able to work.<br> That’s why after some tests by a colleague of mine, we joined the Figma Community.</p>
 <h3 id="figma">Figma – Scalable Design System</h3>
 <p>Figma is well known by the design community, and it allows you to build efficient Design System and share visual libraries. I did test other solutions like Adobe XD or Sketch, but the  cross-OS compatibility and the way it works matches my way of working on a Design System.</p>
 <p>The Team features are really useful for onboarding people in a team of designers. There are <strong>Shared Libraries</strong> that can be activate on the overall team to kind of force people to used Master Components (Symbols in Sketch) in their design composition.</p>
 <figure id="attachment_7209" class="wp-caption aligncenter"><picture class="size-full wp-image-7209"> <source type="image/webp" srcset="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma@2x.jpg.webp 1438w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma@2x-300x175.jpg.webp 300w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma@2x-600x350.jpg.webp 600w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma@2x-768x448.jpg.webp 768w" sizes="(max-width: 1438px) 100vw, 1438px"> <img src="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma@2x.jpg" sizes="(max-width: 1438px) 100vw, 1438px" srcset="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma@2x.jpg 1438w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma@2x-300x175.jpg 300w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma@2x-600x350.jpg 600w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma@2x-768x448.jpg 768w" alt="" width="1438" height="839"> </picture>
-<figcaption id="figcaption_attachment_7209" class="wp-caption-text">Screenshot of Foyer Design System visual Library</figcaption>
+<figcaption>Screenshot of Foyer Design System visual Library</figcaption>
 </figure>
 <p>Those different libraries can be activate on the overall Team, but are all optional. It means that when you create your file to work on an interface using your Design System, you can deactivate the libraries you don’t need. I don’t know why you would need to do that, but you can do it 😀<br> Our existing System is quite big, but I never notices any lag using it or searching through the big amount of Master Components.</p>
 <p>There is also <strong>Live Collaboration</strong> where you can work on the exact same object in the exact same file. That’s a life saver when you need to rush on a design for any reason.</p>
 <figure id="attachment_7222" class="wp-caption aligncenter"><img class="size-full wp-image-7222" src="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/Figma-collaborate.gif" alt="" width="736" height="414">
-<figcaption id="figcaption_attachment_7222" class="wp-caption-text">A demo of 3 people collaborating on the same file (<a href="https://www.figma.com/blog/zoom-case-study/">source</a>)</figcaption>
+<figcaption>A demo of 3 people collaborating on the same file (<a href="https://www.figma.com/blog/zoom-case-study/">source</a>)</figcaption>
 </figure>
 <p>Visitors and contributors can leave comments on the workspace directly, adding several layers of contribution.</p>
 <figure id="attachment_7213" class="wp-caption aligncenter"><picture class="size-full wp-image-7213"> <source type="image/webp" srcset="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x.jpg.webp 1752w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x-300x177.jpg.webp 300w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x-600x353.jpg.webp 600w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x-768x452.jpg.webp 768w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x-1536x905.jpg.webp 1536w" sizes="(max-width: 1752px) 100vw, 1752px"> <img src="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x.jpg" sizes="(max-width: 1752px) 100vw, 1752px" srcset="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x.jpg 1752w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x-300x177.jpg 300w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x-600x353.jpg 600w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x-768x452.jpg 768w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-comment@2x-1536x905.jpg 1536w" alt="" width="1752" height="1032"></picture>
-<figcaption id="figcaption_attachment_7213" class="wp-caption-text">A comment on a Design System Component</figcaption>
+<figcaption>A comment on a Design System Component</figcaption>
 </figure>
 <p>The fact that all the files are in the <strong>Cloud</strong>, you don’t even think about backup or cloud service where you have to save your work regularly and think of a versioning tool. Everything is included  into Figma: version control, blame tool, files saved in the cloud. And yes, you can <a href="https://help.figma.com/hc/en-us/articles/360040328553-Work-offline-with-Figma">work offline</a> as soon as you already loaded your work, the tool will save locally your work and push it online when your connection is retablished.<br> For Organizations, if you need to have an enhanced security, <a href="https://help.figma.com/hc/en-us/articles/360040532333-Getting-Started-with-SAML-SSO">Figma allows SAML SSO</a>.</p>
 <p>Figma is also all about the community around it: <strong>Plugins</strong> and <strong>Shared files</strong> made by the community for free are available and can easily be activated for all your team members. The onboarding for building a plugin is so simple that I’ve made one to prepare your <a href="https://www.figma.com/c/plugin/771341909571444129/PWA-Icon-App-Exports">exports for PWA Icons</a>.</p>
 <figure id="attachment_7215" class="wp-caption aligncenter"><picture class="size-full wp-image-7215"> <source type="image/webp" srcset="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-community@2x.jpg.webp 1231w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-community@2x-300x174.jpg.webp 300w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-community@2x-600x347.jpg.webp 600w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-community@2x-768x444.jpg.webp 768w" sizes="(max-width: 1231px) 100vw, 1231px"> <img src="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-community@2x.jpg" sizes="(max-width: 1231px) 100vw, 1231px" srcset="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-community@2x.jpg 1231w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-community@2x-300x174.jpg 300w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-community@2x-600x347.jpg 600w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/02/design-system-tool-figma-community@2x-768x444.jpg 768w" alt="" width="1231" height="712"> </picture>
-<figcaption id="figcaption_attachment_7215" class="wp-caption-text">The Community page within Figma</figcaption>
+<figcaption>The Community page within Figma</figcaption>
 </figure>
 <p>Figma is free for up to 2 editors and 3 projects, which is really enough for students or small design teams. But as long as you need to build shared libraries, you will have to pay $12/month/editor.</p>
 <p class="center"><a class="demo" href="https://www.figma.com">Learn more about Figma</a></p>
@@ -77,7 +124,6 @@
 <li>SAML SSO + User Permissions (Enterprise offer)</li>
 </ul>
 <p class="center"><a class="demo" href="https://zeroheight.com/">Learn more about ZeroHeight</a></p>
-<h3 id="mcetoc_1ec2vbq681"> </h3>
 <h2 id="code">UI Kit and Code Tools</h2>
 <p>Here are some of the dev-oriented tools I found or use(d) with my team on our Design Systems. Again it’s not easy to separate design and dev on this topic, but those tools will talk way more to developers.</p>
 <h3 id="mcetoc_1ec2vbq682">StencilJS – Reusable Components</h3>
@@ -103,7 +149,7 @@
 <h2 id="mcetoc_1ec2vbq687">Building a Design System is about humans…</h2>
 <p>Don’t forget that building a Design System is not about gathering the right tools but gathering the right persons around the table, communication and needs understanding.</p>
 <figure id="attachment_7243" class="wp-caption aligncenter"><picture class="size-full wp-image-7243"> <source type="image/webp" srcset="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne.jpg.webp 1818w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne-300x224.jpg.webp 300w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne-600x448.jpg.webp 600w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne-768x573.jpg.webp 768w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne-1536x1146.jpg.webp 1536w" sizes="(max-width: 1818px) 100vw, 1818px"> <img src="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne.jpg" sizes="(max-width: 1818px) 100vw, 1818px" srcset="https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne.jpg 1818w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne-300x224.jpg 300w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne-600x448.jpg 600w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne-768x573.jpg 768w, https://www.creativejuiz.fr/blog/wp-content/uploads/2020/03/foyer-design-system-luxembourg-kaorianne-1536x1146.jpg 1536w" alt="" width="1818" height="1356"> </picture>
-<figcaption id="figcaption_attachment_7243" class="wp-caption-text">From left to right: Matthieu, Bastien, Laurent, <a href="https://www.youtube.com/channel/UCyKcVce0geZzwSYuML0jj3g?view_as=subscriber">Steven B.</a>, Florentin, Jordan, Julie, Geoffrey, Steven L., Léa — Photographer: <a href="http://www.kaorianne.com/">Kaorianne</a></figcaption>
+<figcaption>From left to right: Matthieu, Bastien, Laurent, <a href="https://www.youtube.com/channel/UCyKcVce0geZzwSYuML0jj3g?view_as=subscriber">Steven B.</a>, Florentin, Jordan, Julie, Geoffrey, Steven L., Léa — Photographer: <a href="http://www.kaorianne.com/">Kaorianne</a></figcaption>
 </figure>
 <p>The tools are here to help you build a strong relationship between at least developers and designers. They are supposed to help them speak the same language, filling the gap between those two fields, and serve a common goal: bring a consistency within interfaces for a better user experience.</p>
 <p>Choosing the right tool is not always easy, you will have to listen to each other to understand designers and developers needs. To improve you Design System, you have to do exactly the same thing as other products: listen to users, collect their needs and pain points, and build solutions.</p>
@@ -119,7 +165,7 @@
         <link href="https://www.design.foyer.lu/blog/user-task-canvas-collect-your-users-needs-and-activities.html"/>
         <id>https://www.design.foyer.lu/blog/user-task-canvas-collect-your-users-needs-and-activities.html</id>
 
-        <updated>2020-06-30T11:45:55+02:00</updated>
+        <updated>2020-07-02T09:31:27+02:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://www.design.foyer.lu/blog/media/posts/1/user-task-listing-activities2x-1.jpg" alt="" />
@@ -137,11 +183,11 @@
 <p>But before we could address the question of “why”, we needed to better understand the context and identify their work habits while understanding their daily lives. Thus, we would have bits of “what”, “who” and “how” that would most certainly allow us to find leads on the “why”.</p>
 <p>We wanted to make it easier for our users, and bring a bit of fun too. We looked at creating a card game fast enough to help our managers work with us on this exercise.</p>
 <figure class="post__image post__image--wide" ><img src="https://www.creativejuiz.fr/blog/wp-content/uploads/2019/12/user-task-card-prototype@2x.jpg" alt="The first prototype we tested on a colleague" width="1600" height="900">
-<figcaption id="figcaption_attachment_7009" class="wp-caption-text">The first prototype we tested on a colleague</figcaption>
+<figcaption>The first prototype we tested on a colleague</figcaption>
 </figure>
 <p>We had one day to conceptualize them, pre-test them, make them, print them, cut them out and test them the next day.</p>
 <figure class="post__image post__image--wide" ><img src="https://www.creativejuiz.fr/blog/wp-content/uploads/2019/12/user-task-first-print@2x.jpg" width="1600" height="900">
-<figcaption id="figcaption_attachment_7011" class="wp-caption-text">The prototype tested on the left, the first set printed on the right</figcaption>
+<figcaption>The prototype tested on the left, the first set printed on the right</figcaption>
 </figure>
 <h2 id="cards">Context of use of our <span lang="en">User Task Cards</span></h2>
 <p>To help our managers, we organized a small workshop with two of our end users, blocked 1 hour for the exercise. In hindsight, the time was not enough and we overran by 15 minutes, where it would have taken 1h30 instead.</p>
@@ -167,21 +213,21 @@
 <h3 id="cards-workshop">Conduct of the workshop</h3>
 <p>Once the presentations were made, we suggested that managers complete a few task cards to list them.</p>
 <figure class="post__image post__image--wide" ><img src="https://www.creativejuiz.fr/blog/wp-content/uploads/2019/12/user-task-listing-activities@2x-1.jpg" width="1600" height="900">
-<figcaption id="figcaption_attachment_7023" class="wp-caption-text">Users filling in task cards</figcaption>
+<figcaption>Users filling in task cards</figcaption>
 </figure>
 <p>However, as they filled them out, they remembered the dependencies and tools they use. We ended up giving them free access to all the cards so that they could express themselves freely. They quickly took the tool in hand. We started making them work together.</p>
 <figure class="post__image post__image--wide" ><img src="https://www.creativejuiz.fr/blog/wp-content/uploads/2019/12/user-task-activities-columns@2x-1.jpg" width="1600" height="900">
-<figcaption id="figcaption_attachment_7017" class="wp-caption-text">Columns of tasks and their context</figcaption>
+<figcaption>Columns of tasks and their context</figcaption>
 </figure>
 <p>In order to help them, we completed, while listening to them, the meta-cards, which offer more context to a given task. We only had the “Rhythm” card at that time, but we quickly realized the need for the “Where” and the duration.</p>
 <p>After a while, and because sometimes someone may take the lead in the group, we ended up separating the two managers to get more tasks and allow everyone to use their own memory.</p>
 <p>At the end of the workshop, we offered the “Magic Changes” card so that the user could imagine their own solution for the Pain Points encountered. At that time we took the example of the shower to present the concept to them. “Having a small auxiliary water-heater”, “Porous shower floor” or “motorized ventilation” can be solutions to the pain points in our shower story.</p>
 <figure class="post__image post__image--wide" ><img src="https://www.creativejuiz.fr/blog/wp-content/uploads/2019/12/user-task-activities-prioritized@2x-1.jpg.webp" width="1600" height="900">
-<figcaption id="figcaption_attachment_7021" class="wp-caption-text">Many more tasks organized by columns</figcaption>
+<figcaption>Many more tasks organized by columns</figcaption>
 </figure>
 <p>Once it’s done, group your columns into small stacks for quick access to task information. We used small <a href="https://amzn.to/2PGyR4U" hreflang="fr">wooden clamps</a> that are much more practical than paper clips here.</p>
 <figure class="post__image post__image--wide" ><img src="https://www.creativejuiz.fr/blog/wp-content/uploads/2019/12/user-task-activities-grouped@2x-1.jpg" width="1600" height="900">
-<figcaption id="figcaption_attachment_7019" class="wp-caption-text">Stacks of our users’ tasks</figcaption>
+<figcaption>Stacks of our users’ tasks</figcaption>
 </figure>
 <p>We obviously had not anticipated everything for this workshop, so here are some additional tips.</p>
 <h3 id="mcetoc_1ec27ehgg2">Some tips for this workshop</h3>
