@@ -1,7 +1,13 @@
 name: Publish Blog
 on:
+  push:
+    branches:
+      - blog
+  pull_request:
+    branches:
+      - blog
   schedule:
-    - cron:  '0 * * * *'
+    - cron:  '0 * * * *' # everyday
 
 jobs:
   publish:
