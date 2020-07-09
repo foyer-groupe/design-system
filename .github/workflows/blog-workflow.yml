@@ -15,7 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
+        with:
+          ref: blog
       - name: Setup assets
         run: |
           mkdir blog
