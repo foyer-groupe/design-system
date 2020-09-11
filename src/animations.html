@@ -1,0 +1,302 @@
+{% set docTitle = 'Animations' %}
+{% include  'partials/html-header.html' %}
+
+<div class="documentation" data-root>
+
+	{% set navBranding = 'is-active' %}
+	{% set navAnimations = 'is-active' %}
+	{% include 'partials/navigation.html' %}
+
+	<div class="doc-main">
+		<main class="fds">
+			<h1 class="h1-like">Motion &amp; Animations</h1>
+
+			<div class="intro-block">
+				<p>Animations are a good way to convey helpers for the users: they help understand the changes within the interface, but also bring direct feedback and delightfulness.</p>
+			</div>
+
+			<div class="toc">
+				<p id="toc-title" class="h3-like">Table of Contents</p>
+				<ul aria-labelledby="toc-title">
+					<li>
+						<a href="#principles">Animation Principles</a>
+					</li>
+					<li>
+						<a href="#duration">Duration &amp; Easing</a>
+					</li>
+					<li>
+						<a href="#system-change">Interface / System Changes</a>
+					</li>
+					<li>
+						<a href="#direct-feedback">Direct Feedback</a>
+					</li>
+					<li>
+						<a href="#attention-keeper">Attention Keeper</a>
+					</li>
+					<li>
+						<a href="#interface-drawing">Interface Drawing</a>
+					</li>
+				</ul>
+			</div>
+
+			<h2 class="h2-like" id="principles">Our Animation Principles</h2>
+
+			<p>Our animations tend to respect those principles.</p>
+
+			<blockquote class="is-big">
+				<p>
+					Quick &amp; Smart
+				</p>
+			</blockquote>
+
+			<p>The animation shouldn't slow down the perceived performance of the interface or system. On the contrary, it should help feel it quick and smart.</p>
+			
+			<blockquote class="is-big">
+				<p>
+					Friendly but Smooth and Professional
+				</p>
+			</blockquote>
+
+			<p>The animation should bring a bit of friendliness for our end users (both agents and clients). For instance, bouncing animations or squeezing effects are welcome but sparingly. Smooth light animations are prefered.</p>
+			
+			<blockquote class="is-big">
+				<p>
+					Supportive &amp; Helpful
+				</p>
+			</blockquote>
+
+			<p>Animations are proposed to serve user experience. It helps user better understand the changes over the interface, and give them direct feedback during interaction.</p>
+
+
+			<h2 class="h2-like" id="duration">Duration &amp; Easing</h2>
+
+			<p>
+				The duration and easing we use are defined to serve 2 precise purposes:
+			</p>
+
+			<ul>
+				<li>Give a natural feeling to the movement,</li>
+				<li>Help the user by making the movement quick and adapted to the element being animated.</li>
+			</ul>
+
+			<h3 class="h3-like" id="animation-duration">
+				Duration of the animations
+			</h3>
+ 
+			<p>
+				Well! It depends, but mostly: trust the designer team recommandation. Here are some commonly used duration, defined by our design tokens.
+			</p>
+			
+			<div class="Table-responsive-container">
+				<table class="Table">
+					<thead>
+						<tr>
+							<th scope="col">Duration</th>
+							<th scope="col">Token</th>
+							<th scope="col">Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>300<abbr title="Milliseconds">ms</abbr></td>
+							<td><code class="u-is-txt-no-wrap ">$animation-duration</code></td>
+							<td>This is the default minimal duration for items sized like a button, for instance.</td>
+						</tr>
+						<tr>
+							<td>500<abbr title="Milliseconds">ms</abbr></td>
+							<td><em>none</em></td>
+							<td>Part of the token <code>$collapse-transition-open</code>, it's the duration of the open animation for collapsable panels, or equivalent sizing.</td>
+						</tr>
+						<tr>
+							<td>1.2<abbr title="seconds">s</abbr></td>
+							<td><em>none</em></td>
+							<td>This is the maximum duration for the biggest full screen animation on desktop format. Duration will adjust depending on the screen size. (mobile/small screens will be quicker)</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<p>
+				To illustrate the small animation duration, our buttons are the best examples.
+			</p>
+
+			<p>
+				<button type="button" class="ButtonContained">
+					Hover and click me
+				</button>
+
+				<button type="button" class="ButtonText is-rounded">
+					Hover and click me
+				</button>
+			</p>
+
+			<h3 class="h3-like" id="long-animation">
+				Keyframed / Long animations
+			</h3>
+
+			<p>
+				There are some more complexe animations that require a bit more duration to process entirely. It's the case for multiple animated element that respect a precise timeline. For example, this house animation used in a "number of rooms" form controls, or the animated Foyer logo (which is a draft not validated yet).
+			</p>
+			
+			<div class="gallery can-overflow u-is-bg-white text-center">
+				<div class="gallery-image">
+					<div class="gl-image">
+						<video width="320" autoplay="true" muted="true" controls="true" src="img/motion-house-spinner.mp4"></video>
+					</div>
+				</div>
+				<div class="gallery-image">
+					<div class="gl-image">
+						<video width="320" autoplay="true" muted="true" controls="true" src="img/motion-logo-foyer.mp4"></video>
+					</div>
+				</div>
+			</div>
+
+			<h3 class="h3-like" id="animation-easing">
+				Easing and timing function
+			</h3>
+			
+			<p>
+				We didn't pick a too complexe timing function for our basics animation. We decided to use the <code>ease-in-out</code> as working base. This function feels more natural: in the physical world, an object needs time to start moving, but also to slow down, and in between it has a max movement speed to reach.
+			</p>
+
+			<div class="can-overflow u-is-bg-white text-center">
+				<video width="780" autoplay="true" muted="true" controls="true" src="img/motion-easing.mp4"></video>
+				<p>Demo from <a href="https://cubic-bezier.com/#.17,.67,.83,.67">Lea Verou Cubic-Bezier</a> tool.</p>
+			</div>
+
+			<p>
+				The first animated block has an easing applied, while the second one has a linear timing function. See how the first one looks more natural during the animation.
+			</p>
+
+			<h2 class="h2-like" id="system-change">
+				Interface / System Changes
+			</h2>
+
+			<p>
+				We call a system change in these different cases:
+			</p>
+
+			<ul>
+				<li>
+					The interface is changing (new content, content deletion, etc.) with a certain amount of new elements, or removed elements.
+				</li>
+
+				<li>
+					The interface asked something to the system, and the system is processing.
+				</li>
+
+				<li>
+					The system has requested a change to the interface by itself (notification or push principles)
+				</li>
+			</ul>
+
+			<h3 class="h3-like" id="loaders">
+				Loaders
+			</h3>
+
+			<p>
+				The loading principles and waiting time management's topic is discussed in another section of this documentation. <em>(link coming soon)</em></p>
+
+			<p>This section addresses the topic of system status and all the different loading states available to make the user wait, or understand that something is processing.
+			</p>
+
+			<h3 class="h3-like" id="minor-changes">
+				Minor interface changes
+			</h3>
+
+			<p>
+				Even for minor changes, animation/transition are mandatory. The smaller the change is, the quicker the animation will be. (3ms, remember?)
+			</p>
+
+			<p>Here is a visual example of this principle applied to multiple elements appearing:</p>
+			
+			<div class="can-overflow u-is-bg-white">
+				<p class="codepen" data-height="434" data-theme-id="light" data-default-tab="result" data-user="GeoffreyCrofte" data-slug-hash="MRLweL" style="height: 434px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Transition Delay simple animation"></p>
+			</div>
+
+			<p>This principle applies also on user-controlled element that will be added to the interface, for instance:</p>
+			
+			<div class="can-overflow u-is-bg-white">
+				<p class="codepen" data-height="437" data-theme-id="light" data-default-tab="result" data-user="GeoffreyCrofte" data-slug-hash="RwbQrjQ" style="height: 437px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Todo List with scrollIntoView(), LocalStorage and CSS animations"></p>
+			</div>
+
+			<p>See <a href="https://codepen.io/GeoffreyCrofte/full/RwbQrjQ">this Pen</a> in a separate window for better scroll interaction.</p>
+
+			<h3 class="h3-like" id="major-changes">
+				Major interface changes
+			</h3>
+
+			<p>
+				For bigger changes, like a panel of an group of several changes…
+			</p>
+			
+			<div class="can-overflow u-is-bg-white">
+				<p class="codepen" data-height="947" data-theme-id="light" data-default-tab="result" data-user="GeoffreyCrofte" data-slug-hash="zmLeza" style="height: 947px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Mobile App Floating Navigation Layout Transition"></p>
+			</div>
+
+
+			<h2 class="h2-like" id="direct-feedback">
+				Direct Feedback
+			</h2>
+
+			<p>One of the usage of animation is for smooth but direct feedback. For instance, on buttons, we've got inspired by the Ripple Effect of Material Design.</p>
+
+			<p>
+				<button type="button" class="ButtonContained">Click on me!</button>
+			</p>
+
+			<p>
+				This direct feedback take a little bit of time to end thanks to the animation duration. This help the brain of the user in understanding the changes applied after their own action on the interface.
+			</p>
+
+			<h2 class="h2-like" id="attention-keeper">
+				Attention Keeper
+			</h2>
+
+			<p>Sometimes when we just need the user to focus on something specific, we use animation to keep their attention. For instance, we worked on several animations that cycle, to invite the user to interact with a precise element on the interface.</p>
+			
+			<div class="can-overflow u-is-bg-white">
+				<p class="codepen" data-height="262" data-theme-id="light" data-default-tab="result" data-user="GeoffreyCrofte" data-slug-hash="NWNPKwx" style="height: 262px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Pulse/Ripple CSS Animation — Tappable Area Button"></p>
+			</div>
+
+			<h2 class="h2-like" id="interface-drawing">
+				Interface Drawing
+			</h2>
+
+			<p>
+				Another good use of animations is when the interface load a certain amount of data or visual element. Bringing them step by step can help the users understand the different point of interest in the current screen.<br>
+				It adds a level of fulfillness and delightfulness too.
+			</p>
+
+			<div class="can-overflow u-is-bg-white">
+				<p class="codepen" data-height="594" data-theme-id="light" data-default-tab="result" data-user="GeoffreyCrofte" data-slug-hash="LKMYge" style="height: 594px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Animated Responsive Circular Chart with SVG and CSS"></p>
+			</div>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+			<p>For any other need, and before deploying a new kind of animation, developers and other team members are asked to get help and advice from the design team. </p>
+
+
+
+			<h2 class="h2-like text-center">Go further with:</h2>
+			<div class="discover row">
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="illustration.html" class="disco-1">
+						<p class="h3-like">Illustrations</p>
+						<p>How with draw things to delight our users.</p>
+					</a>
+				</div>
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<a href="colors.html" class="disco-2">
+						<p class="h3-like">Colors</p>
+						<p>The colors we use, how and why.</p>
+					</a>
+				</div>
+			</div>
+
+		</main>
+
+		{% include  'partials/html-footer.html' %}
+	</div>
+</div>
+	</body>
+</html>

@@ -1984,6 +1984,39 @@ button:focus {
 }
 
 /**
+ * Tables
+ */
+.Table-responsive-container {
+	max-width: 100%;
+	overflow: auto;
+	border-radius: 8px;
+}
+
+table {
+	td,
+	th {
+		padding: 16px;
+		background: white;
+	}
+
+	th {
+		font-weight: 500;
+		text-align: left;
+		background: $color-info-light;
+		color: $color-foyer;
+	}
+}
+
+/**
+ * CodePen Wrappers
+ */
+.cp_embed_wrapper {
+	width: 780px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+/**
  * Inline Colors
  */
 .color {
