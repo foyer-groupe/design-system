@@ -489,6 +489,50 @@
 				</div>
 			</div>
 
+
+			<h2 class="h2-like" id="accessibbility">
+				Accessibility
+			</h2>
+
+			<p>
+				When you work on animation, you need to be aware that it can lead to motion sickness. This discomfort is mostly caused by a lot of changes at the same time in the interface, or when a big one appears on the screen.
+			</p>
+
+			<p>
+				To avoid this discomfort, multiple solutions exists, complementary to each other, or exclusive, among these:
+			</p>
+
+			<ul>
+				<li>A play/pause button for loop animation for instance (video, background, video),</li>
+				<li><code>Esc</code> key on the keyboard should also pause the loop animations,</li>
+				<li>Take into account the user’s preferences based on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"><code>prefers-reduced-motion</code></a></li>
+			</ul>
+
+			<h3 class="h3-like" id="prefers-reduced-motion">
+				Prefers-reduced-motion
+			</h3>
+			
+			<p>
+				This easy-to-implement solution can be sum-up with some CSS lines, like so:
+			</p>
+
+			<div class="can-overflow u-is-bg-white">
+
+                <pre><code class="html">@media (prefers-reduced-motion) {
+	.animated-elements {
+		animation-name: dissolve;
+	}
+}</code></pre>
+            </div>
+
+            <p>
+            	With this example, we replace all the animations by something animated based on fade-in/out animations insteado of movements. Dissolve would be the name of the declared animation.
+            </p>
+
+            <p>
+            	Build you own solution keeping in mind that a lot of solutions exists to take into account and respect user preferences.
+            </p>
+
 		</main>
 
 				
