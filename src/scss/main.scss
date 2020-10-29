@@ -377,6 +377,20 @@ table {
 	font-weight: $font-weight-bold;
 }
 
+.u-mt-10 {
+	margin-top: 80px;
+}
+
+.u-ml-0 {
+	margin-left: 0;
+}
+
+@media (min-width: map-get($breakpoints, sm) ) {
+	.u-ml-sm-9 {
+		margin-left: 72px;
+	}
+}
+
 /**
  * Hero Banner
  */
@@ -1559,6 +1573,7 @@ button:focus {
 	background: $color-foyer $linear-gradient-main;
 
 	a {
+		display: inline-block;
 		color: inherit;
 	}
 
@@ -1575,6 +1590,15 @@ button:focus {
 	.work-img {
 		margin-top: 16px;
 		opacity: .5;
+	}
+
+	.dl-apps {
+		margin-left: -4px;
+		margin-right: -4px;
+
+		a {
+			margin: 4px;
+		}
 	}
 }
 
