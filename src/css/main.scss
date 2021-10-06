@@ -2020,6 +2020,12 @@ button:focus {
 		margin-top: 0;
 		list-style: none;
 		font-size: .75em;
+
+		li {
+			&:before {
+				content: none;
+			}
+		}
 	}
 
 	.dl-action {
