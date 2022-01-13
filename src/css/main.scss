@@ -1132,7 +1132,7 @@ button:focus {
 	p,
 	li {
 		> code {
-			font-size: 1.2em;
+			font-size: 1em;
 			line-height: 1.4;
 			color: purple;
 		}
@@ -2091,6 +2091,11 @@ button:focus {
 		border: 1px solid #AAA;
 		border-radius: 2px;
 	}
+}
+
+/* Components doc fix */
+.Panel .Panel-background-image, .Panel .Panel-backgroundImage {
+	right: -20px;
 }
 
 
