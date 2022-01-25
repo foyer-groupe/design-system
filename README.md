@@ -17,7 +17,7 @@ Website is accessible at [https://www.design.foyer.lu](https://design.foyer.lu).
 
 ## Human Behind
 
-Here is the Core Team of the Design System.
+Here are the Core Team members of the Design System.
 
 * Geoffrey Crofte - Lead Design System / UX Designer
 * Bastien Collet - Front-End Developer / Dev Team Relationship
