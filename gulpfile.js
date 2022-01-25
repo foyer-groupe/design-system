@@ -2,7 +2,7 @@
 //          DEV TASKS MANAGER
 // ------------------------------------------------------------------------------------------------------------------ //
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
 const concat = require('gulp-concat');
@@ -37,7 +37,9 @@ gulp.task('default', function (done) {
 
 			// Compile CSS files
 			gulp.src('src/css/main.scss')
-				.pipe(sass())
+				.pipe(sass.sync().on('error', function (error) {
+					console.log(error);
+				}))
 				.pipe(autoprefixer())
 				.pipe(csso())
 				.pipe(gulp.dest('public/css/')),

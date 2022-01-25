@@ -5,16 +5,17 @@
 	"description": "FDS public presentation",
 	"license": "MIT",
 	"devDependencies": {
-		"gh-pages": "^2.1.1",
 		"del": "^5.0.0",
+		"flexboxgrid": "latest",
+		"gh-pages": "^2.1.1",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.0",
 		"gulp-concat": "latest",
 		"gulp-csso": "latest",
-		"gulp-sass": "latest",
+		"gulp-sass": "^5.1.0",
 		"gulp-swig": "^0.9.1",
-		"flexboxgrid": "latest",
-		"highlightjs": "8.7.0"
+		"highlightjs": "8.7.0",
+		"sass": "^1.49.0"
 	},
 	"scripts": {
 		"init": "npm install"

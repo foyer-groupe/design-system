@@ -1,0 +1,224 @@
+/*
+  All these variables are the ones used in the root to be transformed into css variables.
+*/
+
+// ---- COLORS of the interface ------------------------------------------------------------------------------------ //
+// Here the default and map-merge are from the v1 where you could specify a theme by giving a map of colors, we'll see if we still need it later
+$colors: () !default;
+/* stylelint-disable function-parentheses-space-inside */
+$original-colors: (
+		black : #000000,
+		white : #FFFFFF,
+	// Primary
+		primary-lighter : #EAEEFA,
+		primary-light : #A9BCE9,
+		primary : #2957C8,
+		primary-dark : #0736A8,
+		primary-darker : #041D58,
+	// Secondary
+		secondary-lighter : #F8F9FC,
+		secondary-light : #EAEEF6,
+		secondary : #C4CEDE,
+		secondary-dark : #67768E,
+		secondary-darker : #454F5F,
+	// Old good blue Foyer colors.
+		blue-foyer-lighter : #F0F5FA,
+		blue-foyer-light : #3979B4,
+		blue-foyer : #004C92,
+		blue-foyer-dark : #033767,
+		blue-foyer-darker : #01213C,
+	// Info
+		info-lighter : #EDF6FF,
+		info-light : #B9D8F4,
+		info : #4C9ADF,
+		info-dark : #3B7AB3,
+		info-darker : #1A5A95,
+	// Yellow
+		yellow-lighter : #FEFAE8,
+		yellow-light : #F9E176,
+		yellow : #F5CE22,
+		yellow-dark : #DDB91F,
+		yellow-darker : #7B6711,
+	// Warning
+		warning-lighter: #FEECD7,
+		warning-light : #FBB54B,
+		warning : #FF9E00,
+		warning-dark : #D18B00,
+		warning-darker : #975F09,
+	// Danger
+		danger-lighter : #FFF0F0,
+		danger-light : #F39194,
+		danger : #ED5E63,
+		danger-dark : #D14449,
+		danger-darker : #A32C30,
+	// Success
+		success-lighter: #E0F5F3,
+		success-light : #59C5B3,
+		success : #00A88C,
+		success-dark : #008670,
+		success-darker : #006353,
+	// Light Grey
+		feather-grey-lighter: #F8F9FC,
+		feather-grey-light: #EAEEF6,
+		feather-grey: #C4CEDE,
+		feather-grey-dark: #67768E,
+		feather-grey-darker: #454F5F,
+		grey-shadow: rgba(64, 72, 79, 0.25),
+	// Udbs
+		udb-mobile : #F5CE22,
+		udb-habitation : #C4057A,
+		udb-sante : #c780b4,
+		udb-pension : #69C2C3,
+		white-000 : rgba(255, 255, 255, 0),
+		white-050 : rgba(255, 255, 255, 0.05),
+		white-100 : rgba(255, 255, 255, 0.1),
+		white-150 : rgba(255, 255, 255, 0.15),
+		white-200 : rgba(255, 255, 255, 0.2),
+		white-250 : rgba(255, 255, 255, 0.25),
+		white-500 : rgba(255, 255, 255, 0.5),
+		white-650 : rgba(255, 255, 255, 0.65),
+		white-800 : rgba(255, 255, 255, 0.8),
+		white-900 : rgba(255, 255, 255, 0.9),
+		black-000 : rgba(0, 0, 0, 0),
+		black-050 : rgba(0, 0, 0, 0.05),
+		black-100 : rgba(0, 0, 0, 0.1),
+		black-150 : rgba(0, 0, 0, 0.15),
+		black-200 : rgba(0, 0, 0, 0.2),
+		black-400 : rgba(0, 0, 0, 0.4),
+		black-500 : rgba(0, 0, 0, 0.5)
+);
+
+$colors-deprecated: (
+		blue-ghost-light : map-get($original-colors, feather-grey-lighter),
+		blue-ghost : map-get($original-colors, feather-grey-lighter),
+		grey-050 : map-get($original-colors, feather-grey-lighter),
+		blue-ghost-dark : map-get($original-colors, feather-grey-light),
+		blue-smoke-light : map-get($original-colors, feather-grey-light),
+		blue-smoke : map-get($original-colors, feather-grey-light),
+		blue-smoke-dark : map-get($original-colors, feather-grey-light),
+		grey-light : map-get($original-colors, feather-grey-light),
+		grey-100 : map-get($original-colors, feather-grey-light),
+		grey-300 : map-get($original-colors, feather-grey),
+		blue-smoke-darker : map-get($original-colors, feather-grey),
+		grey-500 : map-get($original-colors, feather-grey-dark),
+		grey-700 : map-get($original-colors, feather-grey-dark),
+		grey-800 : map-get($original-colors, feather-grey-darker),
+		blue-smoke-200 : rgba(234, 240, 246, 0.2)
+);
+
+$colors-with-deprecated: map-merge(
+				$original-colors,
+				$colors-deprecated
+);
+
+$colors: map-merge($colors-with-deprecated, $colors);
+
+// ---- GRADIENTS --------------------------------------------------------------------------------------------------- //
+// Here the default and map-merge are from the v1 where you could specify a theme by giving a map of colors, we'll see if we still need it later
+$gradients: () !default;
+$gradients: map-merge(
+				(
+						blue-primary : linear-gradient(to right, #004C92, #086DCA),
+						blue-secondary : linear-gradient(to right, #479CE8, #3973E6),
+						blue-tertiary : linear-gradient(to right, #4EABFF, #0F8DFF),
+						blue-quaternary : linear-gradient(to right, #388CD9, #0C77D9),
+						blue-quinary : linear-gradient(to bottom, #004C92, #0083C4),
+						blue-complete : linear-gradient(to right, #4EABFF, #0F8DFF, #388CD9, #0C77D9),
+						orange-primary : linear-gradient(to right, #FF9E00, #FF8B00),
+						orange-secondary : linear-gradient(to right, #D98600, #D97500),
+						orange-complete : linear-gradient(to right, #FF9E00, #FF8B00, #D98600, #D97500),
+						red-primary : linear-gradient(to right, #F97F7F, #FF5A5F),
+						red-secondary : linear-gradient(to right, #E26969, #D74B50),
+						red-complete : linear-gradient(to right, #F97F7F, #FF5A5F, #E26969, #D74B50),
+						green-primary : linear-gradient(to right, #00DCC9, #00B698),
+						green-secondary : linear-gradient(to right, #00B698, #0F8E79),
+						green-complete : linear-gradient(to right, #00DCC9, #00B698, #00B698, #0F8E79)
+				),
+				$gradients
+);
+
+// ---- Illu colors --------------------------------------------------------------------------------------------------- //
+$illu-colors: () !default;
+$illu-colors: map-merge(
+				(
+						black : #071219,
+						dark-grey : #243859, // primary
+						grey : #66758D,
+						grey-400 : #C2C8D2,
+						grey-100 : #F0F1F4,
+						grey-house : #E9ECF5,
+						dark-blue : #0736A8,
+						primary-blue : #0B42C8, // primary
+						blue : #2957C8,
+						blue-400 : #A9BCE9,
+						blue-100 : #EAEEFA,
+						dark-grey-blue : #A1BEDD,
+						grey-blue-primary : #C9DBF0, // primary
+						grey-blue : #D9E6F5,
+						grey-blue-400 : #F0F5FB,
+						grey-blue-100 : #FBFCFE,
+						darker-green : #015E4E,
+						sapin-green : #037D69,
+						dark-green : #019F85,
+						primary-green : #00BDA1, // primary
+						light-green : #40CDB8,
+						light-green-400: #B3EBE3,
+						light-green-100: #ECFAF8,
+						dark-orange : #E05434,
+						orange : #E6714F,
+						coral-orange : #E97D5B,
+						dark-yellow : #D8A600,
+						primary-yellow : #F5CE22,
+						yellow : #F8DD64,
+						yellow-400 : #FBEBA7,
+						yellow-100 : #FEFAE9,
+						skin-dark-brown : #705D54,
+						skin-brown : #947A6D,
+						dark-skin : #C98D76,
+						taned-skin : #BA9680,
+						taned-skin-lighter : #D8B096,
+						primary-skin : #F6CAA7,
+						skin : #F6DCCD,
+						skin-400 : #FCEFE5,
+						skin-100 : #FEFAF6,
+						dark-brown : #553A29,
+						choco : #684B38,
+						dark-purple : #710B55,
+						purple : #9A1C6E,
+						pink : #D44D9E,
+						purple-400 : #EEB8D8,
+						purple-100 : #FBEDF5
+				),
+				$illu-colors
+);
+
+
+// ---- Breakpoints -------------------------------------------------------------------------------------------- //
+/* Since we cannot use css variables inside media queries, this won't be overriden with css variables in the variables.scss file */
+$breakpoints: () !default;
+$breakpoints: map-merge(
+				(
+						xxs : 0,
+						xs : 376px,
+						sm : 716px,
+						md : 984px,
+						lg : 1200px,
+						xl : 1600px
+				), $breakpoints
+);
+
+// ---- Layouts -------------------------------------------------------------------------------------------- //
+$header-height-desktop-tablet: 64px !default;
+$header-height-mobile: 48px !default;
+$navbar-height: 64px !default;
+$footer-height: 48px !default;
+$appbarleft-width: 144px !default;
+$layout-max-width: 1440px !default;
+
+// ---- Others -------------------------------------------------------------------------------------------- //
+$variable-prefix: 'fds-';
+$variable-illu-prefix: 'illu-';
+$variable-gradient-prefix: 'gradient-';
+
+$default-border-color: map-get($colors, feather-grey);
+$default-border-color-focus: map-get($colors, feather-grey-dark);
