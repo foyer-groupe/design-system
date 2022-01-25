@@ -42,8 +42,9 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
 		
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/vendor.css">
-	<link rel="stylesheet" href="css/main.css">
 
     <script type="text/javascript" src="js/vendor.js"></script>
     <script type="text/javascript" src="js/main.js" async></script>
@@ -239,7 +240,7 @@
             </p>
 
              <p class="margin-big text-center">
-                <img src="img/components/button-dna-documentation.png" srcset="img/components/button-dna-documentation@2x.png" width="543" height="120" alt="A button with blue gradient and measurements here and there, described below.">
+                <img src="img/components/button-dna-documentation.png" srcset="img/components/button-dna-documentation@2x.png" width="437" height="203" alt="A button with blue background and some measurements here and there, described below.">
             </p>
 
             <h3 class="h3-like" id="button-detail">
@@ -250,10 +251,10 @@
 
             <ul>
                 <li>Barlow Medium 16px Uppercase is used in white</li>
-                <li>Background is a <a href="colors.html#gradient-blue-tertiary">Blue Tertiary</a> from <span class="color">#4EABFF</span> to <span class="color">#0F8DFF</span> on normal state.</li>
+                <li>Background is a <a href="colors.html#primary">Primary</a> on normal state.</li>
                 <li>Padding left and right are 16px, top and bottom are 12px</li>
                 <li>Border Radius are 4 pixels</li>
-                <li>Total height is approximately 40px. Approx. because you never block the height of an element with a text inside of it (accessibility recommandation).</li>
+                <li>Total height is approximately 40px. Approx. because we never block the height of an element with a text inside of it (accessibility recommandation).</li>
             </ul>
 
             <h2 class="h2-like" id="variations">
@@ -275,46 +276,31 @@
             <div class="gallery can-overflow u-is-bg-white">
                 <div class="gallery-image">
                     <div class="gl-image" style="height: 85px;">
-                        <img src="img/components/button-primary-normal.png" srcset="img/components/button-primary-normal@2x.png" width="155" height="48" alt="Button Primary in a normal state">
+                        <img src="img/components/button-primary-normal.png" srcset="img/components/button-primary-normal@2x.png" width="122" height="40" alt="Button Primary in a normal state">
                     </div>
                     <ul class="dl-links">
                         <li class="text-center"><strong>Normal</strong></li>
-                        <li class="text-center"><a href="#gradient-blue-tertiary">$gradient-blue-tertiary</a></li>
-                        <li class="text-center">Regular Shadow</li>
+                        <li class="text-center"><a href="/colors.html#primary">$primary</a></li>
                     </ul>
                 </div>
 
                 <div class="gallery-image">
                     <div class="gl-image" style="height: 85px;">
-                        <img src="img/components/button-primary-hover.png" srcset="img/components/button-primary-hover@2x.png" width="158" height="52" alt="Button Primary in a hover state">
+                        <img src="img/components/button-primary-hover.png" srcset="img/components/button-primary-hover@2x.png" width="122" height="40" alt="Button Primary in a hover state">
                     </div>
                     <ul class="dl-links">
-                        <li class="text-center"><strong>:hover</strong></li>
-                        <li class="text-center"><a href="#gradient-blue-quaternary">$gradient-blue-quaternary</a></li>
-                        <li class="text-center">Diffused Shadow</li>
+                        <li class="text-center"><strong>:hover / :focus</strong></li>
+                        <li class="text-center"><a href="/colors.html#primary-dark">$primary-dark</a></li>
                     </ul>
                 </div>
 
                 <div class="gallery-image">
                     <div class="gl-image" style="height: 85px;">
-                        <img src="img/components/button-primary-active.png" srcset="img/components/button-primary-active@2x.png" width="158" height="52" alt="Button Primary in a active state">
-                    </div>
-                    <ul class="dl-links">
-                        <li class="text-center"><strong>:active</strong></li>
-                        <li class="text-center"><a href="#gradient-blue-quaternary">$gradient-blue-quaternary</a></li>
-                        <li class="text-center">Ripple Effect</li>
-                    </ul>
-                </div>
-
-                <div class="gallery-image">
-                    <div class="gl-image" style="height: 85px;">
-                        <img src="img/components/button-primary-disabled.png" srcset="img/components/button-primary-disabled@2x.png" width="155" height="48" alt="Button Primary in a disabled state">
+                        <img src="img/components/button-primary-disabled.png" srcset="img/components/button-primary-disabled@2x.png" width="122" height="40" alt="Button Primary in a disabled state">
                     </div>
                     <ul class="dl-links">
                         <li class="text-center"><strong>disabled</strong></li>
-                        <li class="text-center"><a href="#gradient-blue-tertiary">$gradient-blue-tertiary</a></li>
-                        <li class="text-center">Regular Shadow</li>
-                        <li class="text-center">Opacity: 50%</li>
+                        <li class="text-center"><a href="/colors.html#primary-lighter">$primary-lighter</a></li>
                     </ul>
                 </div>
             </div>
@@ -352,7 +338,7 @@
             </p>
 
             <p>
-                The <strong>Contained</strong> one (<code>.ButtonContained</code>) is made to have a strong emphasis and is eye-catching on purpose. You can find it on several <a href="#color-variations">color variations</a>.
+                The <strong>Contained</strong> button (<code>.ButtonContained</code>) is made to have a strong emphasis and is eye-catching on purpose. You can find it on several <a href="#color-variations">color variations</a>.
             </p>
 
             <div class="gallery can-overflow u-is-bg-white">
@@ -888,14 +874,14 @@
 
             <div class="can-overflow u-is-bg-white">
 
-                <pre><code class="html"><button class="ButtonContained [is-loading]" [disabled] type="button">
+                <pre><code class="html"><button class="ButtonContained [is-loading]" disabled type="button">
     Button Label
 </button>
 </code></pre>
             </div>
 
             <p>
-                <code>disabled</code> attribute is used for styling not enabled buttons, but the styling also works with <code>aria-disabled="true"</code> attribute, which has the same meaning.
+                <code>disabled</code> attribute is used for styling not enabled buttons, but the styling also works with <code>aria-disabled="true"</code> attribute, which has the same meaning. The goal is to educate developers (new comers) in the importance of meaningful attributes.
             </p>
 
 
