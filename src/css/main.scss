@@ -1,6 +1,8 @@
 /**
  * Documentation stylesheet
  */
+@import 'variables';
+
 // TODO Variables file
 $color-blue:        #4EABFF;
 $color-blue-dark:   #479CE8;
@@ -133,13 +135,13 @@ $breakpoints : (
 	xl  : 1600px
 );
 
-@import 'font-face';
-@import 'materialicons';
-@import 'mixins';
-@import 'colors';
-@import 'grid';
-@import 'panel';
-@import 'buttons';
+//@import 'font-face';
+//@import 'materialicons';
+//@import 'mixins';
+//@import 'colors';
+//@import 'grid';
+//@import 'panel';
+//@import 'buttons';
 @import 'documentation';
 
 * {
@@ -424,6 +426,10 @@ table {
 
 	li {
 		display: inline-block;
+
+		&:before {
+			content: none;
+		}
 	}
 
 	li + li {
@@ -444,6 +450,7 @@ table {
 		padding-top: 140px;
 		font-size: 2.4em;
 		font-weight: $font-weight-light;
+		color: map-get($colors, white);
 
 		@media (min-width: $mq-small) {
 			padding-top: 192px;
@@ -1125,7 +1132,7 @@ button:focus {
 	p,
 	li {
 		> code {
-			font-size: 1.2em;
+			font-size: 1em;
 			line-height: 1.4;
 			color: purple;
 		}
@@ -1192,9 +1199,10 @@ button:focus {
 	 */
 	.subtitle {
 		width: 540px;
+		max-width: 100%;
 		margin: 2.5em auto 3.5em;
 		max-width: 100%;
-		font-size: 1.125em; // 18px;
+		font-size: 1.25em; // 20px;
 		line-height: 1.7;
 	}
 
@@ -1371,6 +1379,10 @@ button:focus {
 		li {
 			margin: 32px 40px;
 
+			&:before {
+				content: none;
+			}
+
 			@media (min-width: $mq-small) {
 				margin: 48px 64px;	
 			}
@@ -1407,6 +1419,7 @@ button:focus {
 
 	.peops-job {
 		font-size: .875em;
+		font-weight: 500;
 		color: rgba(255, 255, 255, .65);
 	}
 
@@ -1635,14 +1648,25 @@ button:focus {
 }
 
 .social {
-	li + li {
-		margin-left: 24px;
+	li {
+		&:before {
+			content: none;
+		}
+
+		+ li {
+			margin-left: 24px;
+		}
 	}
 }
 
 .network {
-	li + li {
-		margin-left: 64px;
+	li {
+		&:before {
+			content: none;
+		}
+		+ li {
+			margin-left: 64px;
+		}
 	}
 
 	a {
@@ -1996,6 +2020,12 @@ button:focus {
 		margin-top: 0;
 		list-style: none;
 		font-size: .75em;
+
+		li {
+			&:before {
+				content: none;
+			}
+		}
 	}
 
 	.dl-action {
@@ -2061,6 +2091,11 @@ button:focus {
 		border: 1px solid #AAA;
 		border-radius: 2px;
 	}
+}
+
+/* Components doc fix */
+.Panel .Panel-background-image, .Panel .Panel-backgroundImage {
+	right: -20px;
 }
 
 

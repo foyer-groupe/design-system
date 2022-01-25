@@ -36,10 +36,14 @@ gulp.task('default', function (done) {
 			]).pipe(gulp.dest('public/')),
 
 			// Compile CSS files
-			gulp.src('src/scss/main.scss')
+			gulp.src('src/css/main.scss')
 				.pipe(sass())
 				.pipe(autoprefixer())
 				.pipe(csso())
+				.pipe(gulp.dest('public/css/')),
+
+			// Move CSS
+			gulp.src('src/css/components.css')
 				.pipe(gulp.dest('public/css/')),
 
 			// Compile JS files
