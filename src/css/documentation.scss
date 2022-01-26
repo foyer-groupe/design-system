@@ -330,7 +330,7 @@
 						font-weight: bold;
 
 						&:after {
-							transform: rotate(180deg);
+							transform: rotate(180deg) translateY(3px);
 						}
 					}
 
@@ -387,11 +387,12 @@
 				outline: none;
 
 				&::after {
-					content: '\e313';
+					content: '^';
 					position: absolute;
 					right: 24px;
-					font-family: 'MaterialIcons';
+					font-family: Consolas, monospace;
 					transition: all .275s;
+					transform: rotate(0) translateY(5px)
 				}
 			}
 
