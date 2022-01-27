@@ -5,11 +5,11 @@
 	"description": "FDS public presentation",
 	"license": "MIT",
 	"devDependencies": {
-		"del": "^5.0.0",
+		"del": "^5.1.0",
 		"flexboxgrid": "latest",
-		"gh-pages": "^2.1.1",
+		"gh-pages": "^2.2.0",
 		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^7.0.0",
+		"gulp-autoprefixer": "^7.0.1",
 		"gulp-concat": "latest",
 		"gulp-csso": "latest",
 		"gulp-sass": "^5.1.0",
@@ -21,6 +21,6 @@
 		"init": "npm install"
 	},
 	"dependencies": {
-		"gulp-cli": "^2.2.0"
+		"gulp-cli": "^2.3.0"
 	}
 }
