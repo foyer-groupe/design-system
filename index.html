@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -43,7 +41,7 @@
     <meta property="og:image:type" content="image/jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
-
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/vendor.css">
 
@@ -66,7 +64,9 @@
         <a href="#menu" class="jump-link sr-only sr-focusable">Go to menu</a>
 
 
-<header class="header mobile-navigation " role="banner" data-root>
+
+
+<header class="header mobile-navigation is-home" role="banner" data-root>
     <div class="fds-logo">
         <a href="index.html" title="Back to homepage of Foyer Design System"><img src="https://static.foyer.lu/images/d9/logo-fds-molecule.d97e418aa10ea3aae0181ac4b44c9efbdb16a72d.svg" width="106" height="36" alt="Foyer Design System"></a>
     </div>
@@ -78,15 +78,11 @@
     </div>
 </header>
 
-<nav id="menu" class="doc-nav " role="navigation" data-root>
+<nav id="menu" class="doc-nav is-home" role="navigation" data-root>
 
 	<div class="doc-nav-logo">
 		
-		<a href="index.html">
-		
 		<img width="147" height="51" src="img/logo-molecule.svg" alt="Foyer Design System" class="doc-logo">
-		
-		</a>
 		
 	</div>
 
@@ -481,18 +477,102 @@
 </main>
 
 		
-		<footer class="mini-footer text-center">
-			<p>
-				<img src="https://static.foyer.lu/images/e8/logo-foyer-vertical-blue.e8f1828132134ac5b9537db80e3103452de0b5e9.svg" width="80" height="64" alt="Foyer Assurances">
-			</p>
+		<footer id="footer" class="main-footer" data-root>
+			<div class="container">
+				<div class="row middle-md">
 
-			<p>
-				<a href="license.html">License</a>
-				—
-				<a href="contact.html">Contact Us</a>
-				—
-				<a href="https://groupe.foyer.lu/">Groupe Foyer</a>
-			</p>
+					<div class="col-md-3 col-xs-12 text-xs-center">
+						<p class="sr-only" id="social-desc">Foyer on social networks:</p>
+						<ul class="social" aria-describedby="social-desc">
+							<li>
+								<a href="https://facebook.com/foyer.luxembourg/">
+									<img src="img/icon-facebook.svg" width="32" height="32" alt="Facebook">
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/GroupeFoyer">
+									<img src="img/icon-twitter.svg" width="32" height="32" alt="Twitter">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/company/foyer-assurances/">
+									<img src="img/icon-linkedin.svg" width="32" height="32" alt="Linkedin">
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-md-9 col-xs-12 text-xs-center text-right">
+						<ul class="network">
+							
+							<li>
+								<a href="https://www.foyer.lu/en/professional">Professional</a>
+							</li>
+							<li>
+								<a href="https://groupe.foyer.lu">Le Groupe Foyer</a>
+							</li>
+						</ul>
+					</div>
+
+				</div><!-- .row -->
+				
+				<div class="divider"></div>
+
+				<div class="row">
+					<div class="col-md-4 col-xs-12 text-xs-center">
+						<a href="https://myapp.foyer.lu/en/index.html"><img class="icon-app" src="https://static.foyer.lu/images/0e/icon-foyer-logo.0ea4c1d66ee468a2b1f83d2a06e96a5fdbf48777.svg" width="80" height="80" alt=""></a>
+
+						<p class="text-medium text-bold">Download Our New Application</p>
+
+						<p>Simple and intuitive, your procedure for your healthcare reimbursements will get easier. Follow your claim in real time and be reassured by the availability of 24/7 emergency callbacks.</p>
+
+						<p class="dl-apps">
+							<a href="https://play.google.com/store/apps/details?id=lu.foyer.myfoyer"><img src="img/banner-google-store.svg" width="150" height="45" alt="Google Play Store"></a>
+							<a href="https://apps.apple.com/app/myfoyer/id1370858131"><img src="img/banner-apple-store.svg" width="150" height="45" alt="AppStore"></a>
+						</p>
+					</div>
+
+					<div class="col-md-4 col-xs-12 text-center">
+						<img src="img/logo-foyer.svg" width="92" height="80" alt="">
+
+						<p class="text-medium text-bold">Foyer Assurances</p>
+
+						<p>
+							12 rue Léon Laval<br>
+							L-3372 Leudelange
+						</p>
+
+						<p>Phone: +352 437 437</p>
+
+						<p>
+							<a href="https://foyer.lu/contact/" class="button ghost light">
+								<span class="button-text">Contact Us</span>
+								<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+								</svg>
+							</a>
+						</p>
+					</div>
+
+					<div class="col-md-4 col-xs-12 text-xs-center text-right">
+						<img class="work-img" src="img/work-with-us.png" srcset="img/work-with-us@2x.png 2x" width="152" height="56" alt="">
+
+						<p class="text-medium text-bold">Work with us!</p>
+
+						<p>If you are interested in joining a dynamic group<br> in full expansion, then consult our job offers or<br> do not hesitate to submit your spontaneous<br> application.</p>
+
+						<p>
+							<a href="https://jobs.foyer.lu/" class="button ghost light">
+								<span class="button-text">Work With Us</span>
+								<svg class="icon-arrow-right" role="presentation" width="19" height="12" viewBox="0 0 31 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 12.25L24.4039 12.25L18.2383 18.5325L20.6667 21L31 10.5L20.6667 0L18.2383 2.4675L24.4039 8.75L0 8.75V12.25Z" fill="currentColor"/>
+								</svg>
+							</a>
+						</p>
+					</div>
+
+				</div><!-- .row -->
+			</div>
 		</footer>
 		
 
