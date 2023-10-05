@@ -9,7 +9,7 @@
 		"flexboxgrid": "latest",
 		"gh-pages": "^2.2.0",
 		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^7.0.1",
+		"gulp-autoprefixer": "^8.0.0",
 		"gulp-concat": "latest",
 		"gulp-csso": "latest",
 		"gulp-sass": "^5.1.0",
