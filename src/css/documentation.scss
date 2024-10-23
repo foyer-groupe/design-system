@@ -15,7 +15,7 @@
 			max-width: 100%;
 			padding: 24px 24px 0 24px;
 			margin: 0 auto;
-			font-size: 1.1em;
+			font-size: 1em;
 			line-height: 1.7;
 
 			img {
@@ -522,7 +522,7 @@
 			}
 
 			&.is-main {
-				transform: scale(1.2);
+				transform: scale(1.15);
 
 				@media (max-width: $mq-small) {
 					transform: scale(1.05);				
